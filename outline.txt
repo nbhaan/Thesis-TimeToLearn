@@ -1,0 +1,78 @@
+Thesis outline
+
+———
+
+Abstract:
+
+Research question: What is the best way to build an app for the smartwatch to accelerate the memorization process of somebody who is learning the vocabulary of a second language?
+
+Useful for: People who can read and understand the language, but want to improve..
+
+Why: elevator, waiting bus.
+
+How have other people tried to solve it?: Android wallpaper.
+
+NEW approach: Watch 
+
+Prove that it is a good solution: You look more on your watch than on your mobile, its also easier to access.
+
+How do you demonstrate that it works?: Getting feedback from users by testing.
+
+———
+
+Introduction:
+
+Problem: People are way too busy these days.
+
+Approach: Micro-learning (complementary tool)
+
+Structure of the thesis: -
+
+———
+
+Related work:
+
+Android wallpaper article -> and articles referred in this article.
+
+———
+
+The problem statement:
+
+Research question: What is the best way to build an app for the smartwatch to accelerate the memorization process of somebody who is learning the vocabulary of a second language?
+
+Useful for: People who can read and understand the language, but want to improve..
+
+Why: elevator, waiting bus.
+
+———
+
+Approach:
+
+-> Smartwatch: why? pros and cons.
+
+———
+
+The implementation:
+
+Flashcard simulation -> pictures
+All the layers -> picture
+Development stages -> screenshots of past designs
+requirejs
+Leitner/Slim Stampen/Niels & Rick Flashcard system
+
+—————
+
+Evaluation:
+
+Why was it successful? Questionnaires 
+
+Methods section:
+Results section:
+Conclusion section: 
+
+——————
+
+Conclusion and future work:
+
+
+
