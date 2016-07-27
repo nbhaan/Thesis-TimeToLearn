@@ -46,6 +46,15 @@ The way people learn has changed over the years. The development of information 
 \chapter {Related Work}
 Describe the field in general and how others have tried to solve this problem.
 
+Your goals are to:
+\begin{itemize}
+	\item show you are aware of current state of knowledge
+(theoretical, methodological, applied) that relates to your
+research topic
+	\item To indicate a gap/question worthy of investigation 
+\end{itemize}
+
+
 (Thornbury. S.(2002) How to teach vocabulary. Harlow. Longman Pearson.)
 According to Scott Thornbury (2002) knowing a word involves knowing its form and its meaning. Knowing its form means that you know whether it is a noun, a verb or a preposition etc. and how to spell it. When focussing on its meaning you not only need to know what the word means in the L1, but also what register it is used in, what category of words it belongs to: for instance: fruit, animals, plants, transport or even to groups of abstract words. And you need to know how it is used in a sentence or what chunks or collocations it can be used in.
 
@@ -94,16 +103,6 @@ There is other time-taking aspects that people may see as disadvantage of smartp
 Smartphone is mobile but we need to carry, which implies while we are not carrying it, there could be a chance that we forget where we place the phone. Hence finding or searching for the misplaced phone is another time-taking exercise, compared to wearing thing.
 
 
-Your goals are to:
-\begin{itemize}
-	\item show you are aware of current state of knowledge
-(theoretical, methodological, applied) that relates to your
-research topic
-	\item To indicate a gap/question worthy of investigation 
-\end{itemize}
-
-
-
 
 \chapter{The Problem Statement}
 describe in detail the problem you are trying to solve.
@@ -118,6 +117,19 @@ packages that you can look at for code formatting:
 
 - http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf
 - https://en.wikibooks.org/wiki/LaTeX/Source\_Code\_Listings
+
+For our research we implemented an app for the smartwatch. This app should help us investigating the best way to build an app for the smartwatch which can help accelerate the memorization process of learning the vocabulary of a second language.
+
+For the implementation we had to use Tizen. The availible smartwatch, the Samsung Gear S2, runs on Tizen.
+Tizen is the operating system of Samsung which is also used for their smartwatches. 
+
+(https://developer.tizen.org/development/getting-started/overview?langredirect=1)
+Building an app for Tizen gives two possible implementation methods, web and native.
+A native application is implemented with C code and can access more advanced device-specific features on the smartwatch, such as a camera, GPS, and accelerometer. 
+A web application is implemented with HTML5, CSS and Javascript and is essentially a web site stored on the smartwatch. To interact with the native subsystems the web application uses the Tizen Web Framework.
+
+Before the user can use the app, she needs to have an account at Zeeguu. (https://zeeguu.unibe.ch/)
+With this account words can be added to her profile on the server. The app on the smartwatch connects to this server to retrieve the words. A more detailled description about the functionality can be found below.
 
 
 \chapter {The Evaluation}
