@@ -1,4 +1,4 @@
- \documentclass[oneside,a4paper,12pt]{book}
+\documentclass[oneside,a4paper,12pt]{book}
 %\pagestyle{headings}
 \frontmatter
 \input{preamble}
@@ -74,7 +74,7 @@ Verb: "I word my sentences carefully, so as not to confuse you."
 Adjective: "I like word games."
 
 (Anderson, J.P. and Jordan, A.M. 1928. Learning and retention of Latin words and phrases. Journal of Educational Psychology 19. 485-496.)
-For example, Anderson and Jordan (1928) measured recall immediately after learning, after one week, after three weeks and after eight weeks. The percentages of material retained were 66%, 48%, 39% and 37% respectively. This indicates that the repetition of new items should occur very soon after they are first studied, before too much forgetting occurs. After this the repetitions can be spaced further apart.
+For example, Anderson and Jordan (1928) measured recall immediately after learning, after one week, after three weeks and after eight weeks. The percentages of material retained were 66\%, 48\%, 39\% and 37\% respectively. This indicates that the repetition of new items should occur very soon after they are first studied, before too much forgetting occurs. After this the repetitions can be spaced further apart.
 
 (I.S.P. Nation, 1982. Beginning to Learn Foreign Vocabulary: A Review of the Research)
 If there is a delay between the presentation of a word form and its
@@ -96,7 +96,7 @@ Smartphone: how many step is required to do things?
 Given the phone has been picked out from pocket and now is on hands, a person still needs to do some steps. Typically the steps are:
 o Unlocking the phone. While in pocket, a phone is typically screen-locked to avoid unwanted use. Unlocking requires several taps or slides.
 o Finding app. A person typically has number of apps that is more than one phone screen can hold and therefore apps icons are placed in multiple home-screens. Hence finding the apps required another one or two taps or slides.
-o Running the app itself. This may vary based on how easy the app’s user interface is, but it definitely needs more than just two taps.
+o Running the app itself. This may vary based on how easy the app?s user interface is, but it definitely needs more than just two taps.
 With the number of steps above, in a mobile situation such as while driving, cycling, walking or running, the use of phone is not a convenient thing, time taking and could be even unsafe.
 
 There is other time-taking aspects that people may see as disadvantage of smartphone.
@@ -104,8 +104,42 @@ Smartphone is mobile but we need to carry, which implies while we are not carryi
 
 
 
-\chapter{The Problem Statement}
-describe in detail the problem you are trying to solve.
+\chapter{The Design}
+Making an app for a smartwatch involves quit some thinking about the design. Compared to a smartphone the available display is much smaller and circular and thus designing and redesigning the layout with the time, the words, the buttons and some information components took some time. The app is a watchface and this comes with some restrictions when it comes to the different inputs the watch can receive from the user. An app that is set as a watchface can only detect touch, swipe up and swipe down. The app begins with a login screen and after entering a valid code the main screen is shown. All the decisions related to the designs of those two screens are described below.
+
+\section{Login screen}
+
+Before the user can use the app a code is needed that is used for receiving the user's words from the server. To get this code the app starts with a login screen. The login screen first consisted of ten buttons with the ten numbers, a clear button and a okay button. On the top of the screen there are four small rectangles for displaying the pressed numbers (see figure ..). 
+After some testing and discussions it was decided that the pressed numbers on the top of the screen were to small and thus some rethinking was needed to come up with a new design. An idea was to make four rotating disks that was inspired from securing a travel suitcases. The advantage is that no buttons for the numbers were needed so the numbers could be place in the middle where they can be displayed in a larger font since more space is available due to the circular shape. However, the detection of swipe events were insufficient and thus the idea for rotating disks was changed to improve the functionality. The positions of the numbers stayed the same, but instead of swiping an increase and decrease button was added above and below each number (see figure ..). To increase the safety of a user's account it was decided to use a code of eight digits and therefore a page indication is placed below the decrease buttons to notify the user that the user should insert 4 digits two times. On the bottom of the screen a next button is placed to go to the next page for inserting the second 4 digits of the code or to confirm that the 8 digits were inserted.
+
+\section{Main screen}
+
+When a valid code is inserted, the main screen is opened. During the project, the main screen had had different layouts. The made decisions are sorted in different categories: time, words, background, buttons, information components, menus and profile.
+
+\subsection{Time}
+
+An important part of the app is displaying the time, since the app will be the first thing the user will see when the watch screen turns on. This importance was not clear at the beginning of the project, therefore the first design contained the time in a small black font. The size of the font was based on the hill that was displayed on the background. With the chosen font the time fitted in the hill in the middle to increase the readability (see figure ..). After the first discussion it was decided that the time should be displayed on 50\% of the screen since the app would be use for checking the time and for learning words (see figure ..). The time however was not readable enough and this was solved by changing the font color to white and by changing the background (see figure ..). This new design worked really well and therefore this is final design for the time. 
+
+\subsection{Words}
+
+The other important part of the app is showing the words the user wants to learn. Displaying words on a small circular screen was quit challenging which resulted in different designs for the watchface (see figure ..). 
+
+\subsection{Background}
+
+
+\subsection{Buttons}
+
+
+\subsection{Information components}
+
+
+\subsection{Menus}
+
+
+\subsection{Profile}
+
+
+Example: why white font? Change of the buttons, contrast with backgrounds 	(time hill and words background), size and position words and 		translation, temperature, weather, date, medals, fireworks, fades
 
 \chapter {The Approach}
 describe your approach to solving the problem. Describe any potential weaknesses of your approach.

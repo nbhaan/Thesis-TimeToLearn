@@ -51,7 +51,7 @@ Related work:
 
 The Design
 
-* 
+* Making an app for a smartwatch involves quit some thinking about the design. Compared to a smartphone the availible screen is much smaller. 
 
 * login screen
 * sections for buttons, background, text, information, menus, profile
