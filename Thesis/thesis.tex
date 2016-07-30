@@ -9,7 +9,7 @@
 \begin{quotation}
 \noindent 
 
-Learning has changed over the years. People do not learn only from books anymore. Although Books are still used, other tools for learning are gaining popularity. Websites that can test the knowledge about words of another language of the user are quit common and they have improved themselves over the years.
+Learning has changed over the years. People do not learn only from books anymore. Although Books are still used, other tools for learning are gaining popularity. Websites that can test the knowledge about words of another language of the user are quite common and they have improved themselves over the years.
 
 There is however a disadvantage. The user still needs to find the time to sit down in front of the screen and focus to learn the words. With the upcoming market of smartwatches a new possibility for learning is created. A possibility that makes the user able to learn words whenever the user wants to. 
 
@@ -105,41 +105,58 @@ Smartphone is mobile but we need to carry, which implies while we are not carryi
 
 
 \chapter{The Design}
-Making an app for a smartwatch involves quit some thinking about the design. Compared to a smartphone the available display is much smaller and circular and thus designing and redesigning the layout with the time, the words, the buttons and some information components took some time. The app is a watchface and this comes with some restrictions when it comes to the different inputs the watch can receive from the user. An app that is set as a watchface can only detect touch, swipe up and swipe down. The app begins with a login screen and after entering a valid code the main screen is shown. All the decisions related to the designs of those two screens are described below.
+Making an app for a smartwatch involves quite some thinking about the design. Compared to a smartphone the available display is much smaller and circular and thus designing and redesigning the layout with the time, the words, the buttons and some information components took some time. The app is a watchface and this comes with some restrictions when it comes to the different inputs the watch can receive from the user. An app that is set as a watchface can only detect touch, swipe up and swipe down. The app begins with a login screen and after entering a valid code the main screen is shown. All the decisions related to the designs of those two screens are described below.
 
 \section{Login screen}
 
 Before the user can use the app a code is needed that is used for receiving the user's words from the server. To get this code the app starts with a login screen. The login screen first consisted of ten buttons with the ten numbers, a clear button and a okay button. On the top of the screen there are four small rectangles for displaying the pressed numbers (see figure ..). 
-After some testing and discussions it was decided that the pressed numbers on the top of the screen were to small and thus some rethinking was needed to come up with a new design. An idea was to make four rotating disks that was inspired from securing a travel suitcases. The advantage is that no buttons for the numbers were needed so the numbers could be place in the middle where they can be displayed in a larger font since more space is available due to the circular shape. However, the detection of swipe events were insufficient and thus the idea for rotating disks was changed to improve the functionality. The positions of the numbers stayed the same, but instead of swiping an increase and decrease button was added above and below each number (see figure ..). To increase the safety of a user's account it was decided to use a code of eight digits and therefore a page indication is placed below the decrease buttons to notify the user that the user should insert 4 digits two times. On the bottom of the screen a next button is placed to go to the next page for inserting the second 4 digits of the code or to confirm that the 8 digits were inserted.
+After some testing and discussions it was decided that the pressed numbers on the top of the screen were to small and thus some rethinking was needed to come up with a new design. An idea was to make four rotating disks that was inspired from securing a travel suitcases. The advantage is that no buttons for the numbers were needed so the numbers could be place in the middle where they can be displayed in a larger font since more space is available due to the circular shape. However, the detection of swipe events were insufficient and thus the idea for rotating disks was changed to improve the functionality. The positions of the numbers stayed the same, but instead of swiping an increase and decrease button was added above and below each number (see figure ..). To increase the safety of a user's account it was decided to use a code of eight digits and therefore a page indicator was placed below the decrease buttons to notify the user that the user should insert 4 digits two times. On the bottom of the screen a next button is placed to go to the next page for inserting the second 4 digits of the code or to confirm that the 8 digits were inserted.
 
 \section{Main screen}
 
-When a valid code is inserted, the main screen is opened. During the project, the main screen had had different layouts. The made decisions are sorted in different categories: time, words, background, buttons, information components, menus and profile.
+When a valid code is inserted, the main screen becomes visible. During the project, the main screen had had different layouts. All the decisions are sorted in different categories: time, words, background, buttons, information components, menus, profile and effects.
 
 \subsection{Time}
 
-An important part of the app is displaying the time, since the app will be the first thing the user will see when the watch screen turns on. This importance was not clear at the beginning of the project, therefore the first design contained the time in a small black font. The size of the font was based on the hill that was displayed on the background. With the chosen font the time fitted in the hill in the middle to increase the readability (see figure ..). After the first discussion it was decided that the time should be displayed on 50\% of the screen since the app would be use for checking the time and for learning words (see figure ..). The time however was not readable enough and this was solved by changing the font color to white and by changing the background (see figure ..). This new design worked really well and therefore this is final design for the time. 
+An important part of the app is displaying the time, since the app will be the first thing the user will see when the watch screen turns on. This importance was not clear at the beginning of the project, therefore the first design contained the time in a small black font. The size of the font was based on the hill that was displayed on the background. With the chosen font the time fitted in the hill in the middle to increase the readability (see figure ..). After the first discussion it was decided that the time should be displayed on 50\% of the screen since the app would be use for checking the time and for learning words (see figure ..). The time however was not readable enough and this was solved by changing the font color to white and by changing the background (see figure ..). This new design worked really well and therefore this became the final design for the time. 
 
 \subsection{Words}
 
-The other important part of the app is showing the words the user wants to learn. Displaying words on a small circular screen was quit challenging which resulted in different designs for the watchface (see figure ..). 
+The other important part of the app is showing the wordpairs, the word and the translation, the user wants to learn. Displaying wordpairs on a small circular screen was quite challenging which resulted in different designs for the watchface (see figure ..). In the first design the wordpairs were placed in the middle of the screen (see figure ..) with a white font. Due to the circular shape there is more space available in the middle of the screen and therefore the wordpairs can be in a larger font. The color white was chosen to have a maximum contrast with the background since the background mostly consists of dark colors. The words have a larger font than the translations to have a clear distinction between the two types and later on the smaller font was selected to make sure that there is enough space to display the translations. Since the translations are placed lower than the words, less space is available. 
+When only 50\% of the screen was available for the wordpairs after the first discussion, the wordpairs were placed just below the middle where the space lost is minimal (see figure ..).  
 
 \subsection{Background}
 
+The app consists of two parts, one for the time and one for the wordpairs. Both parts have different backgrounds. The background for the wordpairs was selected in the beginning of the project and did not change. The background consists of different dark grayish colors and with the white colored wordpairs the user should not have any problems reading the wordpairs.
+
+At first the idea for the background of the time was that it should support the current time. Therefore four different backgrounds were designed for the morning, afternoon, evening and night (see figure ..). The space for the time then changed to 50\% of the screen and therefore the backgrounds were unusable because of the old dimensions of the images.
+Instead of changing the images to the new dimensions this moment was used to think again about the background of the time. The different images for the different types of the day have to be saved on the watch. This storage issue was solved by using one image. The new background consisted of the sun, the moon and a transition between blue and black. This background rotated around it's center which makes it possible to support the current time with the positions of the sun and the moon (see figure ..). Due to the rotation a sunset and sunrise could be seen on the watch. To emphasize the sunset and sunrise a landscape was added to make, for example, the sun appear from the horizon with a sunset (see figure ..). The used colors for the landscape were different from the colors in the rotating background and hence a new background with the sun and moon was designed to match the landscape. The landscape worked really well with the rotating background and therefore two other landscapes were designed from which the user can choose (see figure ..).
 
 \subsection{Buttons}
 
+As mentioned before swipe detection was insufficient so it was decided that the app should only use touch events. To navigate through the app with only touch events it seemed logical to use buttons. With the time on top of the screen and the wordpairs in the middle there was unused space in the bottom for the buttons. In the first design the user should be able to reveal the translation of the shown word or to go to the next wordpair. This resulted in two buttons, a red one with glasses on it and one with an arrow to the right (see figure ..). Glasses were chosen for revealing because it could refer to looking something up and that matches with revealing the translation. Since the app is displayed on a small screen, the buttons should not be to small and thus almost all the available space in the bottom was used for the buttons to ensure that there is enough space for the user to press a button. Different tests showed that the buttons could be made smaller. This was a favorable conclusion since after testing it was decided that only 50\% will be used for the wordpairs (see figure ..). The design of the buttons was not really pleasing and needed some rethinking. The first modification was erasing the reveal button. Instead of the button the user could touch the word to reveal the translation. The 'next' button was widened to fit on the whole screen (see figure ..). 
+During development more options were implemented and therefore a new button was made next to the 'next' button. The settings button gave access to these options (see figure ..). The curves on the buttons as can be seen in the first design were replaced with right angles to create a modern feeling.
+The app was tested and more attention was paid to improve the order in which the wordpairs are shown. This process should become smarter by use a knowledge estimator that would estimate what the next word should be. This estimation could only be made when the server could receive feedback of every single word. It is therefore necessary that the user should give feedback after every word. The design of the app was adapted to this new idea by changing the 'next' button to a 'reveal' button (see figure ..). When the user pressed this button the translation appeared and the 'reveal' button changed in three different buttons: a 'wrong' button, a 'menu' button and a 'right' button. This new design forced the user to give feedback of every word. This feedback could be used to optimize the order of the words. The first design of the buttons were a cross and a checkmark to indicate the user what to press when a word was not know or was known. Later on a book and a graduation cap were used for the same purpose but the feedback to the user would be less harsh with the new design.
 
 \subsection{Information components}
 
+date: added later, own small icon on top of the screen
+temperature and weather type added after the date, first to the left and the right of the date, after a while a new icon was designed for the date, temperature and weather type.
 
 \subsection{Menus}
 
+menu
+settings
 
 \subsection{Profile}
 
+medals
 
-Example: why white font? Change of the buttons, contrast with backgrounds 	(time hill and words background), size and position words and 		translation, temperature, weather, date, medals, fireworks, fades
+\subsection{Effects}
+
+fades
+fireworks
+popup
 
 \chapter {The Approach}
 describe your approach to solving the problem. Describe any potential weaknesses of your approach.
