@@ -114,7 +114,11 @@ After some testing and discussions it was decided that the pressed numbers on th
 
 \section{Main screen}
 
+<<<<<<< HEAD
 When a valid code is inserted, the main screen becomes visible. During the project, the main screen had had different layouts. All the decisions are sorted in different categories: time, words, background, buttons, information components, menus, profile and effects.
+=======
+When a valid code is inserted, the main screen becomes visible. During the project, the main screen had had different layouts. All the decisions are sorted in different categories: time, words, background, buttons, information components, option lists, profile and effects.
+>>>>>>> refs/heads/Rick
 
 \subsection{Time}
 
@@ -136,6 +140,7 @@ Instead of changing the images to the new dimensions this moment was used to thi
 
 As mentioned before swipe detection was insufficient so it was decided that the app should only use touch events. To navigate through the app with only touch events it seemed logical to use buttons. With the time on top of the screen and the wordpairs in the middle there was unused space in the bottom for the buttons. In the first design the user should be able to reveal the translation of the shown word or to go to the next wordpair. This resulted in two buttons, a red one with glasses on it and one with an arrow to the right (see figure ..). Glasses were chosen for revealing because it could refer to looking something up and that matches with revealing the translation. Since the app is displayed on a small screen, the buttons should not be to small and thus almost all the available space in the bottom was used for the buttons to ensure that there is enough space for the user to press a button. Different tests showed that the buttons could be made smaller. This was a favorable conclusion since after testing it was decided that only 50\% will be used for the wordpairs (see figure ..). The design of the buttons was not really pleasing and needed some rethinking. The first modification was erasing the reveal button. Instead of the button the user could touch the word to reveal the translation. The 'next' button was widened to fit on the whole screen (see figure ..). 
 During development more options were implemented and therefore a new button was made next to the 'next' button. The settings button gave access to these options (see figure ..). The curves on the buttons as can be seen in the first design were replaced with right angles to create a modern feeling.
+<<<<<<< HEAD
 The app was tested and more attention was paid to improve the order in which the wordpairs are shown. This process should become smarter by use a knowledge estimator that would estimate what the next word should be. This estimation could only be made when the server could receive feedback of every single word. It is therefore necessary that the user should give feedback after every word. The design of the app was adapted to this new idea by changing the 'next' button to a 'reveal' button (see figure ..). When the user pressed this button the translation appeared and the 'reveal' button changed in three different buttons: a 'wrong' button, a 'menu' button and a 'right' button. This new design forced the user to give feedback of every word. This feedback could be used to optimize the order of the words. The first design of the buttons were a cross and a checkmark to indicate the user what to press when a word was not know or was known. Later on a book and a graduation cap were used for the same purpose but the feedback to the user would be less harsh with the new design.
 
 \subsection{Information components}
@@ -157,6 +162,37 @@ medals
 fades
 fireworks
 popup
+=======
+The app was tested and more attention was paid to improve the order in which the wordpairs are shown. This process should become smarter by use a knowledge estimator that would estimate what the next word should be. This estimation could only be made when the server could receive feedback of every single word. It is therefore necessary that the user should give feedback after every word. The design of the app was adapted to this new idea by changing the 'next' button to a 'reveal' button (see figure ..). When the user pressed this button the translation appeared and the 'reveal' button changed in three different buttons: a 'wrong' button, a 'menu' button and a 'right' button. This new design forced the user to give feedback of every word. This feedback could be used to optimize the order of the words. The first design of the buttons were a cross and a checkmark to indicate the user what to press when a word was not know or was known. Later on a book and a graduation cap were used for the same purpose but the feedback to the user would be less harsh with this new design.
+
+\subsection{Information components}
+
+Besides the time the app show also the date. The date was added later when the design of the time was completed. In the first place the date had his own small icon on top of the screen (see figure ..). This icon was partly covered by a Tizen icon for the swipe down menu. Therefore the icon for the date was moved downwards near the time.
+During a discussion it was mentioned that it would be nice to be able to see the temperature and the weather type on the watchface. After some research a free api was found that could provide the app with this information. In the beginning of the implementation the temperature was placed to the left of the date and the weather type was placed to the right of the date. This was barely readable and it did not fit in the realized design hence a new icon was designed that contained the date, temperature, weather type and an open area in the middle for the Tizen icon for the swipe down menu (see figure ..).
+
+\subsection{Option lists}
+
+The app has access to two different option lists: the settings which can be reached by double tapping on the time and the menu that can be reached by tapping in the middle of the translation. This was different in one of the first designs.
+When the app was able to show the words with the translation, the user should have an option to tell the app that a word had a wrong translation or that a word was learned and thus it should not reappear again. Due to the small screen it was not convenient to add more buttons to the watchface and therefore the idea came to make a menu with these extra options (see figure ..). Besides these options, the user should be able to reverse the order in which the wordpairs were asked (when the words are displayed from German to English, the words will be displayed from English to German after the button was pressed), to insert the number of words that the user wanted to learn and to log out of the app. All these options were reachable for the user by a 'menu' button in the bottom. The 'next' button was replaced by two buttons, the 'menu' and the 'next' button (see figure ..). When the 'menu' button was clicked a menu would appear with the 'trash' button and the 'I learned it' button.  In the bottom the user could close the app or open the settings (see figure ..). By pressing the 'settings' button the user would open the settings page with the buttons for reverse, number of words and log out (see figure ..).
+After some discussions the overall opinion was that the 'menu' button should not be this large on the watchface. A solution was to split the menu and the settings to two different pages that the user could reach independently. The user could reach the menu by tapping in the middle of the translation (see figure ..) and the settings could be reach by double tapping on the time since this space was hardly used. The double tap was necessary because tapping the time would change the background.
+The menu and the settings both had a black transparent background for a long time. This was inspired from the transparent and blurred swipe down menu from a well-known OS. Unfortunately the blur effect was not a success, but the transparency remained.
+During testing the text in the buttons were hard to read and the buttons of the main page were visible through the buttons on the bottom. Therefore it was decided that the menu and the settings page should have a background. For the background the same image was used as the background of the wordpairs to preserver the unity of the design. Later on  the idea was abandoned of letting the user choose how many words the user wants to learn and instead came the 'profile' button as the latest addition to the settings page (see figure ..).
+
+\subsection{Profile}
+
+One of the latest addition to the app was the implementation of a profile page where the user could see the four medals that could be earned by using the app (see figure ..). The four categories are: words learned, total time, longest session and longest streak. 
+This page was inspired from a presentation where gamification was mentioned. The idea was that when users could earn medals, users would be more willing to use the app. 
+When the user pressed the 'I learned it' button, the number of 'words learned' is increased and after 10 new learned words, a popup appears with a motivating message to continue. 
+The total time the user used the app is also registered. When this time is the same as one of the pre-determined minutes a popup appears (see figure ..).
+With longest session the time is measured that user uses the app  continuously and with the longest streak the number of days is registered in which the app is used daily. One day of not using the app resets the longest streak.
+
+\subsection{Effects}
+
+To improve the experience of the app some effects were added to give feedback after a button was pressed, to give information (why an option was not available or why a medal was earned) or to beautify a popup.
+Because of the small screen the user could think the wrong buttons was pressed and therefore the user should get feedback about which button was pressed. The most important buttons in the app are the buttons used for indicating whether a word was known or not. When one of these buttons is pressed a green or red image appears depending on if right or wrong is pressed. This image stays on the display for a few milliseconds before it fades out.
+In the app several popups are added to give the user feedback when an option is not available. The design of the popup is based on the first design of the option lists. The popup had a back transparent background with white text on it. The popup could appear when: there is no connection with the internet, when a wrong code is inserted, when the user has too few words, when there are too few words left on the watch or when a user earned a new medal.
+The popup that appears when a new medal is earned is beatified by some fireworks.
+>>>>>>> refs/heads/Rick
 
 \chapter {The Approach}
 describe your approach to solving the problem. Describe any potential weaknesses of your approach.
