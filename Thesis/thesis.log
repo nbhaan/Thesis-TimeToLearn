@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.3)  31 JUL 2016 20:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.3)  2 AUG 2016 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -874,7 +874,7 @@ LaTeX Info: Redefining \nameref on input line 226.
 
 LaTeX Info: Redefining \Ref on input line 226.
 
-<images/logos/groningen-logo.png, id=32, 333.04425pt x 49.6254pt>
+<images/logos/groningen-logo.png, id=4, 333.04425pt x 49.6254pt>
 File: images/logos/groningen-logo.png Graphic file (type png)
 
 <use images/logos/groningen-logo.png>
@@ -916,19 +916,14 @@ l.26 \clearpage
 ]
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
 0.6,0.6}' on input line 31.
- (./thesis.toc
-Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 1.
-Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 3.
-Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 4.
-Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 5.
-Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 6.
-Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 7.
-Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 8.
-)
+
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [2
+[2
 
 
 ]
@@ -952,54 +947,86 @@ Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
 Chapter 3.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
 0.6,0.6}' on input line 122.
-[6
+<images/login_screen.png, id=49, 361.35pt x 361.35pt>
+File: images/login_screen.png Graphic file (type png)
+
+<use images/login_screen.png>
+Package pdftex.def Info: images/login_screen.png used on input line 131.
+(pdftex.def)             Requested size: 216.81pt x 216.81168pt.
+ [6
 
 ]
+<images/login_screen_2.png, id=56, 361.35pt x 361.35pt>
+File: images/login_screen_2.png Graphic file (type png)
+
+<use images/login_screen_2.png>
+Package pdftex.def Info: images/login_screen_2.png used on input line 139.
+(pdftex.def)             Requested size: 216.81pt x 216.81168pt.
+ [7 <./images/login_screen.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
- [7] [8] [9] [10] [11] [12]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 149.
+
+<images/version_1.png, id=63, 361.35pt x 361.35pt>
+File: images/version_1.png Graphic file (type png)
+ <use images/version_1.png>
+Package pdftex.def Info: images/version_1.png used on input line 155.
+(pdftex.def)             Requested size: 216.81pt x 216.81168pt.
+
+[8 <./images/login_screen_2.png>]
+<images/version_3.png, id=72, 361.35pt x 361.35pt>
+File: images/version_3.png Graphic file (type png)
+ <use images/version_3.png>
+Package pdftex.def Info: images/version_3.png used on input line 163.
+(pdftex.def)             Requested size: 216.81pt x 216.81168pt.
+
+[9 <./images/version_1.png>]
+File: images/version_1.png Graphic file (type png)
+ <use images/version_1.png>
+Package pdftex.def Info: images/version_1.png used on input line 173.
+(pdftex.def)             Requested size: 216.81pt x 216.81168pt.
+ [10 <./images/version_3.png>] [11] [12] [13] [14] [15]
 Chapter 4.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 212.
-[13
+0.6,0.6}' on input line 223.
+[16
 
 ]
 Chapter 5.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 215.
+0.6,0.6}' on input line 226.
 
-Overfull \hbox (214.25996pt too wide) in paragraph at lines 220--222
+Overfull \hbox (214.25996pt too wide) in paragraph at lines 231--233
 []\OT1/ptm/m/n/12 (-20) - http://mirror.unl.edu/ctan/macros/latex/contrib/minte
 d/minted.pdf - https://en.wikibooks.org/wiki/LaTeX/Source[]Code[]Listings 
  []
 
 
-Overfull \hbox (36.33493pt too wide) in paragraph at lines 233--235
+Overfull \hbox (36.33493pt too wide) in paragraph at lines 244--246
 []\OT1/ptm/m/n/12 (-20) Before the user can use the app, she needs to have an a
 c-count at Zeeguu. (https://zeeguu.unibe.ch/)
  []
 
-[14
+[17
 
-] [15]
+] [18]
 Chapter 6.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 237.
-[16
+0.6,0.6}' on input line 248.
+[19
 
 ]
 Chapter 7.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 241.
+0.6,0.6}' on input line 252.
 No file thesis.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
-[17
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
+[20
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 252.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
 
 
 Package rerunfilecheck Warning: File `thesis.out' has changed.
@@ -1007,27 +1034,30 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 826AFFB92196CE8B5EEA80484020991F;374
-(rerunfilecheck)             After:  E732BF4259ADF7E705ECE2BA764FB240;1327.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 252.
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  03410B05D17FCA92EA8A2D0B9C4B734E;1040.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
  ) 
 Here is how much of TeX's memory you used:
- 18077 strings out of 493089
- 308985 string characters out of 6134843
- 423691 words of memory out of 5000000
- 21131 multiletter control sequences out of 15000+600000
+ 18095 strings out of 493089
+ 309419 string characters out of 6134843
+ 423552 words of memory out of 5000000
+ 21142 multiletter control sequences out of 15000+600000
  37677 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,7n,39p,10456b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,7n,39p,10456b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb>
-Output written on thesis.pdf (20 pages, 140852 bytes).
+Output written on thesis.pdf (23 pages, 314207 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 15934 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 15898 words of extra memory for PDF output out of 17280 (max. 10000000)
 
