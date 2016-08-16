@@ -1,4 +1,4 @@
-Thesis outline
+﻿Thesis outline
 
 ———
 
@@ -22,57 +22,101 @@ How do you demonstrate that it works?: Getting feedback from users by testing.
 
 Introduction:
 
-Problem: People are way too busy these days.
+* short sketch about the average user and their available time
+	* Useful for people who can read and understand the language, but want to 	improve.
+* (problem statement) describe how availible time can be a problem nowadays
+* descripe the research question (What is the best way to build an app for the smartwatch to accelerate the memorization process of somebody who is learning the vocabulary of a second language?)
+* describe the possiblities of a smartwatch (pros and cons)
+* mention how a smartwatch app can solve this problem with time
+	* describe how the user can use the app
+	* describe why it is usefull for the user (waiting for bus)
 
-Approach: Micro-learning (complementary tool)
+* Structure of the thesis
 
-Structure of the thesis: -
+* Summary of the research questions
 
 ———
 
 Related work:
 
-Android wallpaper article -> and articles referred in this article.
+* Introduction about the different used knowledge and tools
+
+* Micro-learning (complementary tool)
+* Android wallpaper article -> and articles referred in this article.
+* Zeeguu
+* Tizen
+* Best way to study words
 
 ———
 
-The problem statement:
+The Design
 
-Research question: What is the best way to build an app for the smartwatch to accelerate the memorization process of somebody who is learning the vocabulary of a second language?
+* Making an app for a smartwatch involves quit some thinking about the design. Compared to a smartphone the availible screen is much smaller. 
 
-Useful for: People who can read and understand the language, but want to improve..
-
-Why: elevator, waiting bus.
-
-———
-
-Approach:
-
--> Smartwatch: why? pros and cons.
+* login screen
+* sections for buttons, background, text, information, menus, profile
+	* describe what is changed and why.
+	Example: why white font? Change of the buttons, contrast with backgrounds 	(time hill and words background), size and position words and 		translation, temperature, weather, date, medals, fireworks, fades
 
 ———
 
-The implementation:
+The Implementation:
 
-Flashcard simulation -> pictures
-All the layers -> picture
-Development stages -> screenshots of past designs
-requirejs
+* Flashcard simulation -> image
+* All the layers -> image
+* changing of the watchface (local storage - server) -> image
+* requirejs
+	* create
+	* static classes
+* adding new words algorithm
+* knowledge estimator with events
+* clicktracker -> image
+* update every second with draw
+* rotating background
+* when sending data 
+	* clicks by screen on because of slowing down app
+	* events by clicking right or wrong
+	* learnedIt and wrongTranslation sent by clicking right or wrong
+	* possible bug with learnedIt and wrongTranslation (button is clicked -> 	screenOff -> screenOn -> deleted word can be sent from server)
+
 Leitner/Slim Stampen/Niels & Rick Flashcard system
 
 —————
 
+The Usage results
+
+* explain executed tests
+* summary of the results with diagrams
+* explain results
+* conclusion
+
+———
+
 Evaluation:
 
-Why was it successful? Questionnaires 
-
-Methods section:
-Results section:
-Conclusion section: 
+* Methods section:
+* Results section:
+* Conclusion section:
 
 ——————
 
 Conclusion and future work:
+
+future work:
+* solution bugs
+* slim stampen
+* add own wordlist via (own) website
+
+———
+
+Appendix
+
+* test cases
+* survey questions (pre and post)
+* answers survey users
+* bibliography
+
+———
 
 
 
