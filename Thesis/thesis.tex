@@ -44,7 +44,7 @@ The application for the smartwatch will be a watch face, this is the screen that
 
 The app for the smart watch is part of Zeeguu, which is a research project designed to speed \& fun up vocabulary learning in a new language. Its based on three fundamental principles: only read the stuff you like, have words everywhere with you and practice with personalized exercises. This basically means the users read articles they like, tap on the words they don't know and practice them later. The words will be saved in their accounts and can be accessed at any time. We build an app for the smartwatch, so users have an complementary tool for learning their words in the Zeeguu account and thus increase the memorization process of learning a second new language. In this thesis we will research what is the best way to build such an app, therefore a user study was designed to answer the following research question: 
 
-What is the best way to build an app for the smartwatch to accelerate the memorization process of somebody who is learning the vocabulary of a second language?
+How do users use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language?
 
 \paragraph{Structure of this Thesis}
 \begin{itemize}
@@ -132,7 +132,15 @@ Before the user can use the app a code is needed that is used for receiving the 
    \caption{login screen v1.0}
 \end{figure}
 
-After some testing and discussions it was decided that the feedback of the pressed numbers on the top of the screen were to small and thus some rethinking was needed to come up with a new design. An idea was to make four rotating disks that was inspired from securing a travel suitcases (see figure lock travel suitcase.jpg). The advantage is that no buttons for the numbers were needed so the numbers could be place in the middle. In the middle they can be displayed in a larger font since more space is available due to the circular shape. However, the detection of swipe events were insufficient for rotating the disks and thus the idea for rotating disks was changed to improve the functionality. The positions of the numbers stayed the same, but instead of swiping an increase and decrease button was added above and below each number (see figure login\_screen\_2.png). 
+After some testing and discussions it was decided that the feedback of the pressed numbers on the top of the screen were to small and thus some rethinking was needed to come up with a new design. An idea was to make four rotating disks that was inspired from securing a travel suitcases. 
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/lock.jpg} 
+   \caption{lock}
+\end{figure}
+
+The advantage is that no buttons for the numbers were needed so the numbers could be place in the middle. In the middle they can be displayed in a larger font since more space is available due to the circular shape. However, the detection of swipe events were insufficient for rotating the disks and thus the idea for rotating disks was changed to improve the functionality. The positions of the numbers stayed the same, but instead of swiping an increase and decrease button was added above and below each number (see figure login\_screen\_2.png). 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -153,7 +161,7 @@ An important part of the app is displaying the time, since the app will be the f
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=3in]{images/version_1.png} 
-   \caption{time v1.0}
+   \caption{version 1}
 \end{figure}
 
 After the first discussion it was decided that the time should be displayed on 50\% of the screen since the app would be use for checking the time and for learning words (see figure version 2.png). The time however was not readable enough and this was solved by changing the font color to white and by changing the background (see figure version 3.png). This new design worked really well and therefore this became the final design for the time. 
@@ -168,21 +176,50 @@ After the first discussion it was decided that the time should be displayed on 5
 
 The other important part of the app is showing the wordpairs, the word and the translation, the user wants to learn. Displaying wordpairs on a small circular screen was quite challenging which resulted in different designs for the watchface (see figure all possible versions.png). In the first design the wordpairs were placed in the middle of the screen (see figure version 1.png) with a white font.
 
-\begin{figure}[H] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=3in]{images/version_1.png} 
-   \caption{words v1.0}
-\end{figure}
-
  Due to the circular shape there is more space available in the middle of the screen and therefore the wordpairs can be in a larger font. The color white was chosen to have a maximum contrast with the background since the background mostly consists of dark colors. The words have a larger font than the translations to have a clear distinction between the two types and later on the smaller font was selected to make sure that there is enough space to display the translations. Since the translations are placed lower than the words, less space is available. 
 When only 50\% of the screen was available for the wordpairs after the first discussion, the wordpairs were placed just below the middle where the space lost is minimal (see figure version 2.png).  
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_2.png} 
+   \caption{version 2}
+\end{figure}
 
 \subsection{Background}
 
 The app consists of two parts, one for the time and one for the wordpairs. Both parts have different backgrounds. The background for the wordpairs was selected in the beginning of the project and did not change. The background consists of different dark grayish colors and with the white colored wordpairs the user should not have any problems reading the wordpairs.
 
-At first the idea for the background of the time was that it should support the current time. Therefore four different backgrounds were designed for the morning, afternoon, evening and night (see figure first desings background.png). The space for the time then changed to 50\% of the screen and therefore the backgrounds were unusable because of the old dimensions of the images.
-Instead of changing the images to the new dimensions this moment was used to think again about the background of the time. The different images for the different types of the day had to be saved on the watch. This storage issue was solved by using one image. The new background consisted of the sun, the moon and a transition between blue and black. This background rotated around it's center which makes it possible to support the current time with the positions of the sun and the moon (see figure day\_cycle\_2.png). Due to the rotation a sunset and sunrise could be seen on the watch. To emphasize the sunset and sunrise a landscape was added to make, for example, the sun appear from the horizon with a sunset. The used colors for the landscape were different from the colors in the rotating background and hence a new background with the sun and moon was designed to match the landscape (see figure version 5.png). The landscape worked really well with the rotating background and therefore two other landscapes were designed from which the user can choose (see figure designs landscape.png).
+At first the idea for the background of the time was that it should support the current time. Therefore four different backgrounds were designed for the morning, afternoon, evening and night (see figure first designs background.png). 
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/first_designs_backgrounds.png} 
+   \caption{first designs background}
+\end{figure}
+
+The space for the time then changed to 50\% of the screen and therefore the backgrounds were unusable because of the old dimensions of the images.
+Instead of changing the images to the new dimensions this moment was used to think again about the background of the time. The different images for the different types of the day had to be saved on the watch. This storage issue was solved by using one image. The new background consisted of the sun, the moon and a transition between blue and black. This background rotated around it's center which makes it possible to support the current time with the positions of the sun and the moon (see figure day\_cycle\_2.png).
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/day_cycle_2.png} 
+   \caption{day cycle}
+\end{figure}
+
+Due to the rotation a sunset and sunrise could be seen on the watch. To emphasize the sunset and sunrise a landscape was added to make, for example, the sun appear from the horizon with a sunset. The used colors for the landscape were different from the colors in the rotating background and hence a new background with the sun and moon was designed to match the landscape (see figure version 5.png). The landscape worked really well with the rotating background and therefore two other landscapes were designed from which the user can choose (see figure designs landscape.png).
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_5.png} 
+   \caption{version 5}
+\end{figure}
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/designs_landscapes.png} 
+   \caption{landscapes}
+\end{figure}
+
 
 \subsection{Buttons}
 
@@ -190,20 +227,66 @@ As mentioned before swipe detection was insufficient so it was decided that the 
 During development more options were implemented and therefore a new button was made next to the 'next' button. The settings button gave access to these options (see figure version 4.png). The curves on the buttons as can be seen in the first design were replaced with right angles to create a modern feeling.
 The app was tested and more attention was paid to improve the order in which the wordpairs are shown. This process should become smarter by use a knowledge estimator that would estimate what the next word should be to maximize the learning process. This estimation could only be made when the server could receive feedback of every single word. It is therefore necessary that the user should give feedback after every word. The design of the app was adapted to this new idea by changing the 'next' button to a 'reveal' button (see figure version 5.png). When the user pressed this button the translation appeared and the 'reveal' button changed in three different buttons: a 'wrong' button, a 'menu' button and a 'right' button (see figure version 5 reveal.png). This new design forced the user to give feedback after every word. This feedback could be used to optimize the order of the words. The first design of the buttons were a cross and a checkmark to let the user know what to press when a word was not know or was known. Later on a book and a graduation cap were used for the same purpose but the feedback to the user would be less harsh with the new design (see figure version 6 reveal.png).
 
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_6_reveal.png} 
+   \caption{version 6 on revealing}
+\end{figure}
+
 \subsection{Information components}
 
 Besides the time the app also shows the date. The date was added later when the design of the time was completed. In the first place the date had his own small icon on top of the screen (see figure version 3.png). This icon was partly covered by a Tizen icon for the swipe down menu. Therefore the icon for the date was moved downwards near the time (see figure version 5.png).
 During a discussion it was mentioned that it would be nice to be able to see the temperature and the weather type on the watchface. After some research a free api* was found that could provide the app with this information. In the beginning of the implementation the temperature was placed to the left of the date and the weather type was placed to the right of the date. This was barely readable and it did not fit in the realized design hence a new icon was designed that contained the date, temperature, weather type and an open area in the middle for the Tizen icon for the swipe down menu (see figure version 6.png).
 
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_6.png} 
+   \caption{version 6}
+\end{figure}
+
 \subsection{Option lists}
 
 The app has access to two different option lists: the settings which can be reached by double tapping on the time and the menu that can be reached by tapping in the middle of the translation. This was different in one of the first designs.
-When the app was able to show the words with the translation, the user should have an option to tell the app that a word had a wrong translation or that a word was learned and thus in both cases it should not reappear again. Due to the small screen it was not convenient to add more buttons for each of these options to the watchface and therefore the idea came to make a menu with these extra options. Besides these options the user should be able to reverse the order in which the wordpairs were asked (when the words were displayed from German to English, the words would be displayed from English to German after the button was pressed), to insert the number of words that the user wanted to learn and to log out of the app. All these options were reachable for the user by a 'menu' button in the bottom. The 'next' button was replaced by two buttons, the 'menu' and the 'next' button (see figure version 4.png). When the 'menu' button was clicked a menu would appear with the 'trash' button and the 'I learned it' button.  In the bottom the user could close the app or open the settings (see figure version 4 menu 1.png). By pressing the 'settings' button the user would open the settings page with the buttons for reverse, number of words and log out (see figure version 4 settings 1.png).
+When the app was able to show the words with the translation, the user should have an option to tell the app that a word had a wrong translation or that a word was learned and thus in both cases it should not reappear again. Due to the small screen it was not convenient to add more buttons for each of these options to the watchface and therefore the idea came to make a menu with these extra options. Besides these options the user should be able to reverse the order in which the wordpairs were asked (when the words were displayed from German to English, the words would be displayed from English to German after the button was pressed), to insert the number of words that the user wanted to learn and to log out of the app. All these options were reachable for the user by a 'menu' button in the bottom. The 'next' button was replaced by two buttons, the 'menu' and the 'next' button (see figure version 4.png). 
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_4.png} 
+   \caption{version 4}
+\end{figure}
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_4_settings_1.png} 
+   \caption{version 4 settings}
+\end{figure}
+
+When the 'menu' button was clicked a menu would appear with the 'trash' button and the 'I learned it' button.  In the bottom the user could close the app or open the settings (see figure version 4 menu 1.png). By pressing the 'settings' button the user would open the settings page with the buttons for reverse, number of words and log out (see figure version 4 settings 1.png).
 After some discussions the overall opinion was that the 'menu' button should not be this large on the watchface since the menu would give complementary options which were not part of the main function of the app. Therefore the button should not cover half of the bottom and a solution was to split the menu and the settings to two different pages that the user could reach independently. The user could reach the menu by tapping in the middle of the translation (see figure version 5 reveal.png) and the settings could be reach by double tapping on the time since this space was hardly used. The double tap was necessary because tapping the time would change the background.
 The menu and the settings both had a black transparent background for a long time. This was inspired from the transparent and blurred swipe down menu from a well-known OS. Unfortunately the blur effect was not a success, but the transparency remained.
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_5_reveal.png} 
+   \caption{version 5 reveal}
+\end{figure}
+
 During testing the text in the buttons were hard to read and the buttons of the main page were visible through the buttons on the bottom. Therefore it was decided that the menu and the settings page should have a background. For the background the same image was used as the background of the wordpairs to preserver the unity of the design.
 A lot of translations depends on the context of the word. Hence the user should be able to see the context of the word and this option was added to the menu page (see figure version 6 menu.png). 
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_6_menu.png} 
+   \caption{version 6 menu}
+\end{figure}
+
 Later on  the idea was abandoned of letting the user choose how many words the user wants to learn and instead came the 'profile' button as the latest addition to the settings page (see figure version 6 settings.png).
+
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_6_settings.png} 
+   \caption{version 6 settings}
+\end{figure}
 
 \subsection{Profile}
 
@@ -213,6 +296,12 @@ When the user presses the 'I learned it' button, the number of 'words learned' w
 The total time the user used the app is also registered. When this time is the same as one of the pre-determined minutes a popup appears (see figure version 6 popup.png).
 With longest session the time is measured that the user uses the app  continuously and with the longest streak the number of days is registered in which the app is used daily. One day of not using the app resets the longest streak.
 
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=3in]{images/version_6_popup.png} 
+   \caption{version 6 popup}
+\end{figure}
+
 \subsection{Effects}
 
 To improve the experience of the app some effects were added: to give feedback after a button was pressed, to give information (why an option was not available or why a medal was earned) or to beautify a popup.
@@ -220,29 +309,11 @@ Because of the small screen the user could think the wrong button was pressed an
 In the app several popups are added to give the user feedback when an option is not available. The design of the popup is based on the first design of the option lists. The popup has a black transparent background with white text on it. The popup could appear when: there is no connection with the internet, when a wrong code is inserted, when the user has too few words, when there are too few words left on the watch or when a user earned a new medal.
 The popup that appears when a new medal is earned is beatified by some fireworks.
 
-\chapter {The Approach}
-describe your approach to solving the problem. Describe any potential weaknesses of your approach.
-
 \chapter {The Implementation}
-describe how you implemented your approach. If it is a software system give diagrams, relevant algorithms etc.
+In this part the implementation choices are described. In this project writing the code was one of the biggest challenges. The code has been changed a lot during the process. One of the reasons was to increase readability, but also because of design changes and new features which had to be implemented. The code is written in JavaScript in combination with HTML 5, this means it is web-based application, more information on this will follow later. In this section we will explain how the code works and how we use a framework to order the code. This framework requirejs makes it possible to have multiple files (modules) in javascript, this to increase readability and structure. This section also explains why certain code decisions have been made.
 
-packages that you can look at for code formatting: 
+\subsection{Flash card algorithm}
 
-- http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf
-- https://en.wikibooks.org/wiki/LaTeX/Source\_Code\_Listings
-
-For our research we implemented an app for the smartwatch. This app should help us investigating the best way to build an app for the smartwatch which can help accelerate the memorization process of learning the vocabulary of a second language.
-
-For the implementation we had to use Tizen. The availible smartwatch, the Samsung Gear S2, runs on Tizen.
-Tizen is the operating system of Samsung which is also used for their smartwatches. 
-
-(https://developer.tizen.org/development/getting-started/overview?langredirect=1)
-Building an app for Tizen gives two possible implementation methods, web and native.
-A native application is implemented with C code and can access more advanced device-specific features on the smartwatch, such as a camera, GPS, and accelerometer. 
-A web application is implemented with HTML5, CSS and Javascript and is essentially a web site stored on the smartwatch. To interact with the native subsystems the web application uses the Tizen Web Framework.
-
-Before the user can use the app, she needs to have an account at Zeeguu. (https://zeeguu.unibe.ch/)
-With this account words can be added to her profile on the server. The app on the smartwatch connects to this server to retrieve the words. A more detailled description about the functionality can be found below.
 
 
 \chapter {The Evaluation}
