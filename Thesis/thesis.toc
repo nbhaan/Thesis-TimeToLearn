@@ -1,24 +1,27 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {paragraph}{Structure of this Thesis}{2}{section*.3}
 \contentsline {chapter}{\numberline {2}Related Work}{3}{chapter.2}
-\contentsline {chapter}{\numberline {3}The Design}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}Login screen}{6}{section.3.1}
-\contentsline {section}{\numberline {3.2}Main screen}{8}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Time}{9}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Words}{10}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Background}{11}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Buttons}{13}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Information components}{15}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Option lists}{15}{subsection.3.2.6}
-\contentsline {subsection}{\numberline {3.2.7}Profile}{20}{subsection.3.2.7}
-\contentsline {subsection}{\numberline {3.2.8}Effects}{20}{subsection.3.2.8}
-\contentsline {chapter}{\numberline {4}The Implementation}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Flash card algorithm}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}Getting new words from the server}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Usage Tracking}{26}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Events}{26}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Clicktracking}{26}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Changing the watchface and sending and saving}{26}{section.4.4}
-\contentsline {section}{\numberline {4.5}Drawing the userinterface}{27}{section.4.5}
-\contentsline {chapter}{\numberline {5}The Evaluation}{28}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{29}{chapter.6}
+\contentsline {section}{\numberline {2.1}Zeeguu}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Comparable researches}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}The best way to study words}{5}{section.2.3}
+\contentsline {chapter}{\numberline {3}The Design}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Login screen}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Main screen}{10}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Time}{11}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Words}{12}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Background}{13}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Buttons}{15}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Information components}{17}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Option lists}{17}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Profile}{22}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Effects}{22}{subsection.3.2.8}
+\contentsline {chapter}{\numberline {4}The Implementation}{24}{chapter.4}
+\contentsline {section}{\numberline {4.1}Flash card algorithm}{24}{section.4.1}
+\contentsline {section}{\numberline {4.2}Getting new words from the server}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Usage Tracking}{28}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Events}{28}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Clicktracking}{28}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Changing the watchface and sending and saving}{28}{section.4.4}
+\contentsline {section}{\numberline {4.5}Drawing the userinterface}{29}{section.4.5}
+\contentsline {chapter}{\numberline {5}The Evaluation}{30}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{31}{chapter.6}
