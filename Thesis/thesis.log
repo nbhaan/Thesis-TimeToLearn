@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.3)  17 AUG 2016 14:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.3)  21 AUG 2016 21:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -874,7 +874,7 @@ LaTeX Info: Redefining \nameref on input line 226.
 
 LaTeX Info: Redefining \Ref on input line 226.
 
-<images/logos/groningen-logo.png, id=72, 333.04425pt x 49.6254pt>
+<images/logos/groningen-logo.png, id=96, 333.04425pt x 49.6254pt>
 File: images/logos/groningen-logo.png Graphic file (type png)
 
 <use images/logos/groningen-logo.png>
@@ -895,7 +895,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
 s/logos/groningen-logo.png>])
-LaTeX Font Info:    Try loading font information for T1+put on input line 8.
+LaTeX Font Info:    Try loading font information for T1+put on input line 39.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1put.fd
 File: t1put.fd 2001/06/04 font definitions for T1/put.
@@ -905,17 +905,17 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 8.
+0.6,0.6}' on input line 39.
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.26 \clearpage
+l.57 \clearpage
                 [1
 
 ]
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 31.
+0.6,0.6}' on input line 62.
  (./thesis.toc
 Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 1.
 Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 3.
@@ -958,6 +958,12 @@ Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 15.
 Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 16.
 Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 17.
 Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 18.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 19.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 20.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 21.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 22.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 23.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 24.
 )
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
@@ -968,202 +974,447 @@ Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 18.
 ]
 Chapter 1.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 37.
+0.6,0.6}' on input line 68.
 [1
 
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 51.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 82.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [2]
 Chapter 2.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 61.
+0.6,0.6}' on input line 92.
 [3
 
 ] [4] [5]
 Chapter 3.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 122.
-<images/login_screen.png, id=132, 361.35pt x 361.35pt>
+0.6,0.6}' on input line 153.
+<images/login_screen.png, id=162, 361.35pt x 361.35pt>
 File: images/login_screen.png Graphic file (type png)
 
 <use images/login_screen.png>
-Package pdftex.def Info: images/login_screen.png used on input line 131.
+Package pdftex.def Info: images/login_screen.png used on input line 162.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
  [6
 
 ]
-<images/lock.jpg, id=137, 361.35pt x 361.35pt>
+<images/lock.jpg, id=168, 361.35pt x 361.35pt>
 File: images/lock.jpg Graphic file (type jpg)
  <use images/lock.jpg>
-Package pdftex.def Info: images/lock.jpg used on input line 139.
+Package pdftex.def Info: images/lock.jpg used on input line 170.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
  [7 <./images/login_screen.png> <./images/lock.jpg>]
-<images/login_screen_2.png, id=145, 361.35pt x 361.35pt>
+<images/login_screen_2.png, id=176, 361.35pt x 361.35pt>
 File: images/login_screen_2.png Graphic file (type png)
 
 <use images/login_screen_2.png>
-Package pdftex.def Info: images/login_screen_2.png used on input line 147.
+Package pdftex.def Info: images/login_screen_2.png used on input line 178.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 157.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 188.
  [8 <./images/login_screen_2.png>]
-<images/version_1.png, id=152, 361.35pt x 361.35pt>
+<images/version_1.png, id=183, 361.35pt x 361.35pt>
 File: images/version_1.png Graphic file (type png)
  <use images/version_1.png>
-Package pdftex.def Info: images/version_1.png used on input line 163.
+Package pdftex.def Info: images/version_1.png used on input line 194.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
 
-<images/version_3.png, id=153, 361.35pt x 361.35pt>
+<images/version_3.png, id=184, 361.35pt x 361.35pt>
 File: images/version_3.png Graphic file (type png)
  <use images/version_3.png>
-Package pdftex.def Info: images/version_3.png used on input line 171.
+Package pdftex.def Info: images/version_3.png used on input line 202.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
 
 [9 <./images/version_1.png>]
-<images/version_2.png, id=161, 361.35pt x 361.35pt>
+<images/version_2.png, id=191, 361.35pt x 361.35pt>
 File: images/version_2.png Graphic file (type png)
  <use images/version_2.png>
-Package pdftex.def Info: images/version_2.png used on input line 184.
+Package pdftex.def Info: images/version_2.png used on input line 215.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
 
 [10 <./images/version_3.png>]
-<images/first_designs_backgrounds.png, id=169, 2255.42625pt x 635.37375pt>
+<images/first_designs_backgrounds.png, id=199, 2255.42625pt x 635.37375pt>
 File: images/first_designs_backgrounds.png Graphic file (type png)
 
 <use images/first_designs_backgrounds.png>
 Package pdftex.def Info: images/first_designs_backgrounds.png used on input lin
-e 196.
+e 227.
 (pdftex.def)             Requested size: 216.81pt x 61.06886pt.
  [11 <./images/version_2.png> <./images/first_designs_backgrounds.png>]
-<images/day_cycle_2.png, id=177, 366.43944pt x 366.43944pt>
+<images/day_cycle_2.png, id=207, 366.43944pt x 366.43944pt>
 File: images/day_cycle_2.png Graphic file (type png)
 
 <use images/day_cycle_2.png>
-Package pdftex.def Info: images/day_cycle_2.png used on input line 205.
+Package pdftex.def Info: images/day_cycle_2.png used on input line 236.
 (pdftex.def)             Requested size: 216.81pt x 216.80685pt.
 
-<images/version_5.png, id=178, 361.35pt x 361.35pt>
+<images/version_5.png, id=208, 361.35pt x 361.35pt>
 File: images/version_5.png Graphic file (type png)
  <use images/version_5.png>
-Package pdftex.def Info: images/version_5.png used on input line 213.
+Package pdftex.def Info: images/version_5.png used on input line 244.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
 
 [12 <./images/day_cycle_2.png>]
-<images/designs_landscapes.png, id=185, 2071.74pt x 545.03625pt>
+<images/designs_landscapes.png, id=215, 2071.74pt x 545.03625pt>
 File: images/designs_landscapes.png Graphic file (type png)
 
 <use images/designs_landscapes.png>
-Package pdftex.def Info: images/designs_landscapes.png used on input line 219.
+Package pdftex.def Info: images/designs_landscapes.png used on input line 250.
 (pdftex.def)             Requested size: 216.81pt x 57.03505pt.
  [13 <./images/version_5.png> <./images/designs_landscapes.png>]
-<images/version_6_reveal.png, id=193, 361.35pt x 361.35pt>
+<images/version_6_reveal.png, id=223, 361.35pt x 361.35pt>
 File: images/version_6_reveal.png Graphic file (type png)
 
 <use images/version_6_reveal.png>
-Package pdftex.def Info: images/version_6_reveal.png used on input line 232.
+Package pdftex.def Info: images/version_6_reveal.png used on input line 263.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
  [14 <./images/version_6_reveal.png>]
-<images/version_6.png, id=200, 361.35pt x 361.35pt>
+<images/version_6.png, id=230, 361.35pt x 361.35pt>
 File: images/version_6.png Graphic file (type png)
  <use images/version_6.png>
-Package pdftex.def Info: images/version_6.png used on input line 243.
+Package pdftex.def Info: images/version_6.png used on input line 274.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
 
 [15 <./images/version_6.png>]
-<images/version_4.png, id=207, 361.35pt x 361.35pt>
+<images/version_4.png, id=237, 361.35pt x 361.35pt>
 File: images/version_4.png Graphic file (type png)
  <use images/version_4.png>
-Package pdftex.def Info: images/version_4.png used on input line 254.
+Package pdftex.def Info: images/version_4.png used on input line 285.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
 
-<images/version_4_settings_1.png, id=208, 361.35pt x 361.35pt>
+<images/version_4_settings_1.png, id=238, 361.35pt x 361.35pt>
 File: images/version_4_settings_1.png Graphic file (type png)
 
 <use images/version_4_settings_1.png>
-Package pdftex.def Info: images/version_4_settings_1.png used on input line 260
+Package pdftex.def Info: images/version_4_settings_1.png used on input line 291
 .
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
  [16 <./images/version_4.png>]
-<images/version_5_reveal.png, id=216, 361.35pt x 361.35pt>
+<images/version_5_reveal.png, id=246, 361.35pt x 361.35pt>
 File: images/version_5_reveal.png Graphic file (type png)
 
 <use images/version_5_reveal.png>
-Package pdftex.def Info: images/version_5_reveal.png used on input line 270.
+Package pdftex.def Info: images/version_5_reveal.png used on input line 301.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
  [17 <./images/version_4_settings_1.png>]
-<images/version_6_menu.png, id=223, 361.35pt x 361.35pt>
+<images/version_6_menu.png, id=253, 361.35pt x 361.35pt>
 File: images/version_6_menu.png Graphic file (type png)
 
 <use images/version_6_menu.png>
-Package pdftex.def Info: images/version_6_menu.png used on input line 279.
+Package pdftex.def Info: images/version_6_menu.png used on input line 310.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
  [18 <./images/version_5_reveal.png>]
-<images/version_6_settings.png, id=230, 361.35pt x 361.35pt>
+<images/version_6_settings.png, id=260, 361.35pt x 361.35pt>
 File: images/version_6_settings.png Graphic file (type png)
 
 <use images/version_6_settings.png>
-Package pdftex.def Info: images/version_6_settings.png used on input line 287.
+Package pdftex.def Info: images/version_6_settings.png used on input line 318.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
  [19 <./images/version_6_menu.png> <./images/version_6_settings.png>]
-<images/version_6_popup.png, id=239, 361.35pt x 361.35pt>
+<images/version_6_popup.png, id=269, 361.35pt x 361.35pt>
 File: images/version_6_popup.png Graphic file (type png)
 
 <use images/version_6_popup.png>
-Package pdftex.def Info: images/version_6_popup.png used on input line 301.
+Package pdftex.def Info: images/version_6_popup.png used on input line 332.
 (pdftex.def)             Requested size: 216.81pt x 216.81168pt.
  [20 <./images/version_6_popup.png>] [21]
 Chapter 4.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 312.
+0.6,0.6}' on input line 343.
+<images/flashcard_method.png, id=280, 645.91313pt x 563.85657pt>
+File: images/flashcard_method.png Graphic file (type png)
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 315.
+<use images/flashcard_method.png>
+Package pdftex.def Info: images/flashcard_method.png used on input line 351.
+(pdftex.def)             Requested size: 361.34999pt x 315.43918pt.
+ [22
 
-[22
+] [23 <./images/flashcard_method.png>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 359.
 
-]
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `pcr' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+
+(./source_code/userData.js
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 49.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 49.
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 49.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 49.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 50.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 50.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 51.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 51.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 53.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 55.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 55.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 55.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 55.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 57.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 57.
+)
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 359.
+ [24]
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+ (./source_code/session.js
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 48.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 48.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 48.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 48.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 49.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 49.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 49.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 50.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 50.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 51.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 52.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 53.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 53.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 53.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 53.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 53.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 53.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 53.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 54.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 55.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 55.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 55.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 56.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 61.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 61.
+)
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 364.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+
+(./source_code/userData.js
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 32.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 32.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 32.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 32.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 33.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 33.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 33.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 33.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 34.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 34.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 34.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 34.
+)
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 366.
+ [25] [26]
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+ (./source_code/gui.js
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 153.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 153.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 154.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 154.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 155.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 155.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 156.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 156.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 157.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 157.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 158.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 158.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 159.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 159.
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 161.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 161.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 161.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 161.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 161.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 161.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 162.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 162.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 162.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 162.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 162.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 162.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 162.
+)
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 384.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+
+(./source_code/main.js
+Package xcolor Info: Setting color `{}{0 0 1 rg 0 0 1 RG}{rgb}{0,0,1}' on input
+ line 11.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 11.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 12.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 12.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 13.
+Package xcolor Info: Setting color `{}{0 g 0 G}{gray}{0}' on input line 13.
+)
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+Package xcolor Info: Setting color `{}{0.75 g 0.75 G}{gray}{0.75}' on input lin
+e 386.
+ [27]
 Chapter 5.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 319.
-[23
+0.6,0.6}' on input line 388.
+[28
 
 ]
 Chapter 6.
 Package xcolor Info: Setting color `{}{0.6 0.6 0.6 rg 0.6 0.6 0.6 RG}{rgb}{0.6,
-0.6,0.6}' on input line 323.
+0.6,0.6}' on input line 392.
 No file thesis.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
-[24
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 403.
+[29
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 403.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 403.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 403.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0B3AC6008A6B70A89F876063EC2E58A6;1068.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
+(rerunfilecheck)             Checksum: 52B8EF4849695858014A294FBA6DD9CE;1521.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 403.
  ) 
 Here is how much of TeX's memory you used:
- 18375 strings out of 493089
- 315223 string characters out of 6134843
- 423691 words of memory out of 5000000
- 21351 multiletter control sequences out of 15000+600000
- 42517 words of font info for 149 fonts, out of 8000000 for 9000
+ 18612 strings out of 493089
+ 318385 string characters out of 6134843
+ 487978 words of memory out of 5000000
+ 21490 multiletter control sequences out of 15000+600000
+ 45705 words of font info for 162 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,7n,39p,10456b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,7n,40p,10456b,1106s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/urw/times/utmr8a.pfb>
-Output written on thesis.pdf (27 pages, 1132256 bytes).
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
+w/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb>
+Output written on thesis.pdf (32 pages, 1349715 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 17640 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 432 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 23325 words of extra memory for PDF output out of 24883 (max. 10000000)
 

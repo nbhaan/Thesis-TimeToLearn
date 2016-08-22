@@ -12,6 +12,12 @@
 \BOOKMARK [2][-]{subsection.3.2.7}{3.2.7 Profile}{section.3.2}% 12
 \BOOKMARK [2][-]{subsection.3.2.8}{3.2.8 Effects}{section.3.2}% 13
 \BOOKMARK [0][-]{chapter.4}{4 The Implementation}{}% 14
-\BOOKMARK [1][-]{subsection.4.0.1}{4.0.1 Flash card algorithm}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{5 The Evaluation}{}% 16
-\BOOKMARK [0][-]{chapter.6}{6 Conclusion and Future Work}{}% 17
+\BOOKMARK [1][-]{section.4.1}{4.1 Flash card algorithm}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{4.2 Getting new words from the server}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.3}{4.3 Usage Tracking}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Events}{section.4.3}% 18
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Clicktracking}{section.4.3}% 19
+\BOOKMARK [1][-]{section.4.4}{4.4 Changing the watchface and sending and saving}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.5}{4.5 Drawing the userinterface}{chapter.4}% 21
+\BOOKMARK [0][-]{chapter.5}{5 The Evaluation}{}% 22
+\BOOKMARK [0][-]{chapter.6}{6 Conclusion and Future Work}{}% 23

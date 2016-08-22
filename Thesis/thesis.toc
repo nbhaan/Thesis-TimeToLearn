@@ -13,6 +13,12 @@
 \contentsline {subsection}{\numberline {3.2.7}Profile}{20}{subsection.3.2.7}
 \contentsline {subsection}{\numberline {3.2.8}Effects}{20}{subsection.3.2.8}
 \contentsline {chapter}{\numberline {4}The Implementation}{22}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.1}Flash card algorithm}{22}{subsection.4.0.1}
-\contentsline {chapter}{\numberline {5}The Evaluation}{23}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{24}{chapter.6}
+\contentsline {section}{\numberline {4.1}Flash card algorithm}{22}{section.4.1}
+\contentsline {section}{\numberline {4.2}Getting new words from the server}{24}{section.4.2}
+\contentsline {section}{\numberline {4.3}Usage Tracking}{26}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Events}{26}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Clicktracking}{26}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Changing the watchface and sending and saving}{26}{section.4.4}
+\contentsline {section}{\numberline {4.5}Drawing the userinterface}{27}{section.4.5}
+\contentsline {chapter}{\numberline {5}The Evaluation}{28}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{29}{chapter.6}
