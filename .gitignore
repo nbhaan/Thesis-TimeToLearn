@@ -1,1 +1,4 @@
 Thesis/thesis.fls
+Thesis/thesis.pdf
+Thesis/*.aux
+Thesis/*.log
