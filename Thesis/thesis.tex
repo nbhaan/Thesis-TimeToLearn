@@ -3,35 +3,73 @@
 \frontmatter
 \input{preamble}
 
-\lstdefinelanguage{JavaScript}{
-  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-  keywordstyle=\color{blue}\bfseries,
-  ndkeywords={class, export, boolean, throw, implements, import, this},
-  ndkeywordstyle=\color{darkgray}\bfseries,
-  identifierstyle=\color{black},
-  sensitive=false,
-  comment=[l]{//},
-  morecomment=[s]{/*}{*/},
-  commentstyle=\color{purple}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
-  morestring=[b]',
-  morestring=[b]"
+%Define the listing package
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+ 
+%Customize a bit the look
+\lstset{ %
+backgroundcolor=\color{white}, % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+basicstyle=\footnotesize, % the size of the fonts that are used for the code
+breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+breaklines=true, % sets automatic line breaking
+captionpos=b, % sets the caption-position to bottom
+commentstyle=\color{mygreen}, % comment style
+deletekeywords={...}, % if you want to delete keywords from the given language
+escapeinside={\%*}{*)}, % if you want to add LaTeX within your code
+extendedchars=true, % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+frame=single, % adds a frame around the code
+keepspaces=true, % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+keywordstyle=\color{blue}, % keyword style
+% language=Octave, % the language of the code
+morekeywords={*,...}, % if you want to add more keywords to the set
+numbers=left, % where to put the line-numbers; possible values are (none, left, right)
+numbersep=5pt, % how far the line-numbers are from the code
+numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+rulecolor=\color{black}, % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+showspaces=false, % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+showstringspaces=false, % underline spaces within strings only
+showtabs=false, % show tabs within strings adding particular underscores
+stepnumber=1, % the step between two line-numbers. If it's 1, each line will be numbered
+stringstyle=\color{mymauve}, % string literal style
+tabsize=2, % sets default tabsize to 2 spaces
+title=\lstname % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
-
+%END of listing package%
+ 
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+ 
+%define Javascript language
+\lstdefinelanguage{JavaScript}{
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]"
+}
+ 
 \lstset{
-   language=JavaScript,
-   backgroundcolor=\color{lightgray},
-   extendedchars=true,
-   basicstyle=\footnotesize\ttfamily,
-   showstringspaces=false,
-   showspaces=false,
-   numbers=left,
-   numberstyle=\footnotesize,
-   numbersep=9pt,
-   tabsize=2,
-   breaklines=true,
-   showtabs=false,
-   captionpos=b
+language=JavaScript,
+extendedchars=true,
+basicstyle=\footnotesize\ttfamily,
+showstringspaces=false,
+showspaces=false,
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=9pt,
+tabsize=2,
+breaklines=true,
+showtabs=false,
+captionpos=b
 }
 
 % A B S T R A C T
@@ -76,6 +114,11 @@ The application for the smartwatch will be a watch face, this is the screen that
 The app for the smart watch is part of Zeeguu, which is a research project designed to speed \& fun up vocabulary learning in a new language. Its based on three fundamental principles: only read the stuff you like, have words everywhere with you and practice with personalized exercises. This basically means the users read articles they like, tap on the words they don't know and practice them later. The words will be saved in their accounts and can be accessed at any time. We build an app for the smartwatch, so users have an complementary tool for learning their words in the Zeeguu account and thus increase the memorization process of learning a second new language. In this thesis we will research what is the best way to build such an app, therefore a user study was designed to answer the following research question: 
 
 How do users use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language?
+\begin{itemize}
+\item How long takes a session on a smartwatch (i.e., general usage)? And how long does a learning session take on a smartwatch (i.e., only using time to learn app)?
+\item Where is the smartwatch primary for used when using the time to learn app (i.e., for looking at the time or learning words)?
+\item How long do they use the app?
+\end{itemize}
 
 \paragraph{Structure of this Thesis}
 \begin{itemize}
@@ -385,13 +428,215 @@ The userinterface is drawn every second on the screen, this happens in gui.js in
 
 \lstinputlisting[language=JavaScript, firstline=11, lastline=14, caption=main class]{source_code/main.js}
 
-\chapter {The Evaluation}
-describe how you evaluated to show that your approach was successful. You may need a methods section, a results section and a conclusion section.
+\chapter{Usage study}
+After the implementation the app was ready to enter the test phase. The results of the test period should give answers to the following two questions: is the app used during short intervals (this would indicate that the users used the app for micro-learning) and is the app designed properly (e.g., are all the option found during the test period).
 
+The test period consisted of four parts:
+\begin{enumerate}
+\item All participant started with making an account on Zeeguu in which they saved several words they wanted to learn.
+\item The participant received the smartwatch with the app as a watchface and basic instructions about how to use the app.
+\item The participant used the app for four days in a row.
+\item After four days the participants handed in the smartwatch and they filled in a questionnaire about the test period and how they experienced the app.
+\end{enumerate}
+
+During the test period the smartwatch kept track of the usage by using telemetry. All the buttons and touch areas for the existing options had different events attached to it so when a button or area was pressed, an event would be made and sent to the server. The events and their definitions are shown in table 5.1. 
+
+\begin{table}[H]
+\centering
+\caption{Events}
+\begin{tabular}{| l | p{10cm} |} 
+\hline
+\textbf{Type} & \textbf{Definition} \\ \hline 
+screenOn & When the screen lightens up. \\ \hline
+reveal & When the user wants to see the translation and presses the `reveal' button or area. \\ \hline
+right & When the user knows the translation and presses the `right' button or area. \\ \hline
+wrong & When the user does not know the translation and presses the `wrong' or area. \\ \hline
+wrongTranslation & When the user thinks the translation is incorrect and presses the `wrong translation' button in them menu. \\ \hline
+learnedIt & When the user thinks the word is learned and presses the `I learned it' button in the menu. \\ \hline
+showContext & When the user wants to see the context of the word and presses the `show context' button in the menu. \\ \hline
+reverse & When the user wants to learn the other way around and presses the `reverse' button in settings. \\ \hline
+screenOff & When the screen turns off. \\ \hline
+\end{tabular}
+\end{table}
+
+Besides the type of buttons or areas the position of the tap was also sent to the server. With this extra data a heat map could be made that would reveal the most used positions for the different options. However an object was sent to the server while the server expected a string due to miscommunication. 
+
+\section{Usage results}
+After all the participants finished their test period all the events per user were collected from the server and analyzed. For answering the research questions and for giving a clear overview about how the app was used during the test period, the following diagrams were made per user:
+\begin{itemize}
+\item \textbf{A circle diagram about the overall usage of the smartwatch in seconds (see fig. 5.1 and 5.2).} The diagram about the overall usage was created by collecting all the time intervals between a `screenOn' and a `screenOff' event. This data was then sorted into five different intervals:
+\begin{itemize}
+\item time $\leq$ 2
+\item 2 $<$ time $\leq$ 5
+\item 5 $<$ time $\leq$ 15
+\item 15 $<$ time $\leq$ 60
+\item time $>$ 60
+\end{itemize}
+The first interval was chosen, because checking the time or other arm movements would not take more than two seconds. When the duration is longer than two seconds the user probably does more than only checking the time. 
+The user could check the time, but because a word is shown too, the user might reveal that word by pressing `reveal' and then the user might also give feedback by pressing `right' or `wrong'. These actions for one word would take not more than five seconds. Summarized, these could be learning sessions that were not intended to be a learning session. Then comes the intended learning sessions but for a really short time and the sessions that took a bit longer. As mentioned before the learning app will probably only be used for short sessions and thus sessions longer that one minute will probably hardly occur.
+\item \textbf{A circle diagram about the duration of the learning sessions on the app in seconds (see fig. 5.3 and 5.4).} The duration of the learning sessions were found by using an algorithm (see listing 6). This algorithm first sorted out all the `screenOn' events that were immediately followed by a `ScreenOff' event. A user that used the app for learning and not for checking the time would use at least one option the app provides for learning new words before the screen would turn off. Therefore the combinations of a `screenOn' and `screenOff' events were seen as not learning sessions and these pairs were erased from the list of events. 
+In the remaining events the time was measured between a `screenOn' and a `screenOff' event and afterwards the data was sorted into four intervals: 
+\begin{itemize}
+\item time $\leq$ 5
+\item 5 $<$ time $\leq$ 15
+\item15 $<$ time $\leq$ 60
+\item time $>$ 60
+\end{itemize}
+The app will presumably be used for micro learning. Therefore the number of sessions will probably decrease exponentially when the duration increases. This is the reason why the length of the intervals increases faster than a linear growth.
+\item \textbf{A bar chart about the number of times a user pressed `right' and `wrong' (see fig. 5.5 and 5.6).} 
+For each day the app was used the number of `right' and `wrong' events were counted and plotted in a bar chart. 
+\item \textbf{A table with the average reaction time between a `reveal' and a `right' or `wrong' and the time the app was used.} The reaction time is the time it took the user to press `right' or `wrong' after `reveal' was pressed. The average was calculated for each single day and for the whole period of four days. Besides the average time the total time is mentioned too. This indicates for how long the user used the app during the four days of testing.
+\end{itemize}
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[Testperson 1]{{\includegraphics[width=2.6in]{usage_results/1_usage.png} }}%
+    \qquad
+    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_usage.png} }}%
+    \caption{General usage testpersons 1 and 2}%
+    \label{fig:example}%
+\end{figure}
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_usage.png} }}%
+    \qquad
+    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_usage.png} }}%
+    \caption{General usage testpersons 3 and 4}%
+    \label{fig:example}%
+\end{figure}
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[Testperson 1]{{\includegraphics[width=2.6in]{usage_results/1_usage_learning.png} }}%
+    \qquad
+    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_usage_learning.png} }}%
+    \caption{Learning sessions time testpersons 1 and 2}%
+    \label{fig:example}%
+\end{figure}
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_usage_learning.png} }}%
+    \qquad
+    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_usage_learning.png} }}%
+    \caption{Learning sessions time testpersons 3 and 4}%
+    \label{fig:example}%
+\end{figure}
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[Testperson 1]{{\includegraphics[width=2.6in]{usage_results/1_right_wrong.png} }}%
+    \qquad
+    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_right_wrong.png} }}%
+    \caption{Number of right and wrong clicks for testpersons 1 and 2}%
+    \label{fig:example}%
+\end{figure}
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_right_wrong.png} }}%
+    \qquad
+    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_right_wrong.png} }}%
+    \caption{Number of right and wrong clicks for testpersons 3 and 4}%
+    \label{fig:example}%
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Testperson 1 average reaction time and total usage time}
+\begin{tabular}{| l | l | l |} 
+\hline
+\textbf{Date} & \textbf{Average} & \textbf{Time} \\ \hline 
+29-07-2016 & 00:00:02 & 00:08:39 \\ \hline
+30-07-2016 & 00:00:13 & 00:13:10 \\ \hline
+31-07-2016 & 00:00:01 & 00:45:43 \\ \hline
+01-08-2016 & 00:00:36 & 00:37:07 \\ \hline
+\hline
+\textbf{Average} & 00:00:07 & 00:26:10 \\ \hline
+\textbf{Total} & & 01:44:39 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Testperson 2 average reaction time and total usage time}
+\begin{tabular}{| l | l | l |} 
+\hline
+\textbf{Date} & \textbf{Average} & \textbf{Time} \\ \hline 
+15-08-2016 & 00:00:08 & 00:19:45 \\ \hline
+16-08-2016 & 00:00:02 & 02:15:03 \\ \hline
+17-08-2016 & 00:00:02 & 00:36:00 \\ \hline
+18-08-2016 & 00:00:02 & 00:01:00 \\ \hline
+\hline
+\textbf{Average} & 00:00:05 & 00:47:57 \\ \hline
+\textbf{Total} & & 02:35:48 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Testperson 3 average reaction time and total usage time}
+\begin{tabular}{| l | l | l |} 
+\hline
+\textbf{Date} & \textbf{Average} & \textbf{Time} \\ \hline 
+21-08-2016 & 00:04:20 & 00:18:21 \\ \hline
+22-08-2016 & 00:00:04 & 00:02:23 \\ \hline
+\hline
+\textbf{Average} & 00:02:12 & 00:10:22 \\ \hline
+\textbf{Total} & & 00:20:44 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Testperson 4 average reaction time and total usage time}
+\begin{tabular}{| l | l | l |} 
+\hline
+\textbf{Date} & \textbf{Average} & \textbf{Time} \\ \hline 
+16-08-2016 & 00:03:54 & 00:37:23 \\ \hline
+17-08-2016 & 00:00:03 & 04:05:46 \\ \hline
+18-08-2016 & 00:12:34 & 00:28:02 \\ \hline
+19-08-2016 & 00:02:30 & 00:13:41 \\ \hline
+\hline
+\textbf{Average} & 00:04:45 & 01:21:13 \\ \hline
+\textbf{Total} & & 05:24:52 \\ \hline
+\end{tabular}
+\end{table}
+
+\lstinputlisting[language=JavaScript, caption=script to get different session lengths]{source_code/script_research.js}
+
+\section{Evaluating usage results}
+\subsection{General usage}
+The graph about the overall usage of the smartwatch tells something about the behavior of the users related to a smartwatch. From the graphs it can be seen that most of the time (53\% till 66\%) the smartwatch is used less than three seconds. This can be related to checking the time what would mean that the ratio between checking the time and learning words is roughly 50 to 50. This is in a well agreement with the design where 50\% of the screen is used for the time and the other 50\% for learning words.\\
+The graphs also shows that a session on the smartwatch rarely lasts for more than 60 seconds. Apparently the smartwatch is not suitable or convenient enough to be constantly used for a long period. If the smartwatch is used for a session that lasts a couple of minutes then this will not be longer than fifteen seconds in most cases.
+
+\subsection{Learning sessions}
+The graph about the learning sessions shows a different distribution when it comes to the duration of the sessions. When the smartwatch is used to learn words, the session last for 5 till 60 seconds most of the time where the interval of 15 till 60 seconds is often the largest. Sessions that are used for learning and that last for more than 60 seconds are still a small percentage of all the sessions. In the graph from testperson 3 the distribution is a little bit skewed, this is probably due to a lack of results. This user didn't use the watch as often as the other users.
+
+\subsection{Right and wrong}
+If we look at all the graphs, it is easily seen that right is more often pressed than wrong. This is something you probably wouldn't expect, since you are learning new words which you don't know. In the graph of testperson 1 this is shown extreme, this user had a german background. This might be a possible explanation for the absurd high number of right clicks. In the graph of testperson 2, a decrease in usage is seen. At 17 augustus the watch it's battery was depleted, so therefore usage was less. At 18 augustus usage was less since it was not an full day of usage, the user handed in the watch at noon. In the graph of testperson 3 it can be seen that the watch is unfortunately only used for 2 days, there is however a clear learning curve which can only be observed in testperson 1 and 4. 
+
+\subsection{Reaction time reveal to right/wrong}
+\begin{itemize}
+\item Long reaction time; they might want to learn that specific word and be reminded of that again when looking at the time.
+\end{itemize}
 
 \chapter {Conclusion and Future Work}
-summarize your thesis again as in the introduction. Describe how your evaluation revealed that your system is successful. Describe future work in this area.
+How do users use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language?\\
+The users that use a smartwatch application to learn new words mostly use micro learning in order to learn new words. The sessions that last for 5 till 60 seconds occur most of the time. 
 
+\begin{itemize}
+\item How long takes a session on a smartwatch (i.e., general usage)? And how long does a learning session take on a smartwatch (i.e., only using time to learn app)?
+\item Where is the smartwatch primary for used when using the time to learn app (i.e., for looking at the time or learning words)?
+\item How long do they use the app?
+\end{itemize}
+
+\begin{appendices}
+\chapter{Test Cases}
+\includepdf[pages=-]{test_cases.pdf}
+\chapter{Another one}
+\end{appendices}
 
 
 %END Doc
