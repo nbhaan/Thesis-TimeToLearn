@@ -2,3 +2,4 @@ Thesis/thesis.fls
 Thesis/thesis.pdf
 Thesis/*.aux
 Thesis/*.log
+Thesis/thesis.fdb_latexmk
