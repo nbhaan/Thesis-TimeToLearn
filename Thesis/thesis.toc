@@ -1,27 +1,35 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {paragraph}{Structure of this Thesis}{2}{section*.3}
-\contentsline {chapter}{\numberline {2}Related Work}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Zeeguu}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Comparable researches}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}The best way to study words}{5}{section.2.3}
-\contentsline {chapter}{\numberline {3}The Design}{8}{chapter.3}
-\contentsline {section}{\numberline {3.1}Login screen}{8}{section.3.1}
-\contentsline {section}{\numberline {3.2}Main screen}{10}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Time}{11}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Words}{12}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Background}{13}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Buttons}{15}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Information components}{17}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Option lists}{17}{subsection.3.2.6}
-\contentsline {subsection}{\numberline {3.2.7}Profile}{22}{subsection.3.2.7}
-\contentsline {subsection}{\numberline {3.2.8}Effects}{22}{subsection.3.2.8}
-\contentsline {chapter}{\numberline {4}The Implementation}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Flash card algorithm}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}Getting new words from the server}{26}{section.4.2}
-\contentsline {section}{\numberline {4.3}Usage Tracking}{28}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Events}{28}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Clicktracking}{28}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Changing the watchface and sending and saving}{28}{section.4.4}
-\contentsline {section}{\numberline {4.5}Drawing the userinterface}{29}{section.4.5}
-\contentsline {chapter}{\numberline {5}The Evaluation}{30}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{31}{chapter.6}
+\contentsline {paragraph}{Structure of this Thesis}{2}{section*.4}
+\contentsline {chapter}{\numberline {2}Related Work}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Zeeguu}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Comparable researches}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}The best way to study words}{6}{section.2.3}
+\contentsline {chapter}{\numberline {3}The Design}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Login screen}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Main screen}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Time}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Words}{13}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Background}{14}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Buttons}{16}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Information components}{18}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Option lists}{18}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Profile}{23}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Effects}{23}{subsection.3.2.8}
+\contentsline {chapter}{\numberline {4}The Implementation}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Flash card algorithm}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Getting new words from the server}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}Usage Tracking}{29}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Events}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Clicktracking}{29}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Changing the watchface and sending and saving}{29}{section.4.4}
+\contentsline {section}{\numberline {4.5}Drawing the userinterface}{30}{section.4.5}
+\contentsline {chapter}{\numberline {5}Usage study}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Usage results}{32}{section.5.1}
+\contentsline {section}{\numberline {5.2}Evaluating usage results}{39}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}General usage}{39}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Learning sessions}{40}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Right and wrong}{40}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Reaction time reveal to right/wrong}{40}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{41}{chapter.6}
+\contentsline {chapter}{\numberline {A}Test Cases}{42}{Appendix.a.A}
+\contentsline {chapter}{\numberline {B}Another one}{49}{Appendix.a.B}
