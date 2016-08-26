@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {paragraph}{Structure of this Thesis}{2}{section*.4}
+\contentsline {paragraph}{Structure of this Thesis}{3}{section*.4}
 \contentsline {chapter}{\numberline {2}Related Work}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Zeeguu}{4}{section.2.1}
+\contentsline {section}{\numberline {2.1}Zeeguu}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Comparable researches}{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}The best way to study words}{6}{section.2.3}
 \contentsline {chapter}{\numberline {3}The Design}{9}{chapter.3}
