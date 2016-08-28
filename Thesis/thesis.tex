@@ -391,8 +391,10 @@ The app has access to two different option lists:
 \end{itemize}
 \ml{please learn to structure a bit the text. when a paragraph is too long, and unstructured, it gets really hard to follow.}
 
-This was different in one of the first designs.
-When the app was able to show the words with the translation, the user should have an option to tell the app that a word had a wrong translation or that a word was learned and thus in both cases it should not reappear again. Due to the small screen it was not convenient to add more buttons for each of these options to the watchface and therefore \chg{the idea came}{we decided} \ml{the idea came sounds very unenglish!} to make a menu with these extra options. Besides these options the user should be able to reverse the order in which the wordpairs were asked (when the words were displayed from German to English, the words would be displayed from English to German after the button was pressed), to insert the number of words that the user wanted to learn and to log out of the app. All these options were reachable for the user by a 'menu' button in the bottom. The 'next' button was replaced by two buttons, the 'menu' and the 'next' button (see figure version 4.png). 
+This was different in one of the first designs. \ml{more structure needed. i don't know if what follows is "one of the first designs"...}
+When the app was able to show the words with the translation, the user should have an option to tell the app that a word had a wrong translation or that a word was learned and thus in both cases it should not reappear again. Due to the small screen it was not convenient to add more buttons for each of these options to the watchface and therefore \chg{the idea came}{we decided} \ml{the idea came sounds very unenglish!} to make a menu with these extra options. 
+
+\ml{new topic, new paragraph}Besides these options the user should be able to reverse the order in which the wordpairs were asked (when the words were displayed from German to English, the words would be displayed from English to German after the button was pressed), to insert the number of words that the user wanted to learn and to log out of the app. All these options were reachable for the user by a 'menu' button in the bottom. The 'next' button was replaced by two buttons, the 'menu' and the 'next' button (see figure version 4.png). 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -407,7 +409,7 @@ When the app was able to show the words with the translation, the user should ha
 \end{figure}
 
 When the 'menu' button was clicked a menu would appear with the 'trash' button and the 'I learned it' button.  In the bottom the user could close the app or open the settings (see figure version 4 menu 1.png). By pressing the 'settings' button the user would open the settings page with the buttons for reverse, number of words and log out (see figure version 4 settings 1.png).
-After some discussions the overall opinion was that the 'menu' button should not be this large on the watchface since the menu would give complementary options which were not part of the main function of the app. Therefore the button should not cover half of the bottom and a solution was to split the menu and the settings to two different pages that the user could reach independently. The user could reach the menu by tapping in the middle of the translation (see figure version 5 reveal.png) and the settings could be reach by double tapping on the time since this space was hardly used. The double tap was necessary because tapping the time would change the background.
+After some discussions the overall opinion was that the 'menu' button should not be this large on the watchface since the menu would give complementary options which were not part of the main function of the app. Therefore the button should not cover half of the bottom and a solution was to split the menu and the settings to two different pages that the user could reach independently. The user could reach the menu by tapping in the middle of the translation (see figure version 5 reveal.png) and the settings could be reach by double tapping on the time since this space was hardly used. The double tap was necessary because tapping the time \chg{would}{was already assigned to} changing the background. \ml{It just occurs to me that as a user, I want to add one more observation to my feedback: you should reverse the two actions! Double click for bg change, because it's less important than seeing the options!}
 The menu and the settings both had a black transparent background for a long time. This was inspired from the transparent and blurred swipe down menu from a well-known OS. Unfortunately the blur effect was not a success, but the transparency remained.
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
@@ -417,7 +419,7 @@ The menu and the settings both had a black transparent background for a long tim
 \end{figure}
 
 During testing the text in the buttons were hard to read and the buttons of the main page were visible through the buttons on the bottom. Therefore it was decided that the menu and the settings page should have a background. For the background the same image was used as the background of the wordpairs to preserver the unity of the design.
-A lot of translations depends on the context of the word. Hence the user should be able to see the context of the word and this option was added to the menu page (see figure version 6 menu.png). 
+\chg{A lot of}{Many} translations depend\del{s} on the context of \chg{the}{a} word. Hence the user should be able to see the context of the word and this option was added to the menu page (see figure version 6 menu.png). \ml{Did I mention this before: as a user I request th Show Context button to be visible at the same time as the Show Translation button!}
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -425,7 +427,7 @@ A lot of translations depends on the context of the word. Hence the user should 
    \caption{version 6 menu}
 \end{figure}
 
-Later on  the idea was abandoned of letting the user choose how many words the user wants to learn and instead came the 'profile' button as the latest addition to the settings page (see figure version 6 settings.png).
+Later \del{on}  the idea was abandoned of letting the user choose how many words the user wants to learn \del{and}. \del{Instead came} the 'profile' button \chg{as}{was} the latest addition to the settings page (see figure version 6 settings.png).
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -435,7 +437,7 @@ Later on  the idea was abandoned of letting the user choose how many words the u
 
 \subsection{Profile}
 
-One of the latest addition to the app was the implementation of a profile page where the user could see the four medals that could be earned by using the app (see figure version 6 profile.png). The four categories are: words learned, total time, longest session and longest streak. 
+\del{One of the latest addition to the app was the}\ins{The app} implementat\chg{ion of}{s}  a profile page where the user \chg{could}{can} see the four medals that \chg{could}{can} be earned by using the app (\ugh{see figure version 6 profile.png}). The four categories are: words learned, total time, longest session and longest streak. \ml{new paragraph required}
 This page was inspired from a presentation where gamification was mentioned. The idea was that when users could earn medals, users would be more willing to use the app. 
 When the user presses the 'I learned it' button, the number of 'words learned' will increase and after 10 new learned words, a popup will appear with a motivating message to continue. 
 The total time the user used the app is also registered. When this time is the same as one of the pre-determined minutes a popup appears (see figure version 6 popup.png).
