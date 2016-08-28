@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Background}{15}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Buttons}{17}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Information components}{19}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Option lists}{19}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.6}Option lists}{20}{subsection.3.2.6}
 \contentsline {subsection}{\numberline {3.2.7}Profile}{24}{subsection.3.2.7}
 \contentsline {subsection}{\numberline {3.2.8}Effects}{24}{subsection.3.2.8}
 \contentsline {chapter}{\numberline {4}The Implementation}{26}{chapter.4}
