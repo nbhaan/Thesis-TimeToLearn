@@ -243,7 +243,7 @@ Making an app for a smartwatch involves quite some thinking about the design. Co
 
 \section{Login screen}
 
-Before the user can use the app a code is needed that is used for receiving the user's words from the server. To get this code the app starts with a login screen. The login screen first consisted of ten buttons with the ten numbers, a clear button and a okay button. On the top of the screen there are four small rectangles for displaying the pressed numbers (see figure login\_screen.png). 
+Before the user can use the app a code is needed that is used for \chg{receiving the user's words from the server}{identifying the user with the server}\ml{because you do more with the code than retrieving the words}. To get this code the app starts with a login screen. The login screen first consisted of ten buttons with the ten numbers, a clear button and a okay button. On the top of the screen there are four small rectangles for displaying the pressed numbers (see figure login\_screen.png). 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -269,13 +269,15 @@ The advantage is that no buttons for the numbers were needed so the numbers coul
 
 To increase the safety of a user's account it was decided to use a code of eight digits and therefore a page indicator was placed below the decrease buttons to notify the user that the user should insert 4 digits two times. On the bottom of the screen a next button is placed to go to the next page for inserting the second 4 digits of the code or to confirm that the 8 digits were inserted.
 
+\ok
+
 \section{Main screen}
 
 When a valid code is inserted, the main screen becomes visible. During the project, the main screen had had different layouts. All the decisions are sorted in different categories: time, words, background, buttons, information components, option lists, profile and effects.
 
 \subsection{Time}
 
-An important part of the app is displaying the time, since the app will be the first thing the user will see when the watch screen turns on. This importance was not clear at the beginning of the project, therefore the first design contained the time in a small black font. The size of the font was based on the hill that was displayed on the background. With the chosen font the time fitted in the hill in the middle to increase the readability (see figure version 1.png). 
+An important part of the app is displaying the time, since the app will be the first thing the user will see when the watch screen turns on. This importance was not clear at the beginning of the project, therefore the first design contained the time in a small black font. The size of the font was based on the hill that was displayed on the background. With the chosen font the time fitted in the hill in the middle to increase the readability (see figure version 1.png). \ok
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -283,7 +285,7 @@ An important part of the app is displaying the time, since the app will be the f
    \caption{version 1}
 \end{figure}
 
-After the first discussion it was decided that the time should be displayed on 50\% of the screen since the app would be use for checking the time and for learning words (see figure version 2.png). The time however was not readable enough and this was solved by changing the font color to white and by changing the background (see figure version 3.png). This new design worked really well and therefore this became the final design for the time. 
+After the first discussion it was decided that the time should be displayed on 50\% of the screen since the app would be use for checking the time and for learning words (see figure version 2.png)\ml{References to figures are done like this Figure \ref{fig:version2}. Note that I've added the {\bf label} command to the figure environment. Please do all the references this way! Thanks!}. The time however was not readable enough and this was solved by changing the font color to white and by changing the background (see figure version 3.png). This new design worked \del{really} well and therefore this became the final design for the time. 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -301,7 +303,8 @@ When only 50\% of the screen was available for the wordpairs after the first dis
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=3in]{images/version_2.png} 
-   \caption{version 2}
+   \caption{\chg{version 2}{The second version of the time display uses 50\% of the screen for showing the time.} \ml{Always have the caption of a figure together with the figure tell a story! }}
+   \label{fig:version2}
 \end{figure}
 
 \subsection{Background}
