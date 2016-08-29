@@ -438,8 +438,10 @@ Later \del{on}  the idea was abandoned of letting the user choose how many words
 \subsection{Profile}
 
 \del{One of the latest addition to the app was the}\ins{The app} implementat\chg{ion of}{s}  a profile page where the user \chg{could}{can} see the four medals that \chg{could}{can} be earned by using the app (\ugh{see figure version 6 profile.png}). The four categories are: words learned, total time, longest session and longest streak. \ml{new paragraph required}
-This page was inspired from a presentation where gamification was mentioned. The idea was that when users could earn medals, users would be more willing to use the app. 
+\del{This page was inspired from a presentation where gamification was mentioned.}\ml{you're not giving me any hard facts here. just that you once watched a presentation. not interesting. sorry. } The idea was that when users \chg{could}{can} earn medals, \chg{users}{they} would be more willing to use the app. 
 When the user presses the 'I learned it' button, the number of 'words learned' will increase and after 10 new learned words, a popup will appear with a motivating message to continue. 
+
+\ml{new line!!}
 The total time the user used the app is also registered. When this time is the same as one of the pre-determined minutes a popup appears (see figure version 6 popup.png).
 With longest session the time is measured that the user uses the app  continuously and with the longest streak the number of days is registered in which the app is used daily. One day of not using the app resets the longest streak.
 
@@ -452,9 +454,16 @@ With longest session the time is measured that the user uses the app  continuous
 \subsection{Effects}
 
 To improve the experience of the app some effects were added: to give feedback after a button was pressed, to give information (why an option was not available or why a medal was earned) or to beautify a popup.
+
+\ml{newline}
 Because of the small screen the user could think the wrong button was pressed and therefore the user should get feedback about which button was pressed. The most important buttons in the app are the buttons used for indicating whether a word was known or not. When one of these buttons is pressed a green or red image appears depending on if right or wrong is pressed. This image stays on the display for a few milliseconds before it fades out.
+
+\ml{newline!}
 In the app several popups are added to give the user feedback when an option is not available. The design of the popup is based on the first design of the option lists. The popup has a black transparent background with white text on it. The popup could appear when: there is no connection with the internet, when a wrong code is inserted, when the user has too few words, when there are too few words left on the watch or when a user earned a new medal.
-The popup that appears when a new medal is earned is beatified by some fireworks.
+The popup that appears when a new medal is earned is beatified by \chg{some}{a particle animation representing } fireworks.
+
+
+
 
 \chapter {The Implementation}
 In this part the implementation choices are described. In this project writing the code was one of the biggest challenges. The code has been changed a lot during the process. One of the reasons was to increase readability, but also because of design changes and new features which had to be implemented. The code is written in JavaScript in combination with HTML 5, this means it is web-based application. The code is build with a framework called requirejs, this makes it possible to have multiple files (modules) in javascript, this to increase readability and structure. In the following sections, we will zoom in some interesting and important decisions and choices related to the implementation.
