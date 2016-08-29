@@ -440,6 +440,10 @@ Because of the small screen the user could think the wrong button was pressed an
 In the app several popups are added to give the user feedback when an option is not available. The design of the popup is based on the first design of the option lists. The popup has a black transparent background with white text on it. The popup could appear when: there is no connection with the internet, when a wrong code is inserted, when the user has too few words, when there are too few words left on the watch or when a user earned a new medal.
 The popup that appears when a new medal is earned is beatified by some fireworks.
 
+
+
+
+
 \chapter {The Implementation}
 In this part the implementation choices are described. In this project writing the code was one of the biggest challenges. The code has been changed a lot during the process. One of the reasons was to increase readability, but also because of design changes and new features which had to be implemented. The code is written in JavaScript in combination with HTML 5, this means it is a web-based application. The code is build with a framework called require.js, this makes it possible to have multiple files (modules) in javascript, this to increase readability and structure. In the following sections, we will zoom in some interesting and important decisions and choices related to the implementation.
 
@@ -459,30 +463,80 @@ In listing \ref{flashcard} the code involved is shown, every time the users taps
 
 \lstinputlisting[label=flashcard, language=JavaScript, firstline=49, lastline=59, caption=flashcard implemenation in userData.js]{source_code/userData.js}
 
+\newcommand{\module}[1]{{\bf \texttt{#1}}}
+
 \section{Getting new words from the server}
-In the module session.js the words are fetched from the server. This session is created in the main.js. The code which login gives (either entered by the user or loaded from the userData) will be used in session.js to get the words for the user. The session can get new words with this unique code. The code is generated once a new account is created and can be found in the account when logged in the browser. The code contains eight digits. When a session is created, the first thing to look at are there currently any words on the watch. If there are any words on the watch we can set the status to `success', in case there are no words on the watch yet: the watch has to communicate with the server and get the words with the endpoint `bookmarks\_to\_study'. This endpoint will return the words which are currently the most important to study for that particular user. In the implementation we made the choice to get fifty words in case the user has no internet connection for longer periods of time. The session can return different states: if the words are successfully fetched from the server the state will be `success' as described earlier, if the code is invalid the state will be `wrong session number', in case of no internet connection the state will be `no connection'. There is one exception, but this will not happen very often this is when there are too few words in the account of the user. One of these states will be returned to the main module and the main module will give this state through to the login module, in the login the user can then be informed by a popup that will inform the user about a specific situation. If the state was `success' the user will get in the main screen where the words are presented. The login module is not the only place where the watch tries to get new words, it also happens when the user is already logged in and a screen on event occurred (i.e., user makes arm twist to look at time). The new words will then be added to the current wordlist on a screen off event (i.e., user makes again a arm twist to indicate he is not looking anymore), adding words at this point is to prevent any conflicts: adding words to a list which the user is currently doing stuff with. New words will only be added if the list is smaller than fifty words. The list can become smaller if the user has marked a couple of words as `learned it' or as `wrong translation'. When writing the code the initial preference was to get words and add them at the same time on a screen off event, since the user won't be using the application at that moment and it would really feel as everything happens in the background. Unfortunately this didn't work the watch gets in a sort of sleep modus and won't be able to communicate with server anymore. The GET request wasn't executed so it was impossible to do this on a screen off event. When the watch tries to get new words from the server, this happens asynchronously to prevent the watch from getting slow. Implementing this asynchronously was huge in the end, because the user is able to get a lot of words in his account (e.g., some user had already 10000 words) the endpoint will be really slow, since the list of words is not already sorted on importance on the server server side. In the first implementation when it was implemented synchronously, therefore the user could have some delay before being able to interact with the watch. It was first implemented in this way to prevent conflicts, user cannot do something with a list while words are being added. This is now solved by getting the new wordPairs on a screen on (see listing \ref{new wordPairs}) and add them later on a screen off (see listing \ref{add new words}).
+\chg{In t}{T}he module \module{session.js} 
+	\ml{please format everywhere the module names as I did here. sure, if you talked about modules before, make sure to move the command definition earlier} 
+\chg{the}{declares function XYZNAME which} \del{words are} fetches \ins{words} from the server. \ugh{This session}\ml{who's this session? } is created in the main.js. 
+
+The code \chg{which login gives}{provided by login}\ml{what's loing here? a function? a module? not clear!} (either entered by the user or loaded from the userData) will be used in session.js to get the words for the user. 
+\ugh{The session can get new words with this unique code. }\ml{The code is required to be submitted with every request to the server. For everything, not only for getting new words!}
+This code \del{ is generated once a new account is created and}\ml{you're making assumptions about the server. this is not eactly true so don't talk about it.} can be found in the account when logged in the browser. The code contains eight digits. When a session is created, the first thing to look at \ins{is whether} there are \del{currently} any words on the watch. \ml{too big and boring a blog of text here. Structure a bit: } There are two situations: 
+
+\begin{itemize}
+	\item If there are \del{any words on the watch} \ugh{we can set the status}\ml{which status?} to `success', 
+	\item in case there are no words on the watch yet: the watch has to communicate with the server and get the words with the endpoint `bookmarks\_to\_study'. This endpoint will return the words which are currently the most important to study for that particular user. In the implementation we made the choice to get fifty words in case the user has no internet connection for longer periods of time. The session can return different states: if the words are successfully fetched from the server the state will be `success' as described earlier, if the code is invalid the state will be `wrong session number', in case of no internet connection the state will be `no connection'. There is one exception, but this will not happen very often this is when there are too few words in the account of the user. One of these states will be returned to the main module and the main module will give this state through to the login module, in the login the user can then be informed by a popup that will inform the user about a specific situation. 
+\end{itemize}
+
+If \ugh{the state}\ml{state of what?} was `success' the user will get in the main screen where the words are presented. 
+
+\ml{this is clearly a new idea. thus new paragraph!!}
+The login module is not the only place where the watch tries to get new words\del{,} \chg{it}{This } also happens when the user is already logged in and a screen on event occurred (i.e., user makes arm twist to look at time). The new words will then be added to the current wordlist on a screen off event (i.e., user makes again a arm twist to indicate he is not looking anymore), adding words at this point is to prevent any conflicts: adding words to a list which the user is currently doing stuff with. New words will only be added if the list is smaller than fifty words. The list can become smaller if the user has marked a couple of words as `learned it' or as `wrong translation'\ml{THis sentence should start this paragraph. The story would be beter if it flows like this: 
+- it is not sufficient to load words only on login, the user might learn words, and we need to fetch new ones
+- after evaluating several scenarios, it was decided that the best moment for this would be a ``screen on'' event. 
+- adding the new words is on ``screen off''}. 
+
+\ml{new idea. background story. new paragraph.}
+When writing the code the initial preference was to get words and add them at the same time on a screen off event, since the user won't be using the application at that moment and it would really feel as everything happens in the background. Unfortunately this didn't work the watch gets in a sort of sleep \chg{modus}{mode} and won't be able to communicate with server anymore. The GET request wasn't executed so it was impossible to do this on a screen off event. 
+
+\paragraph {Sync vs. Async Calls}
+\ml{For a bit of more structure it's nicer to add a new paragraph here!}
+
+When the watch tries to get new words from the server, this happens asynchronously to prevent the watch from getting slow. 
+
+Implementing this asynchronously  \chg{was huge}{resulted in considerable speedup} \del{in the end}, because \ins{when }the user is able to \chg{get}{accumulate} a \chg{lot}{large number} of words in his account (e.g., some user had already 10000 words) the endpoint will be \chg{really}{very} slow\chg{,}{One of the main reasons for slowness is that } \del{since} the list of words is not already sorted \ins{based }on importance on the server server side. 
+
+\ml{put this paragraph before the previous one. tell the story chronologically}
+In the first implementation when it was implemented synchronously, therefore the user could have some delay before being able to interact with the watch. It was first implemented in this way to prevent conflicts, user cannot do something with a list while words are being added. This is now solved by getting the new wordPairs on a screen on (see listing \ref{new wordPairs}) and add them later on a screen off (see listing \ref{add new words}).
+
 
 \lstinputlisting[label=new wordPairs, language=JavaScript, firstline=48, lastline=62, caption=getting new wordPairs in session.js]{source_code/session.js}
 
 \lstinputlisting[label=add new words, language=JavaScript, firstline=32, lastline=35, caption=adding new words to wordPair in userData.js]{source_code/userData.js}
 
+
+
 \section{Usage Tracking}
 
 \subsection{Events}
-Events are implemented to give the knowledge estimator information which can be used to analyze the knowledge of the user. The knowledge estimator is on the server side implemented. This means we had to decide at what point we should send the events. Because the knowledge estimator decided what the next word is going to be for the user, the events should be send when the user taps wrong or right. This is the moment the user will be presented with a new word. The knowledge estimator can receive the following events: reveal, right, wrong, wrong translation, I learned it, showContext, screenOn and screenOff. 
+Events are implemented to give the knowledge estimator information which can be used to analyze the knowledge of the user. The knowledge estimator is \ugh{on the server side implemented}. This means we had to decide at what point we should send the events. Because the knowledge estimator decided what the next word is going to be for the user, the events should be send when the user taps wrong or right. This is the moment the user will be presented with a new word. The knowledge estimator can receive the following events: \ugh{reveal, right, wrong, wrong translation, I learned it, showContext, screenOn and screenOff}. \ml{just as there is a command for formatting modules, it would be good to have a command and a rule for formatting event names. I propose \texttt{eventName}. Finally, it would be nice to have a list here, and a short description of the event names}
+
 
 \subsection{Clicktracking}
-The clicktracker is designed for research purposes. Its purpose is to track where the user clicks/taps, so the coordinates are saved. Not only the click position is saved, also the click type (e.g., user taps on reveal). For some functions this can be really interesting like the right button; the user can tap on the button itself or on the green space above the button. Both actions result in the same thing. In the future we could change the design based on these results to give the user a better experience. To conclude the clicktracker is not implemented as an extra function for the user, it is purely for research purposes.
+The clicktracker is designed for research purposes. Its purpose is to track where the user clicks/taps, so the coordinates are saved. Not only the click position is saved, also the click type (e.g., user taps on reveal). For some functions this can be really interesting like the right button; the user can tap on the button itself or on the green space above the button. Both actions result in the same thing. In the future we could change the design based on these results to give the user a better experience. To conclude the clicktracker is not implemented as \chg{an extra}{a user-facing feature} \del{function for the user}, it is purely for \chg{research}{telemetry} purposes.
 
 \section{Changing the watchface and sending and saving}
-Sending and saving the clicks and events was a big challenge in this project. This is the result of the user being able to change the watch face at every moment, which will result in losing data. Because the user is able to go to a different watch face at any moment clicks and events should be saved to the storage of the watch immediately. We do this by saving it to the local storage. This is implemented in the same way as saving to the local storage in a web browser. A click and event are immediately pushed to the storage after they occurred. The clicks in the storage are sent on a screen-on event asynchronously, so it won't influence the speed of the application and it happens in the background. When the clicks are successfully sent to the server, the server will return `OK', if the watch then receives this message the clicks in the storage can be freed, they are now at the server. The events in the storage are sent on `right' and `wrong' as previously explained to inform the knowledge estimator. Just as with the clicks the events are deleted from the storage if they successfully have been arrived on the server side. Losing data with changing the watch face not only happens with clicks and events, it also happens when the user reverses the way the words are asked (e.g., English - Dutch to Dutch - English) and with changing the background. The login code is being saved the first time and used for automatic login after a watch face change. 
+
+Sending and saving the clicks and events was a \del{big} challenge in this project. 
+\del{This is the result of} The user\chg{ being}{is} able to change the watch face at every moment, \chg{which}{and this} will result in losing data. \del{Because the user is able to go to a different watch face at any moment}\ml{you just said this in the prev sentence!} \chg{clicks and}{user interaction} events should be saved to the storage of the watch immediately. We do this by saving \ugh{it}\ml{it????} to the local storage. This is implemented in the same way as saving to the local storage in a web browser. \ugh{A click and event are immediately pushed to the storage after they occurred.}\ml{you kind of said this a few sentences before! } 
+
+\ml{new paragraph!}
+The clicks in the storage are \ugh{sent}\ml{sent where?} on a screen-on event asynchronously, so it won't influence the speed of the application and it happens in the background. \ml{mention the endpoint? }When the clicks are successfully sent to the server, the server will return `OK', if the watch then receives this message the clicks in the storage can be freed, they are now at the server. The events in the storage are sent on `right' and `wrong' as previously explained to inform the knowledge estimator. Just as with the clicks the events are deleted from the storage if they successfully have been arrived on the server side. 
+
+\ml{new par}
+Losing data with changing the watch face not only happens with clicks and events, it also happens when the user reverses the way the words are asked (e.g., English - Dutch to Dutch - English) and with changing the background. 
+
+The login code is being saved the first time and used for automatic login after a watch face change. 
 
 \section{Drawing the user interface}
-The user interface is drawn every second on the screen, this happens in gui.js in the draw function which is public (shown in listing \ref{draw function}). The main module has an function which calls this function in GUI every second (shown in listing \ref{main}). The screen is thus updated every second. Time and profile are also being refreshed in the draw function, in the future it would be nice to have these in a different function to make sure the function only draws. 
+The user interface is drawn every second on the screen, this happens in gui.js in the draw function which is public (shown in listing \ref{draw function}). The main module has an function which calls this function in GUI every second (shown in listing \ref{main}). The screen is thus updated every second. Time and \ugh{profile}\ml{what's profile?} are also being refreshed in the draw function, in the future it would be nice to have these in a different function to make sure the function only draws. 
 
 \lstinputlisting[label=draw function,language=JavaScript, firstline=153, lastline=163, caption=draw function in gui.js]{source_code/gui.js}
 
 \lstinputlisting[label=main, language=JavaScript, firstline=11, lastline=14, caption= updateScreenEverySecond function in main.js]{source_code/main.js}
+
+
 
 \chapter{Usage Study}
 After the implementation the app was ready to enter the test phase. The results of the test period should give answers to the following two questions: is the app used during short intervals (this would indicate that the users used the app for micro-learning) and is the app designed properly (e.g., are all the options found during the test period).
