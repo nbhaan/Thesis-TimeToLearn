@@ -814,22 +814,31 @@ The users that use a smartwatch application to learn new words mostly use micro 
 
 
 In this project we tried to give the user the best possible experience to make learning as efficient and fun as possible.
+
+
 \section{Future work}
-As far as we know this is the first time a smartwatch app was made for learning words. In this project we tried to give the user the best possible experience to make learning as efficient and fun as possible. Naturally there are still some interesting features that can be implemented to improve the functionality of the app. Some examples are:
+As far as we know this is the first time a smartwatch app was made for learning \chg{words}{vocabulary}. In this project we tried to give the user the best possible experience to make learning as efficient and fun as possible. Naturally there are still some interesting features that can be implemented to improve the functionality of the app. Some examples are:
+
 \begin{itemize}
-\item \textbf{Improvements on the server side}\\
-Several events are sent to the server when the app is used. These events were used for the test results. However these events could also be used to personalize the learning process. Every user has a different learning curve that plots the time it takes before a word will be forgotten. It is therefore important that a learning app shows that word again, before the user forgets the translation. A new research project tried to calculate this curve in order to maximize the efficiency of a learning app. The algorithm for the learning curve could be implemented on the server side where it could use the events to estimate the learning curve for all users. The algorithm will send a word to the watch that the user should learn according to his learning curve. The downside of this approach for the used smartwatch model will be that the watch should constantly be connected to the internet to keep the learning curve up-to-date. The connection is also important for receiving new words from the server. There are smartwatch models that support 3G and therefore keeping a connection with the internet should not be a problem for these models.
-\item \textbf{Knowing the form of the word}\\
-In the `Related Work' chapter some techniques are mentioned which could improve the time it takes to learn new words. One of these techniques was categorizing the words into different forms, like: verbs, nouns or prepositions etc. so it is clear for the learner in which situation the word should be used. We are still unsure whether there is a database with the form for different words. If it exists, the app could show this form for every word although it will be hard to find space on the small screen.
-\item \textbf{Pronunciation of a word}\\
-After the test period almost all the users would like to have a pronunciation function. The smartwatch model we used did not have speakers, so this function would not work for this model. However, there are models which do have speakers and there are databases available with the pronunciation of a lot of words in different languages which means that this idea could be implemented in a later version of the app. 
-\item \textbf{Pronounce the word aloud}\\
-Another way to improve learning is to say the translation aloud. It can be read in the `Related Work' chapter that pronouncing a word aloud helps the saving process in the brains. The smartwatch model we used has a build-in microphone like many more models. This makes it possible to check if the user says something. This function could even be improved by verifying if the word is pronounced the right way.
-\item \textbf{Avoid interference with words of similar spelling or meaning}\\
-Words with a similar spelling or meaning should not be shown one after another in order to prevent confusion. This would require an algorithm and a database that decides whether two words have a similar spelling and whether these words have a similar meaning.
-\item \textbf{Improve first encounter of word}\\
-The method for showing new words on the app can be improved by showing the word and the translation simultaneously if it is the first time the user sees that word. After the first time the word and the translation can be shown in the same manner the app is showing the words in the latest version.\\
-Since knowing the context of a certain word is important for the learning process, the `reveal' button could be split in two with left the option to show the context and right the option to reveal the translation. The user will then be able to make an educated guess when reading the context of the word. In the latest version this is not possible since the option `show context' is only available when the translation is already revealed.
+
+	\item \textbf{Improvements on the server side}\\
+	Several events are sent to the server when the app is used. These events were used for the test results. However these events could also be used to personalize the learning process. Every user has a different learning curve that plots the time it takes before a word will be forgotten. It is therefore important that a learning app shows that word again, before the user forgets the translation. A\chg{ new}{recent} research project \ins{developed at the RUG} tried to calculate this curve in order to maximize the efficiency of a learning app \ml{would be nice to insert citation here :)}. The algorithm for the learning curve could be implemented on the server side where it could use the events to estimate the learning curve for all users. The algorithm will send a word to the watch that the user should learn according to his learning curve. The downside of this approach for the used smartwatch model will be that the watch should constantly be connected to the internet to keep the learning curve up-to-date. The connection is also important for receiving new words from the server. There are smartwatch models that support 3G and therefore keeping a connection with the internet should not be a problem for these models. \ok
+
+	\item \textbf{Knowing the form of the word}\\
+	In the `Related Work' chapter some techniques are mentioned which could improve the time it takes to learn new words. One of these techniques was categorizing the words into different forms, like: verbs, nouns or prepositions etc. so it is clear for the learner in which situation the word should be used. We are still unsure whether there is a database with the form for different words. If it exists, the app could show this form for every word although it will be hard to find space on the small screen. \ok 
+
+	\item \textbf{Pronunciation of a word}\\
+	After the test period almost all the users would like to have a pronunciation function. The smartwatch model we used did not have speakers, so this function would not work for this model. However, there are models which do have speakers and there are databases available with the pronunciation of a lot of words in different languages which means that this idea could be implemented in a later version of the app. \ok
+
+	\item \textbf{Pronounce the word aloud}\\
+	Another way to improve learning is to say the translation aloud. It can be read in the `Related Work' chapter that pronouncing a word aloud helps the saving process in the brains. The smartwatch model we used has a build-in microphone like many more models. \del{This makes it possible to check if the user says something.} This function could \chg{even be improved}{be used to} \del{by} verify\del{ing} if the word is pronounced the right way.
+
+	\item \textbf{Avoid interference with words of similar spelling or meaning}\\
+	Words with a similar spelling or meaning should not be shown one after another in order to prevent confusion. This would require an algorithm and a database that decides whether two words have a similar spelling and whether these words have a similar meaning. \ml{not sure i get it. similar spelling does not mean simmilar meaning. e.g. meaning - weaning! }
+
+	\item \textbf{Improve first encounter of word}\\
+	The method for showing new words on the app can be improved by showing the word and the translation simultaneously if it is the first time the user sees that word. After the first time the word and the translation can be shown in the same manner the app is showing the words in the latest version.\\ 
+	Since knowing the context of a certain word is important for the learning process, the `reveal' button could be split in two with left the option to show the context and right the option to reveal the translation. The user will then be able to make an educated guess when reading the context of the word. In the \chg{latest}{current} version this is not possible since the option `show context' is only available when the translation is already revealed.
 
 \end{itemize}
 
