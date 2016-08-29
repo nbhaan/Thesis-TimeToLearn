@@ -1,3 +1,1 @@
-# Thesis-TimeToLearn
-
-Bachelorproject Rick Nienhuis & Niels Haan
+# rug-thesis-template
