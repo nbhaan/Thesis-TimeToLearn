@@ -514,9 +514,11 @@ Events are implemented to give the knowledge estimator information which can be 
 
 
 \subsection{Clicktracking}
-The clicktracker is designed for research purposes. Its purpose is to track where the user clicks/taps, so the coordinates are saved. Not only the click position is saved, also the click type (e.g., user taps on reveal). For some functions this can be really interesting like the right button; the user can tap on the button itself or on the green space above the button. Both actions result in the same thing. In the future we could change the design based on these results to give the user a better experience. To conclude the clicktracker is not implemented as \chg{an extra}{a user-facing feature} \del{function for the user}, it is purely for \chg{research}{telemetry} purposes.
+\ml{this should be two words: Click Tracking. Or better yet, touch tracking. Although I'm not sure it makes sense to talk too much about it given that we don't actually have any data about it :)}
+The clicktracker is designed for \chg{research}{usability} purposes \ml{all the project is for research :) }. Its purpose is to track where the user clicks/taps, so the coordinates are saved. Not only the click position is saved, also the click type (e.g., user taps on reveal). For some functions this can be really interesting like the right button; the user can tap on the button itself or on the green space above the button. Both actions result in the same thing. In the future we could change the design based on these results to give the user a better experience. To conclude the clicktracker is not implemented as \chg{an extra}{a user-facing feature} \del{function for the user}, it is purely for \chg{research}{telemetry} purposes.
 
 \section{Changing the watchface and sending and saving}
+\ml{sending and saving what??}
 
 Sending and saving the clicks and events was a \del{big} challenge in this project. 
 \del{This is the result of} The user\chg{ being}{is} able to change the watch face at every moment, \chg{which}{and this} will result in losing data. \del{Because the user is able to go to a different watch face at any moment}\ml{you just said this in the prev sentence!} \chg{clicks and}{user interaction} events should be saved to the storage of the watch immediately. We do this by saving \ugh{it}\ml{it????} to the local storage. This is implemented in the same way as saving to the local storage in a web browser. \ugh{A click and event are immediately pushed to the storage after they occurred.}\ml{you kind of said this a few sentences before! } 
@@ -532,6 +534,11 @@ The login code is being saved the first time and used for automatic login after 
 \section{Drawing the user interface}
 The user interface is drawn every second on the screen, this happens in gui.js in the draw function which is public (shown in listing \ref{draw function}). The main module has an function which calls this function in GUI every second (shown in listing \ref{main}). The screen is thus updated every second. Time and \ugh{profile}\ml{what's profile?} are also being refreshed in the draw function, in the future it would be nice to have these in a different function to make sure the function only draws. 
 
+\ml{I'm looking at the draw functin. 
+it looks really bad that the last two lines of code are not in their own function! 
+they should be abstracted in a function called weather.rotateBackground(). otherwise the code is at two levels of abstraction at the same time!
+}
+
 \lstinputlisting[label=draw function,language=JavaScript, firstline=153, lastline=163, caption=draw function in gui.js]{source_code/gui.js}
 
 \lstinputlisting[label=main, language=JavaScript, firstline=11, lastline=14, caption= updateScreenEverySecond function in main.js]{source_code/main.js}
@@ -543,13 +550,13 @@ After the implementation the app was ready to enter the test phase. The results 
 
 The test period consisted of four parts:
 \begin{enumerate}
-\item All participants started with making an account on Zeeguu in which they saved several words they wanted to learn.
+\item All participants started with making an account on Zeeguu \ins{and used Zeeguu Reader for reading. During this usage, the platform }\del{in which they} saved\del{ several} words they\chg{ wanted to learn.}{did not understand}.
 \item The participant received the smartwatch with the app as a watchface and basic instructions about how to use the app.
 \item The participant used the app for four days in a row.
 \item After four days the participants handed in the smartwatch and they filled in a questionnaire about the test period and how they experienced the app.
 \end{enumerate}
 
-During the test period the smartwatch kept track of the usage by using telemetry. All the buttons and touch areas for the existing options had different events attached to it so when a button or area was pressed, an event would be made and sent to the server. The events and their definitions are shown in table \ref{events}. 
+During the test period the smartwatch kept track of the usage by using telemetry. All the buttons and touch areas for the existing options had different events attached to \chg{it}{them} so when a button or area was pressed, an event would be \del{made and} sent to the server. The events and their definitions are shown in table \ref{events}. 
 
 \begin{table}[H]
 \centering
@@ -558,100 +565,114 @@ During the test period the smartwatch kept track of the usage by using telemetry
 \begin{tabular}{| l | p{10cm} |} 
 \hline
 \textbf{Type} & \textbf{Definition} \\ \hline 
-screenOn & When the screen lightens up. \\ \hline
-reveal & When the user wants to see the translation and presses the `reveal' button or area. \\ \hline
-right & When the user knows the translation and presses the `right' button or area. \\ \hline
-wrong & When the user does not know the translation and presses the `wrong' or area. \\ \hline
-wrongTranslation & When the user thinks the translation is incorrect and presses the `wrong translation' button in them menu. \\ \hline
-learnedIt & When the user thinks the word is learned and presses the `I learned it' button in the menu. \\ \hline
-showContext & When the user wants to see the context of the word and presses the `show context' button in the menu. \\ \hline
-reverse & When the user wants to learn the other way around and presses the `reverse' button in settings. \\ \hline
-screenOff & When the screen turns off. \\ \hline
+screenOn & \del{When} the screen lightens up. \\ \hline
+reveal & \del{When} the user wants to see the translation and presses the `reveal' button or area. \\ \hline
+right & \del{When} the user knows the translation and presses the `right' button or area. \\ \hline
+wrong & \del{When} the user does not know the translation and presses the `wrong' or area. \\ \hline
+wrongTranslation & \del{When} the user thinks the translation is incorrect and presses the `wrong translation' button in them menu. \\ \hline
+learnedIt & \del{When} the user thinks the word is learned and presses the `I learned it' button in the menu. \\ \hline
+showContext & \del{When} the user wants to see the context of the word and presses the `show context' button in the menu. \\ \hline
+reverse & \del{When} the user wants to learn the other way around and presses the `reverse' button in settings. \\ \hline
+screenOff & \del{When} the screen turns off \ins{(automatically, after a timeout)}. \\ \hline
 \end{tabular}
 \end{table}
 
-In the implementation was mentioned that we use a clicktracker to track where the user taps (i.e., click type and position). With this extra data a heat map could be made that would reveal the most used positions for the different options. However an object was sent to the server while the server expected a string due to miscommunication and therefore the data was unfortunately unusable. 
+\del{In the implementation was mentioned that we use a clicktracker to track where the user taps (i.e., click type and position). With this extra data a heat map could be made that would reveal the most used positions for the different options. However an object was sent to the server while the server expected a string due to miscommunication and therefore the data was unfortunately unusable. 
+} \ml{sorry, but this is not scientifically relevant.}
 
 \section{Usage results}
 After all the participants finished their test period all the events per user were collected from the server and analyzed. For answering the research questions and for giving a clear overview about how the app was used during the test period, the following diagrams were made per user:
+
 \begin{itemize}
-\item \textbf{A circle diagram about the overall usage of the smartwatch in seconds (see fig. \ref{fig:general usage 1 2} and \ref{fig:general usage 3 4}).} The diagram about the overall usage was created by collecting all the time intervals between a `screenOn' and a `screenOff' event. This data was then sorted into five different intervals:
-\begin{itemize}
-\item time $\leq$ 2
-\item 2 $<$ time $\leq$ 5
-\item 5 $<$ time $\leq$ 15
-\item 15 $<$ time $\leq$ 60
-\item time $>$ 60
+
+	\item \textbf{A circle diagram \chg{about}{presenting} \ml{also, it's not circle diagram. it's pie chart diagram} the overall usage of the smartwatch in seconds (see fig. \ref{fig:general usage 1 2} and \ref{fig:general usage 3 4}).} \chg{The diagram about the overall usage}{This diagram} was created by collecting all the time intervals between a `screenOn' and a `screenOff' event. This data was then sorted into five different intervals:
+
+		\begin{itemize}
+		\item time $\leq$ 2
+		\item 2 $<$ time $\leq$ 5
+		\item 5 $<$ time $\leq$ 15
+		\item 15 $<$ time $\leq$ 60
+		\item time $>$ 60
+		\end{itemize}
+
+	The first interval was chosen, \chg{because}{assumig that} checking the time or other arm movements would not take more than two seconds. When the duration is longer than two seconds the user probably does more than only checking the time. 
+	The user could check the time, but because a word is shown too, the user might reveal that word by pressing `reveal' and then the user might also give feedback by pressing `right' or `wrong'. These actions for one word would take not more than five seconds. Summarized, these could be learning sessions that were not intended to be a learning session. Then comes the intended learning sessions but for a really short time and the sessions that took a bit longer. As mentioned before the learning app will probably only be used for short sessions and thus sessions longer that one minute will probably hardly occur.
+
+	\begin{figure}[H]%
+	    \centering
+	    \subfloat[\chg{Testperson}{User} 1 \ml{testperson is not a single word in english.  Fix elsewhere too pls.}]{{\includegraphics[width=2.6in]{usage_results/1_usage.png} }}%
+	    \qquad
+	    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_usage.png} }}%
+	    \caption{General usage testpersons 1 and 2}%
+	    \label{fig:general usage 1 2}%
+	\end{figure}
+
+	\begin{figure}[H]%
+	    \centering
+	    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_usage.png} }}%
+	    \qquad
+	    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_usage.png} }}%
+	    \caption{General usage testpersons 3 and 4}%
+	    \label{fig:general usage 3 4}%
+	\end{figure}
+
+
+	\item \textbf{A \ugh{circle diagram} about the duration of the learning sessions on the app in seconds (see fig. \ref{fig:learning sessions 1 2} and \ref{fig:learning sessions 3 4}.).} The duration\ins{s} of the learning sessions were found by using an algorithm (see listing \ref{script}). This algorithm first sorted out all the `screenOn' events that were immediately followed by a `screenOff' event. A user that used the app for learning and not for checking the time would use at least one option the app provides for learning new words before the screen would turn off. Therefore the combinations of a `screenOn' and `screenOff' events were seen as not learning sessions and these pairs were erased from the list of events. \ml{add a footnote, that there is possibly some noise here as a user might have left the word and translation on the screen and see them displayed nevertheless}
+	In the remaining events the time was measured between a `screenOn' and a `screenOff' event and afterwards the data was sorted into four intervals: 
+		\begin{itemize}
+		\item time $\leq$ 5
+		\item 5 $<$ time $\leq$ 15
+		\item15 $<$ time $\leq$ 60
+		\item time $>$ 60
+		\end{itemize}
+	The app will presumably be used for micro learning. Therefore the number of sessions will probably decrease exponentially when the duration increases. This is the reason why the length of the intervals increases faster than a linear growth.
+		
+		\begin{figure}[H]%
+		    \centering
+		    \subfloat[Testperson 1]{{\includegraphics[width=2.6in]{usage_results/1_usage_learning.png} }}%
+		    \qquad
+		    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_usage_learning.png} }}%
+		    \caption{Learning sessions time testpersons 1 and 2}%
+		    \label{fig:learning sessions 1 2}%
+		\end{figure}
+		\begin{figure}[H]%
+		    \centering
+		    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_usage_learning.png} }}%
+		    \qquad
+		    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_usage_learning.png} }}%
+		    \caption{Learning sessions time testpersons 3 and 4}%
+		    \label{fig:learning sessions 3 4}%
+		\end{figure}
+
+	\item \textbf{A bar chart about the number of times a user pressed `right' and `wrong' (see fig. \ref{fig:right wrong 1 2} and \ref{fig:right wrong 3 4}).} 
+	For each day the app was used the number of `right' and `wrong' events were counted and plotted in a bar chart. 
+
+		\begin{figure}[H]%
+		    \centering
+		    \subfloat[Testperson 1]{{\includegraphics[width=2.6in]{usage_results/1_right_wrong.png} }}%
+		    \qquad
+		    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_right_wrong.png} }}%
+		    \caption{Number of right and wrong clicks for testpersons 1 and 2}%
+		    \label{fig:right wrong 1 2}%
+		\end{figure}
+
+		\begin{figure}[H]%
+		    \centering
+		    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_right_wrong.png} }}%
+		    \qquad
+		    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_right_wrong.png} }}%
+		    \caption{Number of right and wrong clicks for testpersons 3 and 4}%
+		    \label{fig:right wrong 3 4}%
+		\end{figure}
+
+	\item \textbf{A table with the average reaction time between a `reveal' and a `right' or `wrong' and the time the app was used (see tables \ref{table time 1}, \ref{table time 2}, \ref{table time 3} and \ref{table time 4}).} 
+	\ml{can we make the right to be green. like in the app?} 
+	\ml{Also, average is meaningless for non-normally distributed distributions. If you can't prove you have a normal distribution, and you probably can't, then you have to use median instead of average! Worst case scenario, keep them both, but average alone is not allowed.}
+	The reaction time is the time it took the user to press `right' or `wrong' after `reveal' was pressed. The average was calculated for each single day and for the whole period of four days. Besides the average time the total time is mentioned too. This indicates for how long the user used the app during the four days of testing.
 \end{itemize}
-The first interval was chosen, because checking the time or other arm movements would not take more than two seconds. When the duration is longer than two seconds the user probably does more than only checking the time. 
-The user could check the time, but because a word is shown too, the user might reveal that word by pressing `reveal' and then the user might also give feedback by pressing `right' or `wrong'. These actions for one word would take not more than five seconds. Summarized, these could be learning sessions that were not intended to be a learning session. Then comes the intended learning sessions but for a really short time and the sessions that took a bit longer. As mentioned before the learning app will probably only be used for short sessions and thus sessions longer that one minute will probably hardly occur.
-\item \textbf{A circle diagram about the duration of the learning sessions on the app in seconds (see fig. \ref{fig:learning sessions 1 2} and \ref{fig:learning sessions 3 4}.).} The duration of the learning sessions were found by using an algorithm (see listing \ref{script}). This algorithm first sorted out all the `screenOn' events that were immediately followed by a `screenOff' event. A user that used the app for learning and not for checking the time would use at least one option the app provides for learning new words before the screen would turn off. Therefore the combinations of a `screenOn' and `screenOff' events were seen as not learning sessions and these pairs were erased from the list of events. 
-In the remaining events the time was measured between a `screenOn' and a `screenOff' event and afterwards the data was sorted into four intervals: 
-\begin{itemize}
-\item time $\leq$ 5
-\item 5 $<$ time $\leq$ 15
-\item15 $<$ time $\leq$ 60
-\item time $>$ 60
-\end{itemize}
-The app will presumably be used for micro learning. Therefore the number of sessions will probably decrease exponentially when the duration increases. This is the reason why the length of the intervals increases faster than a linear growth.
-\item \textbf{A bar chart about the number of times a user pressed `right' and `wrong' (see fig. \ref{fig:right wrong 1 2} and \ref{fig:right wrong 3 4}).} 
-For each day the app was used the number of `right' and `wrong' events were counted and plotted in a bar chart. 
-\item \textbf{A table with the average reaction time between a `reveal' and a `right' or `wrong' and the time the app was used (see tables \ref{table time 1}, \ref{table time 2}, \ref{table time 3} and \ref{table time 4}).} The reaction time is the time it took the user to press `right' or `wrong' after `reveal' was pressed. The average was calculated for each single day and for the whole period of four days. Besides the average time the total time is mentioned too. This indicates for how long the user used the app during the four days of testing.
-\end{itemize}
 
-\begin{figure}[H]%
-    \centering
-    \subfloat[Testperson 1]{{\includegraphics[width=2.6in]{usage_results/1_usage.png} }}%
-    \qquad
-    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_usage.png} }}%
-    \caption{General usage testpersons 1 and 2}%
-    \label{fig:general usage 1 2}%
-\end{figure}
 
-\begin{figure}[H]%
-    \centering
-    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_usage.png} }}%
-    \qquad
-    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_usage.png} }}%
-    \caption{General usage testpersons 3 and 4}%
-    \label{fig:general usage 3 4}%
-\end{figure}
 
-\begin{figure}[H]%
-    \centering
-    \subfloat[Testperson 1]{{\includegraphics[width=2.6in]{usage_results/1_usage_learning.png} }}%
-    \qquad
-    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_usage_learning.png} }}%
-    \caption{Learning sessions time testpersons 1 and 2}%
-    \label{fig:learning sessions 1 2}%
-\end{figure}
-
-\begin{figure}[H]%
-    \centering
-    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_usage_learning.png} }}%
-    \qquad
-    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_usage_learning.png} }}%
-    \caption{Learning sessions time testpersons 3 and 4}%
-    \label{fig:learning sessions 3 4}%
-\end{figure}
-
-\begin{figure}[H]%
-    \centering
-    \subfloat[Testperson 1]{{\includegraphics[width=2.6in]{usage_results/1_right_wrong.png} }}%
-    \qquad
-    \subfloat[Testperson 2]{{\includegraphics[width=2.6in]{usage_results/2_right_wrong.png} }}%
-    \caption{Number of right and wrong clicks for testpersons 1 and 2}%
-    \label{fig:right wrong 1 2}%
-\end{figure}
-
-\begin{figure}[H]%
-    \centering
-    \subfloat[Testperson 3]{{\includegraphics[width=2.6in]{usage_results/3_right_wrong.png} }}%
-    \qquad
-    \subfloat[Testperson 4]{{\includegraphics[width=2.6in]{usage_results/4_right_wrong.png} }}%
-    \caption{Number of right and wrong clicks for testpersons 3 and 4}%
-    \label{fig:right wrong 3 4}%
-\end{figure}
 
 \begin{table}[H]
 \centering
@@ -719,22 +740,36 @@ For each day the app was used the number of `right' and `wrong' events were coun
 \end{tabular}
 \end{table}
 
+
 \lstinputlisting[label=script, language=JavaScript, caption=script to get different session lengths]{source_code/script_research.js}
 
+\ml{This code does not belong here. Move it to an appendix!}
+
 \section{Evaluating usage results}
+
+\ml{Please merge this sectio nwith the previous one. Basically, I want all the discussion about an image to stay together. It makes no sense to describe the visualisations first, and then discuss them later.}
+
 \subsection{General usage}
-The graph about the overall usage of the smartwatch tells something about the behavior of the users related to a smartwatch. From the graphs it can be seen that most of the time (53\% till 66\%) the smartwatch is used less than three seconds. This can be related to checking the time which could mean that the ratio between checking the time and learning words is roughly 50 to 50. This is in a well agreement with the design where 50\% of the screen is used for the time and the other 50\% for learning words.\\
-The graphs also shows that a session on the smartwatch rarely lasts for more than 60 seconds. Apparently the smartwatch is not suitable or convenient enough to be constantly used for a long period. If the smartwatch is used for a session that lasts a couple of minutes then this will not be longer than fifteen seconds in most cases.
+The graph about the overall usage of the smartwatch \chg{tells something about}{provides insight into} the \ins{general} behavior of the \ins{smartwatch }users\del{ related to a smartwatch}. \chg{From the graphs it can be seen}{The graphs show} \ml{shorter is better!} that most of the time (53\% till 66\%) the smartwatch is used less than \ugh{three} seconds \ml{I'm confused, I thought it was 2 seconds!}. \ugh{This can be related to checking the time which could mean that the ratio between checking the time and learning words is roughly 50 to 50}. This is in a well agreement with the design where 50\% of the screen is used for the time and the other 50\% for learning words.\\
+The graphs also shows that a session on the smartwatch rarely lasts for more than 60 seconds. \del{Apparently} the smartwatch is not suitable or convenient enough to be constantly used for a long period. \ugh{If the smartwatch is used for a session that lasts a couple of minutes then this will not be longer than fifteen seconds in most cases.
+} \ml{this makes no sense}
+
+
 
 \subsection{Learning sessions}
 The graph about the learning sessions shows a different distribution when it comes to the duration of the sessions. When the smartwatch is used to learn words, the session last for 5 till 60 seconds most of the time where the interval of 15 till 60 seconds is often the largest. Sessions that are used for learning and that last for more than 60 seconds are still a small percentage of all the sessions. In the graph from testperson 3 the distribution is a little bit skewed, this is probably due to a lack of results. This user didn't use the watch as often as the other users.
 
+
 \subsection{Right and wrong}
-If we look at all the graphs, it is easily seen that right is more often pressed than wrong. This might come as a surprise, since learning new words should start with more wrong then right. In the graph of testperson 1 (see fig. \ref{fig:right wrong 1 2}) this is shown extreme, this user had a German background. This might be a possible explanation for the absurd high number of right clicks. In the graph of testperson 2 (see fig. \ref{fig:right wrong 1 2}), a decrease in usage is seen. At 17 Augustus the watch it's battery was depleted, so therefore usage was less. At 18 Augustus usage was less since it was not a full day of usage, the user handed in the watch at noon. In the graph of testperson 3 (see fig. \ref{fig:right wrong 3 4}) it can be seen that the watch is unfortunately only used for 2 days, there is however a clear learning curve which can only be observed in the graphs of testperson 1 and 4. 
+\chg{If we look at all the graphs, it is easily seen}{The graphs show } that right is more often pressed than wrong. This might come as a surprise, since learning new words should start with more wrong then right. In the graph of testperson 1 (see fig. \ref{fig:right wrong 1 2}) this is shown extreme, this user had a German background \ins{and was learning german}. This might be a possible explanation for the \del{absurd} \ml{absurd :)))} high number of right clicks. In the graph of testperson 2 (see fig. \ref{fig:right wrong 1 2}), a decrease in usage is seen. At 17 August\del{us}\ml{everywhere else!} the \ins{battery of the }watch\del{ it's battery} was depleted, so therefore usage was less. At 18 \ugh{Augustus} usage was less since it was not a full day of usage, the user handed in the watch at noon. In the graph of testperson 3 (see fig. \ref{fig:right wrong 3 4}) it can be seen that the watch is unfortunately only used for 2 days, there is however a clear learning curve which can \del{only} be observed in the graphs of testperson 1 and 4. 
+
+
 
 \subsection{Reaction time reveal to right/wrong}
 The average reaction time between a `reveal' and a `right' or `wrong' differs per user. The first two participants had nearly the same reaction time which is quite fast compared to the other participants. A fast reaction could mean that they are fast learners and they do not have to spend a lot of time to learn the translation. This thought is confirmed by the bar chart where the two participants with a high reaction time had pressed `right' more often than `wrong'. \\
 The other two participants had a much longer reaction time in comparison with the first two reaction times. It could be that these users needed more time to learn a new word and therefore they required more time to learn the translation of a certain word. In the bar chart of the testperson 4 (see fig. \label{fig:right wrong 3 4}) it can be seen that in the first day `wrong' is pressed more than `right' what could indicate that the user was confronted with some hard-to-learn words. 
+\ml{How can you have an average of 4 minutes??? :))) See the observation I've made earlier about the median!}
+
 
 \section{Questionnaires results}
 In order to get even more feedback from the user it was decided to let them answer a questionnaire after their test period. The purpose was to get specific information about the app which cannot be obtained by only using the events. Although the test group was really small, it only consisted of four persons, we can still learn from it. The questionnaire was divided into two sections, questions related to:
@@ -744,11 +779,17 @@ In order to get even more feedback from the user it was decided to let them answ
 \end{itemize}
 In the sections below the results are summarized and evaluated, the questionnaire can be found in appendix \ref{questionnaire} and the answers of the users in appendix \ref{questionnaire answers}.
 
+
 \subsection{General information about the user}
 All four of the users were relatively young, the youngest person was 22 and the oldest 34. It can thus be concluded that the test group was quite young. This could mean that they prefer certain ways of learning which fits the generation. What also was interesting to see was that people don't invest much time in learning new words. This could simply mean that they don't have much time, or that they just hate learning new words for long periods of time. Either case using the smartwatch app helps them invest more time in learning new words using micro learning. For the people who already were learning, the most frequent method was by reading texts in the other language. This would suggest that using the Zeeguu ecosystem (as explained in related work) in combination with the smartwatch is way that people who are enthusiastic about learning a new language would like. 
 
 \subsection{Smartwatch app usage}
-In general the reactions to the design were positive, the context function might need a larger font, but this will also result in more words being removed from the list, since the context won't fit on the screen. There were also some complains about not being able to find all the features the app offers. This was due to not having instructed some of the testers properly, but also because some features might not be very logical to find. The settings for example could be find by double tapping the time. This may not be the most convenient place for the user. A solution would be to have a sort of short instruction manual in the app itself, or to make some small button on the screen for settings. There were two interesting features mentioned that people would like to have in app. The first one was a pronunciation function, this however is hard to implement, because the Samsung Gear S2 does not have a speaker built in. Another feature which was mentioned was ``I don't want to learn this word'', one way of doing this would be to combine ``wrong translation''  and ``I don't want to learn this word'' to ``trash'', in either way the word has to be removed. The disadvantage would be less specific user feedback. The users used the app exactly how we hoped they would, they used it mostly when they had to wait for something. This is exactly what micro learning is all about, the small wait moments will now be filled.
+In general the reactions to the design were positive, the context function might need a larger font, but this will also result in more words being removed from the list, since the context won't fit on the screen. There were also some complains about not being able to find all the features the app offers. This was due to not having instructed some of the testers properly, but also because some features might not be very logical to find. The settings for example could be find by double tapping the time. This may not be the most convenient place for the user. A solution would be to have a sort of short instruction manual in the app itself, or to make some small button on the screen for settings. 
+
+\ml{new}
+There were two interesting features mentioned that people would like to have in app. The first one was a pronunciation function, this however is hard to implement, because the Samsung Gear S2 does not have a speaker built in. \chg{Another}{The second} feature \del{which was mentioned} was ``I don't want to learn this word'', one way of doing this would be to combine ``wrong translation''  and ``I don't want to learn this word'' to ``trash'', in either way the word has to be removed. The disadvantage would be less specific user feedback. 
+
+The users used the app exactly how we hoped they would, they used it mostly when they had to wait for something. This is exactly what micro learning is all about, the small wait moments will now be filled.
 
 \chapter {Conclusion and Future Work}
 
