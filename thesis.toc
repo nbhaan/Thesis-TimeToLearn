@@ -21,29 +21,30 @@
 \contentsline {chapter}{\numberline {4}The Implementation}{26}{chapter.4}
 \contentsline {section}{\numberline {4.1}Flash card algorithm}{26}{section.4.1}
 \contentsline {section}{\numberline {4.2}Getting new words from the server}{28}{section.4.2}
-\contentsline {section}{\numberline {4.3}Usage Tracking}{30}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Events}{30}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Clicktracking}{30}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Changing the watchface and sending and saving}{30}{section.4.4}
-\contentsline {section}{\numberline {4.5}Drawing the user interface}{31}{section.4.5}
-\contentsline {chapter}{\numberline {5}Usage Study}{32}{chapter.5}
-\contentsline {section}{\numberline {5.1}Usage results}{33}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Pie chart diagram presenting overall usage in seconds.}{34}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}Evaluating usage results}{40}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}General usage}{40}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Learning sessions}{41}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Right and wrong}{41}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Reaction time reveal to right/wrong}{41}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Questionnaires results}{42}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}General information about the user}{42}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Smartwatch app usage}{42}{subsection.5.3.2}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{44}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusion}{44}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future work}{45}{section.6.2}
-\contentsline {chapter}{\numberline {A}Test Cases}{48}{Appendix.a.A}
-\contentsline {chapter}{\numberline {B}Questionnaire}{55}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}General information}{55}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Questions after using the smartwatch app}{56}{section.a.B.2}
-\contentsline {chapter}{\numberline {C}Questionnaire answers}{58}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}General information}{58}{section.a.C.1}
-\contentsline {section}{\numberline {C.2}Questions after using the smartwatch app}{60}{section.a.C.2}
+\contentsline {paragraph}{Synchronous vs. Asynchronous calls}{31}{section*.27}
+\contentsline {section}{\numberline {4.3}Usage Tracking}{32}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Events}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Touch tracking}{32}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Changing the watchface and sending and saving the events and taps}{33}{section.4.4}
+\contentsline {section}{\numberline {4.5}Drawing the user interface}{33}{section.4.5}
+\contentsline {section}{\numberline {4.6}Testing}{35}{section.4.6}
+\contentsline {chapter}{\numberline {5}Usage Study}{36}{chapter.5}
+\contentsline {section}{\numberline {5.1}Usage results}{37}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Pie chart diagrams presenting overall usage in seconds.}{37}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Pie chart diagram presenting the learning sessions in seconds}{39}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Bar chart visualizing ratio between `right' and `wrong'}{40}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Table with median reaction time and daily usage}{41}{subsection.5.1.4}
+\contentsline {section}{\numberline {5.2}Questionnaires results}{43}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}General information about the user}{43}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Smartwatch app usage}{44}{subsection.5.2.2}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{45}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future work}{46}{section.6.2}
+\contentsline {chapter}{\numberline {A}Test Cases}{49}{Appendix.a.A}
+\contentsline {chapter}{\numberline {B}Questionnaire}{56}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}General information}{56}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Questions after using the smartwatch app}{57}{section.a.B.2}
+\contentsline {chapter}{\numberline {C}Questionnaire answers}{59}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}General information}{59}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Questions after using the smartwatch app}{61}{section.a.C.2}
+\contentsline {chapter}{\numberline {D}Script to Obtain Different Session Lengths}{65}{Appendix.a.D}
