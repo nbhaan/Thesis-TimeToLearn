@@ -111,9 +111,10 @@ The results of the research show that the users invest a lot more time into stud
 \label{cha:introduction}
 The way people learn has changed over the years. The development of information and communication technology has lead to new ways of learning. People can now find fast and really specific information on the web and learn new things using ICT tools, like laptops, iPads and other electronic devices. The traditional book is being less and less used. We can see this in high schools where students learn their languages on the laptop with a rehearsing program. These rehearsing programs should accelerate the memorization process, so the student can work more efficiently and therefore has more time for other stuff and can work more efficiently.
 
-Accelerating the memorization process of somebody who is learning the vocabulary of a second language is not only valuable for students, but also for other people who want to learn a second language for other reasons. But even with rehearsing programs learning a second language can be a hard and time consuming thing to do. Since learning a second language is so time consuming, people often don't have enough time for it. They are busy with other important things like work and don't have the time to really learn every day. Although for these type of people it seems like they have no time to learn, in fact the time they lose for waiting for the bus, taking the elevator and walking to the car could be used more efficiently. Using these little time units is called micro learning \cite{dearman2012evaluating}. In this thesis we are going to try to find out how we can fill these little time spots in the best way using a smartwatch.
+\ml{This next paragraph was too redundant. Several things have to be deleted and it's going to be better.}
+But even with rehearsing programs learning a second language can be a hard and time consuming thing to do. Since learning a second language is so time consuming, people often \chg{don't have enough time for it}{give it up completely}. \chg{They are}{This is true especially with people who are} busy with other important things like work \del{and don't have the time to really learn every day}. Although for these type of people it seems like they have no time to learn, in fact the time they lose for waiting for the bus, taking the elevator and walking to the car could be used \chg{more efficiently}{for learning}. Using these little time units is called micro learning \cite{dearman2012evaluating}. In this thesis we are going to try to find out how we can fill these little time spots in the best way using a smartwatch.
 
-The application for the smartwatch will be a watch face, this is the screen that the user will see when the screen is on. We also had the option to choose for a separate app using push notifications, however push notifications in general are bad. They have a negative effect on task performance \cite{kim2016analysis} and they could be perceived as annoying.  The main function of the watch face is to show the time, however it also offers the user a word for which the translation can be revealed by tapping on the screen. The user will be stimulated to think of the right translation before seeing it, after revealing it the user can give the watch feedback by pressing the green ('I had it right in my head') or red button ('I had it wrong in my head'). The algorithm used for displaying words is based on the way in which people learn with flashcards. This is to speed up the memorization process, wrong words will be repeated earlier then words which the user had right in his mind.
+The application for the smartwatch will be a watch face, this is the screen that the user will see when the screen is on. We also had the option to choose for a separate app using push notifications, however push notifications in general are bad. They have a negative effect on task performance \cite{kim2016analysis} and they could be perceived as annoying.\ml{I like that you found a recent paper :)}  The main function of the watch face is to show the time, however it also offers the user a word for which the translation can be revealed by tapping on the screen. The user will be stimulated to think of the right translation before seeing it, after revealing it the user can give the watch feedback by pressing the green ('I had it right in my head') or red button ('I had it wrong in my head'). \ins{to speed up the memorization process} The algorithm used for displaying words is based on the way in which people learn with flashcards\chg{.}{:} \del{This is} wrong words will be repeated earlier then words which the user had right in his mind.
 
 The app for the smartwatch is part of Zeeguu ecosystem, which is a research project designed to speed \& fun up vocabulary learning in a new language based on three fundamental principles: only read material the learner likes, have words everywhere with you and practice with personalized exercises. This basically means the users read articles they like, tap on the words they don't know, get ``in text'' translations so they can continue with their reading, and have the chance to practice them later. The words will be saved in their accounts and can be accessed at any time. 
 
@@ -124,9 +125,9 @@ How do users use a smartwatch application to accelerate the memorization process
 To answer this question, we ask and answer the following subquestions:
 
 \begin{itemize}
-\item How long does a session on a smartwatch take (i.e., general usage)? 
-\item How long does a learning session take on a smartwatch (i.e., only using \ttl app)?	
-\item How long do users use the app daily on average?
+\item How long \chg{does a}{do} session\ins{s} on a smartwatch take (i.e., general usage)? 
+\item How long \chg{does a}{do} learning session\ins{s} take on a smartwatch (i.e., only using \ttl app)?	
+\item How long do users use the app daily \del{on average}? \ml{average is again not the right way to go. Never use average when data is not normally distributed!}
 \end{itemize}
 
 \paragraph{Structure of this Thesis}\mbox{}\\
@@ -148,13 +149,13 @@ The structure of the remainder of this document is the following:
 
 The app is built on the Zeeguu platform. Therefore this section will start by discussing Zeeguu and other applications in the Zeeguu ecosystem.
 
-The smartwatch is a relatively new gadget and therefore the number of research studies on the use of smartwatches in learning are  inexistent to the extent of our knowledge. There are however comparable approaches that use smartphones for the same purpose, that is making learning available wherever the user is which we will discuss in this chapter.
+The smartwatch is a relatively new gadget and therefore the number of research studies on the use of smartwatches in learning are  inexistent to the extent of our knowledge. There are however comparable approaches that use smartphones for the same purpose, that is making learning available wherever the user is. \del{ which} We will discuss \chg{in}{several such approaches in} this chapter.
 
-Learning new words is the main purpose of the app and thus it is important to research the best way to learn words. Especially when the user will only use micro-learning, learning during short periods of time, since the smartwatch app is a complementary tool. We close this chapter by discussing some techniques that were found during projects that investigated how to make learning new words more efficient.
+Learning new words \ins{during short periods of time -- or micro-learning --} is the main purpose of the app and thus it is important to \chg{research}{understand} the \chg{best way to learn words}{state of the art in the domain of learning}. \del{Especially when the user will only use , learning , since the smartwatch app is a complementary tool.} \chg{We}{This is why we } close this chapter by discussing some techniques that were found during projects that investigated how to make learning new words more efficient.
 
 
 \section{Zeeguu}
-The smartwatch app can only be used when the user has a profile on Zeeguu. The Zeeguu platform is an ecosystem that is built around an open API\cite{marti2013platform} which aims to improve learning words of a foreign language. 
+The smartwatch app can \ins{currently }only be used when the user has a profile on Zeeguu. The Zeeguu platform is an ecosystem that is built around an open API\cite{marti2013platform} which aims to improve learning words of a foreign language. \ins{We decided to do this in order to avoid having to implement an extra system which would allow users to upload the words they want to study.}
 
 Multiple projects are part of the ecosystem: a Chrome plugin, several Android applications, an iOS application and after this project a smartwatch app can be added to the list.
 
@@ -169,10 +170,10 @@ For iOS devices an application was made in which users could read news articles 
 
 \section{Comparable research projects}
 
-D. Dearman and K.N. Truong presented a Vocabulary Wallpaper which is a language tool designed to provide quick access to vocabulary to support short session of learning.\cite{dearman2012evaluating} This app for the smartphone shows some similarity compared to the app for the smartwatch. The app consists of a vocabulary wallpaper that can be accessed from the lock screen. This idea is similar to the idea for the smartwatch app. The conclusion of this approach showed that in four short sessions of approximately 4 hours, the participants were able to increase the number of second language vocabulary that they could recognize and recall when using the vocabulary wallpaper.
+D. Dearman and K.N. Truong presented \chg{a}{the} ``Vocabulary Wallpaper'' \chg{which is}{--} a language tool designed to provide quick access to vocabulary to support short session of learning.\cite{dearman2012evaluating} This app for the smartphone shows some similarity compared to the app for the smartwatch. The app consists of a vocabulary wallpaper that can be accessed from the lock screen. This idea is similar to the idea for the smartwatch app. The conclusion of this approach showed that in four short sessions of approximately 4 hours, the participants were able to increase the number of second language vocabulary that they could recognize and recall when using the vocabulary wallpaper.
 
 The use of a smartwatch can help users saving time by making processes efficient and easier. D. Pradhan and N. Sujatmiko described why the use of a smartwatch is more efficient and easier compared to a smartphone.\cite{pradhan2014can}
-An example mentioned is the number of steps that are required to use a smartphone. They described the following steps:
+\chg{An example mentioned}{A strong argument } is the number of steps that are required to use a smartphone. They described the following steps:
 \begin{enumerate}
 \item Unlocking the phone. While in pocket, a phone is typically screen-locked to avoid unwanted use. Unlocking requires several taps or slides.
 \item Finding app. A person typically has number of apps that is more than one phone screen can hold and therefore apps icons are placed in multiple home-screens. Hence finding the apps required another one or two taps or slides.
@@ -180,7 +181,9 @@ An example mentioned is the number of steps that are required to use a smartphon
 \end{enumerate}
 These steps make it inconvenient to use a smartphone in situations like: driving, cycling or walking and it could even be unsafe. A smartwatch would only require an arm twist to activate the screen and some swipes (depending on the position of the app) and the watch is ready to go.
 
-Another disadvantage could be the fact that the learner needs to carry the smartphone with him. This will create a chance of forgetting the place where the smartphone is placed. This could lead to losing time when the owner tries to find his smartphone, which is not possible when a device is worn on the wrist.  
+\del{Another disadvantage could be the fact that the learner needs to carry the smartphone with him. This will create a chance of forgetting the place where the smartphone is placed. This could lead to losing time when the owner tries to find his smartphone, which is not possible when a device is worn on the wrist.  
+}\ml{this argument is too weak. i sometimes forget where i put my smartwatch too... so let's just remove it.}
+
 
 \section{The best way to study words}
 
@@ -190,17 +193,28 @@ S. Thornbury described what is needed to learn a new word.\cite{thornbury2006tea
 In the app the user can see the translation of the word and the sentence in which the word appeared. However the user is not able to see whether it is a noun, a verb etc. 
 
 P. Nation came with guidelines how one should learn vocabulary in another language.\cite{nation2001learning}
+
 \begin{enumerate}
-\item Learn new words by using flashcards. The word is written on one side of the card and the translation on the other side. When both the word and the translation are not seen simultaneously, the connection between them will be strengthened.
-\item The words should be learned in groups of fifteen to twenty words at the same time. When the words appeared to be difficult, the groups should be made smaller.
-\item The learning sessions should be alternated with pauses of about one hour. In addition the sessions should be repeated after days to consolidate the words in the long-term memory. When a word appears to be learned, the time between testing this word should be gradually extended.
-\item The memory process can be accelerated by saying the translations aloud. 
-\item A translation that is hard to remember can be more easily retrieved when it has many associations. Seeing the word in a sentence can help this process.
-\item During a learning session words with similar spelling or meaning should be avoided. 
-\item The order in which the words are learned should change from time to time to prevent knowing the order instead of the words.
-\item The context of the word helps with learning the translation.
+	
+	\item Learn new words by using flashcards. The word is written on one side of the card and the translation on the other side. When both the word and the translation are not seen simultaneously, the connection between them will be strengthened.
+
+	\item The words should be learned in groups of fifteen to twenty words at the same time. When the words appeared to be difficult, the groups should be made smaller.
+
+	\item The learning sessions should be alternated with pauses of about one hour. In addition the sessions should be repeated after days to consolidate the words in the long-term memory. When a word appears to be learned, the time between testing this word should be gradually extended.
+
+	\item The memory process can be accelerated by saying the translations aloud. 
+
+	\item A translation that is hard to remember can be more easily retrieved when it has many associations. Seeing the word in a sentence can help this process.
+
+	\item During a learning session words with similar spelling or meaning should be avoided. 
+
+	\item The order in which the words are learned should change from time to time to prevent knowing the order instead of the words.
+
+	\item The context of the word helps with learning the translation.
+
 \end{enumerate}
-The app uses a flashcard method which means that words that are not recognized are more rapidly repeated than words that are recognized. The words are learned in small groups of five. Since the words are placed back in the list of words when a word is learned or not, the order of words changes every time and therefore serial learning is not possible. The user is also able to see the context of the word.
+
+\chg{The app}{\ttl} uses a flashcard method which means that words that are not recognized are more rapidly repeated than words that are recognized. The words are learned in small groups of five. Since the words are placed back in the list of words when a word is learned or not, the order of words changes every time and therefore serial learning is not possible. The user is also able to see the context of the word.
 
 J.P. Anderson and A.M. Jordan measured recall immediately after learning, after one week, after three weeks and after eight weeks.\cite{anderson1928learning} The percentages of material retained were 66\%, 48\%, 39\% and 37\% respectively. These numbers indicates that new words should be repeated very soon after the words appeared for the first time. This is to prevent the word is forgotten before the word appears again.\\
 The app registers the number of times the user knows a word. This number is used to decide at what position the word should be placed when the user indicates the word is still known. The higher the number the further the word is placed in the list and therefore the longer it will take to see that word again.
@@ -245,7 +259,7 @@ To increase the safety of a user's account it was decided to use a code of eight
 
 \section{Main screen}
 
-When a valid code is inserted, the main screen becomes visible. During the project, the main screen had had different layouts. All the decisions are sorted in different categories: time, words, background, buttons, information components, option lists, profile and effects.
+When a valid code is inserted, the main screen becomes visible. During the project, the main screen had had different layouts. \chg{All the}{Each category of } decisions  \chg{are sorted in}{is discussed in } a separate \chg{categories}{section}: time, words, background, buttons, information components, option lists, profile and effects.
 
 \subsection{Time}
 
@@ -254,7 +268,7 @@ An important part of the app is displaying the time, since the app will be the f
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=3in]{images/version_1.png} 
-   \caption{The first version of the main screen with the wrong ratio.}
+   \caption{The first version of the main screen \chg{with the wrong ratio}{put too little emphasis on time}.}
    \label{fig:version1}
 \end{figure}
 
@@ -336,6 +350,7 @@ As mentioned before swipe detection was insufficient so it was decided that the 
 \item to go to the next wordpair.
 \end{itemize}
 This resulted in two buttons, a red one with glasses on it and a green one with an arrow to the right (see figure \ref{fig:version1}). Glasses were chosen for revealing because they suggest looking something up and that we found intuitive for revealing the translation.\\ 
+
 Since the app is displayed on a small screen, the buttons should not be to small and thus almost all the available space in the bottom was used for the buttons to ensure that there was enough space for the user to press a button. Different tests showed that the buttons could be made smaller. The design of the buttons was not really pleasing and needed some rethinking. The first modification was erasing the reveal button. Instead of the button the user could touch the word to reveal the translation. The `next' button was widened so it covered the bottom of the screen (see figure \ref{fig:version3}). 
 During development more options were implemented and therefore a new button was made next to the `next' button. The `settings' button gave access to these options (see figure \ref{fig:version4}). The curves on the buttons as can be seen in the first design were replaced with right angles to create a modern feeling.
 
