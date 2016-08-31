@@ -505,19 +505,21 @@ The module \module{session.js} declares function $getWords$ which fetches words 
 \item if there are too few words in the account of the user the status will become `too few words' (see listing \ref{session.create} line 11).
 \end{itemize}
 
-One of these states will be returned to the \module{main.js} module and this module will give this state through to the \module{login.js} module, in this module the user can then be informed by a popup that will inform the user about a specific situation. 
+One of these states will be returned to the \module{main.js} module and this module will give this state through to the \module{login.js} module, in this module the user can then be informed by a popup that will inform the user about a specific situation.\ml{this is strange. you call getWords(_, false) and this means async=false. But async should be TRUE! you want to have async calls! could it be that the name of the var should be actually ``synchroneuous''?} 
 \end{itemize}
 \lstinputlisting[label=session.create, language=JavaScript, firstline=66, lastline=75, caption=$session.create$ in session.js]{source_code/session.js}
 
 \lstinputlisting[label=session.getWords, language=JavaScript, firstline=77, lastline=115, caption=$session.getWords$ in session.js showing communication with the server]{source_code/session.js}
 
+\ml{code between lines 16 and 19 should be extractd in a different function... this function is too long}
+
 A successful login (i.e., the status was `success') is not the only way to let the watch fetch new words. This is because the word list can become smaller if the user has marked a couple of words as `learned it' or as `wrong translation'. After evaluating several scenarios, it was decided that the best moment for fetching new words was on a \texttt{screenOn} event (i.e., user makes arm twist to look at time). The new words will then be added to the current wordlist on a \texttt{screenOff} event (i.e., user makes again a arm twist to indicate he is not looking anymore), adding words at this point is to prevent any conflicts. The user is not actually using the wordlist when the screen turns off.
 
-When writing the code the initial preference was to get words and add them at the same time on a screen off event, since the user won't be using the application at that moment and it would really feel as everything happens in the background. Unfortunately this didn't work the watch gets in a sort of sleep mode and won't be able to communicate with the server anymore. The GET request wasn't executed so it was impossible to do this on a screen off event. 
+When writing the code the initial preference was to get words and add them at the same time on a screen off event, since the user won't be using the application at that moment and it would really feel as everything happens in the background. Unfortunately this didn't work the watch gets in a sort of sleep mode and won't be able to communicate with the server anymore. The GET request wasn't executed so it was impossible to do this on a screen off event. \ml{but you can still update the list on a screen off! can we assume that network connetions are not executed on screen off, but simple memory operations, like updating an array are? because in that case, you should write it here to be clear!}
 
 \paragraph{Synchronous vs. Asynchronous calls}\mbox{}\\
 When the watch tries to get new words from the server, this happens asynchronously to prevent the watch from getting slow. 
-In the first implementation when it was implemented synchronously, therefore the user could have some delay before being able to interact with the watch. It was first implemented in this way to prevent conflicts, user cannot do something with a list while words are being added. This is now solved by getting the new wordPairs on a screen on (see listing \ref{new wordPairs}) and add them later on a screen off (see listing \ref{add new words}).
+In the first implementation when it was implemented synchronously, \del{therefore} the user could have some delay before being able to interact with the watch. It was first implemented in this way to prevent conflicts, user cannot do something with a list while words are being added. This is now solved by getting the new wordPairs on a screen on (see listing \ref{new wordPairs}) and add them later on a screen off (see listing \ref{add new words}).
 
 Implementing this asynchronously resulted in considerable speedup, because when the user is able to accumulate a large number of words in his account (e.g., some user had already 10000 words) the endpoint will be very slow. One of the main reasons for slowness is that the list of words is not already sorted based importance on the server server side. 
 
@@ -553,9 +555,9 @@ screenOff & The screen turns off (automatically, after a timeout or arm twist). 
 The touch tracker is designed for usability purposes. Its purpose is to track where the user taps, so the coordinates are saved. Not only the tap position is saved, also the type of the tap (e.g., user taps on reveal). For some functions this can be really interesting like the right button; the user can tap on the button itself or on the green space above the button. Both actions result in the same thing. In the future we could change the design based on these results to give the user a better experience. To conclude the touch tracker is not implemented as a user-facing feature, it is purely for telemetry purposes.
 
 \section{Changing the watchface and sending and saving the events and taps}
-Sending and saving the taps and events was a challenge in this project. The user is able to change the watch face at every moment, and this will result in losing data. User interaction taps and events should be saved to the storage of the watch immediately. We do this by saving them to the local storage. This is implemented in the same way as saving to the local storage in a web browser.
+Sending and saving the taps and events was a challenge in this project. The user is able to change the watch face at every moment, and this \chg{will}{could} \ml{or do you really lose data? if not then don't say will!}result in losing data. User interaction taps and events should be saved to the storage of the watch immediately. We do this by saving them to the local storage. This is implemented in the same way as saving to the local storage in a web browser.
 
-The taps in the storage are sent to the Zeeguu server with a PUT request on a screen-on event asynchronously, so it won't influence the speed of the application and it happens in the background. The endpoint is used for tracking all sorts of user activity and is called `upload\_user\_activity\_data' When the taps are successfully sent to the server, the server will return `OK', if the watch then receives this message the taps in the storage can be freed, they are now at the server. The events in the storage are sent on `right' and `wrong' as previously explained to inform the knowledge estimator. Just as with the taps the events are deleted from the storage if they successfully have been arrived on the server side. 
+The taps in the storage are sent to the Zeeguu server with a PUT request on a screen-on event asynchronously, so it won't influence the speed of the application and it happens in the background. The endpoint is used for tracking all sorts of user activity and is called `upload\_user\_activity\_data' When the taps are successfully sent to the server, the server will return `OK', if the watch then receives this message the taps in the storage can be freed, they are now at the server. The events in the storage are sent on `right' and `wrong' as previously explained to inform the knowledge estimator. Just as with the taps the events are deleted from the storage if they successfully have been \chg{arrived}{received} on the server side. 
 
 Losing data with changing the watch face not only happens with taps and events, it also happens when the user reverses the way the words are asked (e.g., English - Dutch to Dutch - English) and with changing the background. 
 
@@ -568,6 +570,7 @@ In the $update$ function on $profile.refresh$ the achievements are refreshed whi
 
 In the $draw$ function the time, battery and current weather are drawn on the screen. If there is no internet connection the weather won't be drawn and nothing is visible where the weather normally is shown.
 
+\ml{Guys! i still want this rotation thing to be moved to it's own function. it is not at the same abstraction level as the previous two .refresh() and .refresh()! this looks bad!}
 \lstinputlisting[label=gui.update,language=JavaScript, firstline=151, lastline=155, caption=update function in gui.js]{source_code/gui.js}
 
 \lstinputlisting[label=gui.draw,language=JavaScript, firstline=157, lastline=162, caption=draw function in gui.js]{source_code/gui.js}

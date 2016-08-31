@@ -24,9 +24,9 @@
 \contentsline {paragraph}{Synchronous vs. Asynchronous calls}{31}{section*.27}
 \contentsline {section}{\numberline {4.3}Usage Tracking}{32}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Events}{32}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Touch tracking}{32}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Touch tracking}{33}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Changing the watchface and sending and saving the events and taps}{33}{section.4.4}
-\contentsline {section}{\numberline {4.5}Drawing the user interface}{33}{section.4.5}
+\contentsline {section}{\numberline {4.5}Drawing the user interface}{34}{section.4.5}
 \contentsline {section}{\numberline {4.6}Testing}{35}{section.4.6}
 \contentsline {chapter}{\numberline {5}Usage Study}{36}{chapter.5}
 \contentsline {section}{\numberline {5.1}Usage results}{37}{section.5.1}
