@@ -505,7 +505,7 @@ The module \module{session.js} declares function $getWords$ which fetches words 
 \item if there are too few words in the account of the user the status will become `too few words' (see listing \ref{session.create} line 11).
 \end{itemize}
 
-One of these states will be returned to the \module{main.js} module and this module will give this state through to the \module{login.js} module, in this module the user can then be informed by a popup that will inform the user about a specific situation.\ml{this is strange. you call getWords(_, false) and this means async=false. But async should be TRUE! you want to have async calls! could it be that the name of the var should be actually ``synchroneuous''?} 
+One of these states will be returned to the \module{main.js} module and this module will give this state through to the \module{login.js} module, in this module the user can then be informed by a popup that will inform the user about a specific situation.\ml{this is strange. you call getWords(\_, false) and this means async=false. But async should be TRUE! you want to have async calls! could it be that the name of the var should be actually ``synchroneuous''} 
 \end{itemize}
 \lstinputlisting[label=session.create, language=JavaScript, firstline=66, lastline=75, caption=$session.create$ in session.js]{source_code/session.js}
 
@@ -602,7 +602,7 @@ After the implementation the app was ready to enter the test phase. The results 
 
 The test period consisted of four parts:
 \begin{enumerate}
-\item All participant started with making an account on Zeeguu and used Zeeguu Reader for reading. During this usage, the platform saved words they did not understand.
+\item All participant\ins{s} started with making an account on Zeeguu and used Zeeguu Reader for reading. During this usage, the platform saved words they did not understand.
 \item The participant received the smartwatch with the app as a watchface and basic instructions about how to use the app.
 \item The participant used the app for four days in a row.
 \item After four days the participants handed in the smartwatch and they filled in a questionnaire about the test period and how they experienced the app.
@@ -620,17 +620,25 @@ After all the participants finished their test period all the events per user we
 \end{itemize}
 
 
-\subsection{Pie chart diagrams presenting overall usage in seconds.}
+\subsection{Overall usage.}
+\ml{the diagrams are not the main point of the section. they are only the way you present the data. the main point is the Overall Usage! Same thing for all the remaining sections. Title should be the topic of discussion, not the type of diagram!! Also, ``in seconds'' was removed.}
 These diagrams (see fig. \ref{fig:general usage 1 2} and \ref{fig:general usage 3 4}) were created by collecting all the time intervals between a \texttt{screenOn} and a \texttt{screenOff} event. This data was then sorted into five different intervals:
+
+\ml{Refactored this text to move the discussion near the time interval. Please re-read and make sure that the text make sense and fix where needed!}
 \begin{itemize}
-\item time $\leq$ 2
-\item 2 $<$ time $\leq$ 5
-\item 5 $<$ time $\leq$ 15
-\item 15 $<$ time $\leq$ 60
-\item time $>$ 60
+
+	\item time $\leq$ 2\ins{s}. The first interval was chosen, assuming that checking the time or other arm movements would not take more than two seconds. 
+
+	\item 2\ins{s} $<$ time $\leq$ 5\ins{s}. When the duration is longer than two seconds the user probably does more than only checking the time. The user could check the time, but because a word is shown too, the user might reveal that word by pressing `reveal' and then the user might also give feedback by pressing `right' or `wrong'. These actions for one word would take not more than five seconds. Summarized, these could be learning sessions that were not intended to be a learning session.
+
+	\item 5 $<$ time $\leq$ 15. \chg{Then}{These are} the intended learning sessions but for a really short time
+
+	\item 15 $<$ time $\leq$ 60. \ins{These are} the indended sessions that took a bit longer.
+
+	\item time $>$ 60. As mentioned before the learning app will probably only be used for short sessions and thus sessions longer that one minute will probably hardly occur.
+
 \end{itemize}
-The first interval was chosen, assuming that checking the time or other arm movements would not take more than two seconds. When the duration is longer than two seconds the user probably does more than only checking the time. 
-The user could check the time, but because a word is shown too, the user might reveal that word by pressing `reveal' and then the user might also give feedback by pressing `right' or `wrong'. These actions for one word would take not more than five seconds. Summarized, these could be learning sessions that were not intended to be a learning session. Then comes the intended learning sessions but for a really short time and the sessions that took a bit longer. As mentioned before the learning app will probably only be used for short sessions and thus sessions longer that one minute will probably hardly occur.
+ 
 
 \begin{figure}[H]%
     \centering
@@ -650,8 +658,8 @@ The user could check the time, but because a word is shown too, the user might r
     \label{fig:general usage 3 4}%
 \end{figure}
 
-The graph about the overall usage of the smartwatch provides insight into the general behavior of the smartwatch users. The graph shows that most of the time (53\% till 66\%) the smartwatch is used less than or equal to two seconds. This can be related to checking the time which could mean that the ratio between checking the time and learning words is roughly 50 to 50. This is in a well agreement with the design where 50\% of the screen is used for the time and the other 50\% for learning words.\\
-The graphs also shows that a session on the smartwatch rarely lasts for more than 60 seconds. The smartwatch is not suitable or convenient enough to be constantly used for a long period.
+The graph about the overall usage of the smartwatch provides insight into the general behavior of the smartwatch users. The graph shows that most of the time (53\% till 66\%) the smartwatch is used less than or equal to two seconds. This can be related to checking the time which {\bf could mean that the ratio between checking the time and learning words is roughly 50 to 50.} \ml{nice conclusion. can be emphasized} This is in a well agreement with the design where 50\% of the screen is used for the time and the other 50\% for learning words.\\
+The graphs also show\del{s} that a {\bf \ins{learning }session on the smartwatch rarely lasts for more than 60 seconds}. The smartwatch is not suitable or convenient enough to be constantly used for a long period.
 
 \subsection{Pie chart diagram presenting the learning sessions in seconds}
 The durations of the learning sessions were found by using an algorithm (see listing \ref{script}). This algorithm first sorted out all the \texttt{screenOn} events that were immediately followed by a \texttt{screenOff} event. A user that used the app for learning and not for checking the time would use at least one option the app provides for learning new words before the screen would turn off. Therefore the combinations of a \texttt{screenOn} and \texttt{screenOff} events were seen as not learning sessions and these pairs were erased from the list of events\footnote{There is possibly some noise here as a user might have left the word and the translation on the screen and see them displayed nevertheless}. 
@@ -682,7 +690,7 @@ The app will presumably be used for micro learning. Therefore the number of sess
     \label{fig:learning sessions 3 4}%
 \end{figure}
 
-The graph about the learning sessions shows a different distribution when it comes to the duration of the sessions. When the smartwatch is used to learn words, the session last for 5 till 60 seconds most of the time where the interval of 15 till 60 seconds is often the largest. Sessions that are used for learning and that last for more than 60 seconds are still a small percentage of all the sessions. In the graph from user 3 the distribution is a little bit skewed, this is probably due to a lack of results. This user didn't use the watch as often as the other users.
+The graph about the learning sessions shows a different distribution when it comes to the duration of the sessions. {\bf When the smartwatch is used to learn words, the session last \chg{for}{between} 5\chg{ till}{and } 60 seconds most of the time \chg{where}{and} the interval of 15 \chg{till}{to} 60 seconds is often the largest}.\ml{again, nice conclusion -- can be bold-ed} Sessions that are used for learning and that last for more than 60 seconds are still a small percentage of all the sessions. In the graph from user 3 the distribution is a little bit skewed, this is probably due to a lack of results. This user didn't use the watch as often as the other users.
 
 \subsection{Bar chart visualizing ratio between `right' and `wrong'}
 For each day the app was used the number of \texttt{right} and \texttt{wrong} events were counted and plotted in a bar chart (see fig. \ref{fig:right wrong 1 2} and \ref{fig:right_wrong_3_4}). 
@@ -705,7 +713,7 @@ For each day the app was used the number of \texttt{right} and \texttt{wrong} ev
     \label{fig:right_wrong_3_4}%
 \end{figure}
 
-The graphs show that `right' is more often pressed than `wrong'. This might come as a surprise, since learning new words should start with more `wrong' then `right'. In the graph of user 1 (see fig. \ref{fig:right wrong 1 2}) this is shown extreme, this user had a German background and was learning German. This might be a possible explanation for the high number of `right' taps. In the graph of user 2 (see fig. \ref{fig:right wrong 1 2}), a decrease in usage is seen. At 17 August the watch was depleted, so therefore usage was less. At 18 August usage was less since it was not a full day of usage, the user handed in the watch at noon. In the graph of user 3 (see fig. \ref{fig:right wrong 3 4}) it can be seen that the watch is unfortunately only used for 2 days, there is however a clear learning curve which can be observed in the graphs of users 1 and 4. 
+The graphs show that `right' is more often pressed than `wrong'. This might come as a surprise, since learning new words should start with more `wrong' then `right'. In the graph of user 1 (see fig. \ref{fig:right wrong 1 2}) this is shown extreme, this user had a German background and was learning German. This might be a possible explanation for the high number of `right' taps. In the graph of user 2 (see fig. \ref{fig:right wrong 1 2}), a decrease in usage is seen. At 17 August the \ins{battery of the } watch was depleted, so therefore usage was less. At 18 August usage was less since it was not a full day of usage, the user handed in the watch at noon. In the graph of user 3 (see fig. \ref{fig:right wrong 3 4}) it can be seen that the watch is unfortunately only used for 2 days, there is however a clear learning curve which can be observed in the graphs of users 1 and 4. 
 
 \subsection{Table with median reaction time and daily usage}
 The reaction time is the time it took the user to press `right' or `wrong' after `reveal' was pressed. The average was calculated for each single day and for the whole period of four days. Besides the average time the total time is mentioned too. This indicates for how long the user used the app during the four days of testing (see tables \ref{table time 1}, \ref{table time 2}, \ref{table time 3} and \ref{table time 4}).
@@ -801,6 +809,16 @@ There were two interesting features mentioned that people would like to have in 
 
 The users used the app exactly how we hoped they would, they used it mostly when they had to wait for something. This is exactly what micro learning is all about, the small wait moments will now be filled.
 
+\section{Threats to Validity}
+
+\ins{The main threats to the validity of the conclusions in this chapter are:}
+
+\begin{itemize}
+	\item Threats to External Validity. The conclusions can not be generalized based on only four users. However, they represent useful incipient data.
+	\item Threats to Internal Validity. It could be that there is some noise in the data. The smartwatch froze several times, and this might determine some very long sessions to be recorded.
+	\item \ml{anything else that you think could affect the validity of the conclusions, must be added here.}
+\end{itemize}
+
 \chapter {Conclusion and Future Work}
 
 \section{Conclusion}
@@ -829,19 +847,24 @@ The time that the users spent daily on the app differs from one another. This di
 \section{Future work}
 As far as we know this is the first time a smartwatch app was made for learning vocabulary. In this project we tried to give the user the best possible experience to make learning as efficient and fun as possible. Naturally there are still some interesting features that can be implemented to improve the functionality of the app. Some examples are:
 \begin{itemize}
-\item \textbf{Improvements on the server side}\\
+\item \textbf{\chg{Improvements}{Improving} the server side}\\
 Several events are sent to the server when the app is used. These events were used for the test results. However these events could also be used to personalize the learning process. Every user has a different learning curve that plots the time it takes before a word will be forgotten. It is therefore important that a learning app shows that word again, before the user forgets the translation. A recent research project developed at the RUG tried to calculate this curve in order to maximize the efficiency of a learning app\cite{slimstampen}.
 The algorithm for the learning curve could be implemented on the server side where it could use the events to estimate the learning curve for all users. The algorithm will send a word to the watch that the user should learn according to his learning curve. The downside of this approach for the used smartwatch model will be that the watch should constantly be connected to the internet to keep the learning curve up-to-date. The connection is also important for receiving new words from the server. There are smartwatch models that support 3G and therefore keeping a connection with the internet should not be a problem for these models.
 \item \textbf{Knowing the form of the word}\\
 In the `Related Work' chapter some techniques are mentioned which could improve the time it takes to learn new words. One of these techniques was categorizing the words into different forms, like: verbs, nouns or prepositions etc. so it is clear for the learner in which situation the word should be used. We are still unsure whether there is a database with the form for different words. If it exists, the app could show this form for every word although it will be hard to find space on the small screen.
-\item \textbf{Pronunciation of a word}\\
-After the test period almost all the users would like to have a pronunciation function. The smartwatch model we used did not have speakers, so this function would not work for this model. However, there are models which do have speakers and there are databases available with the pronunciation of a lot of words in different languages which means that this idea could be implemented in a later version of the app. 
-\item \textbf{Pronounce the word aloud}\\
-Another way to improve learning is to say the translation aloud. It can be read in the `Related Work' chapter that pronouncing a word aloud helps the saving process in the brains. The smartwatch model we used has a build-in microphone like many more models. This makes it possible to check if the user says something. This function could even be improved by verifying if the word is pronounced the right way.
-\item \textbf{Avoid interference with words of similar spelling or meaning}\\
+
+	\ml{renamed these two next bullets because they sounded too similar to each other!}
+	\item \textbf{Exemplifying the Pronunciation of a word}\\
+	After the test period almost all the users would like to have a pronunciation function. The smartwatch model we used did not have speakers, so this function would not work for this model. However, there are models which do have speakers and there are databases available with the pronunciation of a lot of words in different languages which means that this idea could be implemented in a later version of the app. 
+
+	\item \textbf{Verifying a users' pronounciation}\\
+	Another way to improve learning is to say the translation aloud. It can be read in the `Related Work' chapter that pronouncing a word aloud helps the saving process in the brains. The smartwatch model we used has a build-in microphone like many more models. This makes it possible to check if the user says something. This function could even be improved by verifying if the word is pronounced the right way.
+
+\item \textbf{Avoid\ins{ing} interference with words of similar spelling or meaning}\\
 Words with a similar spelling or meaning should not be shown one after another in order to prevent confusion. This would require an algorithm and a database that decides whether two words have a similar spelling and whether these words have a similar meaning.
-\item \textbf{Improve functionality of the app}\\
-The method for showing new words on the app can be improved by showing the word and the translation simultaneously if it is the first time the user sees that word. After the first time the word and the translation can be shown in the same manner the app is showing the words in the latest version.
+
+	\item \textbf{Improv\chg{e}{ing} the functionality of the app}\\
+	The method for showing new words on the app can be improved by showing the word and the translation simultaneously if it is the first time the user sees that word. After the first time the word and the translation can be shown in the same manner the app is showing the words in the latest version.
 
 Since knowing the context of a certain word is important for the learning process, the `reveal' button could be split in two buttons with on the left the option to show the context and right the option to reveal the translation. The user will then be able to make an educated guess when reading the context of the word. In the latest version this is not possible since the option `show context' is only available when the translation is already revealed.
 
