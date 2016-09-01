@@ -78,22 +78,13 @@ captionpos=b
 \begin{quotation}
 \noindent 
 
-In this project we are trying to answer the following question: 
-{\em 
-	How \chg{do users}{can we} use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language? 
-} 
-This question is \ins{of interest }\del{useful for people who want to use a smartwatch for educational purposes. The application is built} for busy people who \del{can read and understand the language, but} want to improve their vocabulary in the most efficient way\ml{because your app could work also for beginners... only the integration with zeeguu makes it appropriate for advanced learners}. 
+In this project we are trying to answer the following question: How can we use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language? This question is of interest for busy people who want to improve their vocabulary in the most efficient way. 
 
-In order to give these people the best possible experience, \ins{we first built such a smartwatch application, and then performed a study }\del{a research was conducted} to investigate how \chg{the}{actual} users \chg{currently use}{benefit from} \chg{the app}{such an application}. 
+In order to give these people the best possible experience, we first built such a smartwatch application, and then performed a study to investigate how actual users benefit from such an application. 
 
-The main goal of the application \ins{-- named Time to Learn -- }is to let users easily invest more time in learning, \del{this is done} by \chg{filling}{taking advantage of many } small time units during the day. This is called micro learning \cite{dearman2012evaluating}. All these little time units together are a reasonable amount of time spent on studying. 
-
+The main goal of the application named \ttl is to let users easily invest more time in learning, by taking advantage of many small time units during the day. This is called micro learning \cite{dearman2012evaluating}. All these little time units together are a reasonable amount of time spent on studying. 
 
 The results of the research show that the users invest a lot more time into studying words while using the smartwatch application. There are however still some features which could be added to give the user an even better experience.
-
-\del{In the past there have been very similar approaches, the main difference was the device choice which was a smartphone instead of a smartwatch. The usage of the smartwatch is an improvement, because it is more efficient and easier than a smartphone \cite{pradhan2014can}. 
-} \ml{Not here but in the related work, if it's not there already!}
-
 
 \end{quotation}
 \clearpage
@@ -109,25 +100,24 @@ The results of the research show that the users invest a lot more time into stud
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
 \label{cha:introduction}
-The way people learn has changed over the years. The development of information and communication technology has lead to new ways of learning. People can now find fast and really specific information on the web and learn new things using ICT tools, like laptops, iPads and other electronic devices. The traditional book is being less and less used. We can see this in high schools where students learn their languages on the laptop with a rehearsing program. These rehearsing programs should accelerate the memorization process, so the student can work more efficiently and therefore has more time for other stuff and can work more efficiently.
+The way people learn has changed over the years. The development of information and communication technology has led to new ways of learning. People can now find fast and really specific information on the web and learn new things using ICT tools, like laptops, iPads and other electronic devices. The traditional book is being less and less used. We can see this in secondary school where students learn their languages on the laptop with a rehearsing program. These rehearsing programs should accelerate the memorization process, so the student can work more efficiently and therefore has more time.
 
-\ml{This next paragraph was too redundant. Several things have to be deleted and it's going to be better.}
-But even with rehearsing programs learning a second language can be a hard and time consuming thing to do. Since learning a second language is so time consuming, people often \chg{don't have enough time for it}{give it up completely}. \chg{They are}{This is true especially with people who are} busy with other important things like work \del{and don't have the time to really learn every day}. Although for these type of people it seems like they have no time to learn, in fact the time they lose for waiting for the bus, taking the elevator and walking to the car could be used \chg{more efficiently}{for learning}. Using these little time units is called micro learning \cite{dearman2012evaluating}. In this thesis we are going to try to find out how we can fill these little time spots in the best way using a smartwatch.
+But even with rehearsing programs learning a second language can be a hard and time consuming thing to do. Since learning a second language is so time consuming, people often give it up completely. This is true especially for people who are busy with other important things like work. Although for these type of people it seems like they have no time to learn, in fact the time they lose for waiting for the bus, taking the elevator and walking to the car could be used for learning. Using these little time units is called micro learning \cite{dearman2012evaluating}. In this thesis we are going to try to find out how we can fill these little time spots in the best way using a smartwatch.
 
-The application for the smartwatch will be a watch face, this is the screen that the user will see when the screen is on. We also had the option to choose for a separate app using push notifications, however push notifications in general are bad. They have a negative effect on task performance \cite{kim2016analysis} and they could be perceived as annoying.\ml{I like that you found a recent paper :)}  The main function of the watch face is to show the time, however it also offers the user a word for which the translation can be revealed by tapping on the screen. The user will be stimulated to think of the right translation before seeing it, after revealing it the user can give the watch feedback by pressing the green ('I had it right in my head') or red button ('I had it wrong in my head'). \ins{to speed up the memorization process} The algorithm used for displaying words is based on the way in which people learn with flashcards\chg{.}{:} \del{This is} wrong words will be repeated earlier then words which the user had right in his mind.
+The application for the smartwatch will be a watch face, this is the screen that the user will see when the screen is on. We also had the option to choose for a separate app using push notifications, however push notifications in general are bad. They have a negative effect on task performance \cite{kim2016analysis} and they could be perceived as annoying. The main function of the watch face is to show the time, however it also offers the user a word for which the translation can be revealed by tapping on the screen. The user will be stimulated to think of the right translation before seeing it. After revealing it the user can give the watch feedback by pressing the green (i.e., I had it right in my head) or red button (i.e., I had it wrong in my head). To speed up the memorization process the algorithm used for displaying words is based on the way in which people learn with flashcards: wrong words will be repeated earlier than words which the user had right in his mind.
 
-The app for the smartwatch is part of Zeeguu ecosystem, which is a research project designed to speed \& fun up vocabulary learning in a new language based on three fundamental principles: only read material the learner likes, have words everywhere with you and practice with personalized exercises. This basically means the users read articles they like, tap on the words they don't know, get ``in text'' translations so they can continue with their reading, and have the chance to practice them later. The words will be saved in their accounts and can be accessed at any time. 
+The app for the smartwatch is part of the Zeeguu ecosystem, which is a research project designed to speed \& fun up vocabulary learning in a new language based on three fundamental principles: only read material the learner likes, have words everywhere with you and practice with personalized exercises. This basically means the users read articles they like, tap on the words they don't know, get `in text' translations so they can continue with their reading, and have the chance to practice them later. The words will be saved in their accounts and can be accessed at any time. 
 
-In this thesis, we introduce an app for the smartwatch called \ttl, so users have an complementary tool for learning their words in the Zeeguu account and thus increase the memorization process of learning a second new language. In this thesis we will research what is the best way to build such an app, therefore a user study was designed to answer the following research question: 
+In this thesis, we introduce an app for the smartwatch called Time to Learn, so users have a complementary tool for learning their words in the Zeeguu account and thus increase the memorization process of learning a second new language. In this thesis we will research what is the best way to build such an app, therefore a user study was designed to answer the following research question: 
 
-How do users use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language?
+How can we use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language?
 
 To answer this question, we ask and answer the following subquestions:
 
 \begin{itemize}
-\item How long \chg{does a}{do} session\ins{s} on a smartwatch take (i.e., general usage)? 
-\item How long \chg{does a}{do} learning session\ins{s} take on a smartwatch (i.e., only using \ttl app)?	
-\item How long do users use the app daily \del{on average}? \ml{average is again not the right way to go. Never use average when data is not normally distributed!}
+\item How long do sessions on a smartwatch take (i.e., general usage)? 
+\item How long do learning sessions take on a smartwatch (i.e., only using the \ttl app)?	
+\item How long do users use the app daily?
 \end{itemize}
 
 \paragraph{Structure of this Thesis}\mbox{}\\
@@ -137,98 +127,78 @@ The structure of the remainder of this document is the following:
 \item In Chapter 3 (The Design) the user interface is described, explaining the choices which have been made.
 \item In Chapter 4 (The Implementation) the code structure, algorithms and implementation choices are explained.
 \item In chapter 5 (Usage Study) explaining the tests and a summary of the results with various diagrams.
-\item In chapter 6 (Evaluation) a discussion about why this research was successful.
-\item In chapter 7 (Conclusion and Future Work) conclusions about the usage results and describing possible future work.
+\item In chapter 6 (Conclusion and Future Work) conclusions and describing possible future work.
 \end{description}
-
-
-
-
 
 \chapter {Related Work}
 
 The app is built on the Zeeguu platform. Therefore this section will start by discussing Zeeguu and other applications in the Zeeguu ecosystem.
 
-The smartwatch is a relatively new gadget and therefore the number of research studies on the use of smartwatches in learning are  inexistent to the extent of our knowledge. There are however comparable approaches that use smartphones for the same purpose, that is making learning available wherever the user is. \del{ which} We will discuss \chg{in}{several such approaches in} this chapter.
+The smartwatch is a relatively new gadget and therefore the number of research studies on the use of smartwatches in learning are  inexistent to the extent of our knowledge. There are however comparable approaches that use smartphones for the same purpose, that is making learning available wherever the user is. We will discuss several such approaches in this chapter.
 
-Learning new words \ins{during short periods of time -- or micro-learning --} is the main purpose of the app and thus it is important to \chg{research}{understand} the \chg{best way to learn words}{state of the art in the domain of learning}. \del{Especially when the user will only use , learning , since the smartwatch app is a complementary tool.} \chg{We}{This is why we } close this chapter by discussing some techniques that were found during projects that investigated how to make learning new words more efficient.
+Learning new words during short periods of time - or micro learning - is the main purpose of the app and thus it is important to understand the state of the art in the domain of learning. This is why we close this chapter by discussing some techniques that were found during projects that investigated how to make learning new words more efficient.
 
 
 \section{Zeeguu}
-The smartwatch app can \ins{currently }only be used when the user has a profile on Zeeguu. The Zeeguu platform is an ecosystem that is built around an open API\cite{marti2013platform} which aims to improve learning words of a foreign language. \ins{We decided to do this in order to avoid having to implement an extra system which would allow users to upload the words they want to study.}
+The smartwatch app can currently only be used when the user has a profile on Zeeguu. The Zeeguu platform is an ecosystem that is built around an open API  which aims to improve learning words of a foreign language \cite{marti2013platform}. We decided to do this in order to avoid having to implement an extra system which would allow users to upload the words they want to study.
 
 Multiple projects are part of the ecosystem: a Chrome plugin, several Android applications, an iOS application and after this project a smartwatch app can be added to the list.
 
 \subsection{Chrome plugin}
-The Chrome plugin can be installed to quickly add new words to the users profile.\cite{marti2013platform} With the plugin the user can click words the user wants to learn. By clicking the translation of that word will appear above it and by clicking the translation the word is saved to the profile of the user. When a translation does not appear to be correct, the user can change the translation.
+The Chrome plugin can be installed to quickly add new words to the users profile \cite{marti2013platform}. With the plugin the user can click words the user wants to learn. By clicking, the translation of that word will appear above it and by clicking the translation the word is saved to the profile of the user. When a translation does not appear to be correct, the user can change the translation.
 
 \subsection{Android applications}
-Android applications were added to the ecosystem to give the users more possibilities to use Zeeguu since Android is the most popular operating system on smartphones.\cite{giehl2015zeeguu} These applications will lead to an increase of time that the user spends on learning words. New exercises designed to improve the learning process were implemented for the applications.
+Android applications were added to the ecosystem to give the users more possibilities to use Zeeguu since Android is the most popular operating system on smartphones \cite{giehl2015zeeguu}. These applications will lead to an increase of time that the user spends on learning words. New exercises designed to improve the learning process were implemented for the applications.
 
 \subsection{iOS application}
-For iOS devices an application was made in which users could read news articles from different websites.\cite{oosterhof2016zeeguuios} The users would read articles in the language they wanted to learn or to improve. If a word is unknown, the user could touch the word and the app would show the translation. This word could then be saved on their Zeeguu account.
+For iOS devices an application was made in which users could read news articles from different websites \cite{oosterhof2016zeeguuios}. The users would read articles in the language they wanted to learn or to improve. If a word is unknown, the user could touch the word and the app would show the translation. This word could then be saved on their Zeeguu account.
 
 \section{Comparable research projects}
 
-D. Dearman and K.N. Truong presented \chg{a}{the} ``Vocabulary Wallpaper'' \chg{which is}{--} a language tool designed to provide quick access to vocabulary to support short session of learning.\cite{dearman2012evaluating} This app for the smartphone shows some similarity compared to the app for the smartwatch. The app consists of a vocabulary wallpaper that can be accessed from the lock screen. This idea is similar to the idea for the smartwatch app. The conclusion of this approach showed that in four short sessions of approximately 4 hours, the participants were able to increase the number of second language vocabulary that they could recognize and recall when using the vocabulary wallpaper.
+D. Dearman and K.N. Truong presented the `Vocabulary Wallpaper' - a language tool designed to provide quick access to vocabulary to support short sessions of learning \cite{dearman2012evaluating}. This app for the smartphone shows some similarity compared to the app for the smartwatch. The app consists of a vocabulary wallpaper that can be accessed from the lock screen. This idea is similar to the idea for the smartwatch app. The conclusion of this approach showed that in four short sessions of approximately four hours, the participants were able to increase the number of second language vocabulary that they could recognize and recall when using the vocabulary wallpaper.
 
-The use of a smartwatch can help users saving time by making processes efficient and easier. D. Pradhan and N. Sujatmiko described why the use of a smartwatch is more efficient and easier compared to a smartphone.\cite{pradhan2014can}
-\chg{An example mentioned}{A strong argument } is the number of steps that are required to use a smartphone. They described the following steps:
+The use of a smartwatch can help users saving time by making processes efficient and easier. D. Pradhan and N. Sujatmiko described why the use of a smartwatch is more efficient and easier compared to a smartphone \cite{pradhan2014can}.
+A strong argument is the number of steps that are required to use a smartphone. They described the following steps:
 \begin{enumerate}
-\item Unlocking the phone. While in pocket, a phone is typically screen-locked to avoid unwanted use. Unlocking requires several taps or slides.
-\item Finding app. A person typically has number of apps that is more than one phone screen can hold and therefore apps icons are placed in multiple home-screens. Hence finding the apps required another one or two taps or slides.
-\item Running the app itself. This may vary based on how easy the app?s user interface is, but it definitely needs more than just two taps.
+\item Unlocking the phone. While in the pocket, a phone is typically screen-locked to avoid unwanted use. Unlocking requires several taps or slides.
+\item Finding an app. A person typically has more apps than one phone screen can hold and therefore app icons are placed in multiple home-screens. Hence finding the apps required another one or two taps or slides.
+\item Running the app itself. This may vary based on how easy the user interface of the app is, but it definitely needs more than just two taps.
 \end{enumerate}
 These steps make it inconvenient to use a smartphone in situations like: driving, cycling or walking and it could even be unsafe. A smartwatch would only require an arm twist to activate the screen and some swipes (depending on the position of the app) and the watch is ready to go.
-
-\del{Another disadvantage could be the fact that the learner needs to carry the smartphone with him. This will create a chance of forgetting the place where the smartphone is placed. This could lead to losing time when the owner tries to find his smartphone, which is not possible when a device is worn on the wrist.  
-}\ml{this argument is too weak. i sometimes forget where i put my smartwatch too... so let's just remove it.}
-
 
 \section{The best way to study words}
 
 There are a lot of research projects about finding the most efficient way for learning new words. Due to the large number of studies, it was not possible to implement all the conclusions of each research. Those who did not make the final version of the app could be implemented in the future.
 
-S. Thornbury described what is needed to learn a new word.\cite{thornbury2006teach} According to S. Thornbury  knowing a word involves knowing its form and its meaning. Knowing its form means that you know whether it is a noun, a verb or a preposition etc. and how to spell it. When focussing on its meaning you not only need to know what the word means, but also what register it is used in, what category of words it belongs to: for instance: fruit, animals, plants, transport or even to groups of abstract words. And you need to know how it is used in a sentence or what chunks or collocations it can be used in.\\
-In the app the user can see the translation of the word and the sentence in which the word appeared. However the user is not able to see whether it is a noun, a verb etc. 
+S. Thornbury described what is needed to learn a new word \cite{thornbury2006teach}. According to S. Thornbury  knowing a word involves knowing its form and its meaning. Knowing its form means that you know whether it is a noun, a verb or a preposition etc. and how to spell it. When focusing on its meaning you not only need to know what the word means, but also what register it is used in, what category of words it belongs to (e.g., fruit, animals, plants, transport or even to groups of abstract words) and you need to know how it is used in a sentence or what chunks or collocations it can be used in.\\
+In the \ttl app the user can see the translation of the word and the sentence in which the word appeared. However the user is not able to see whether it is a noun, a verb etc. 
 
-P. Nation came with guidelines how one should learn vocabulary in another language.\cite{nation2001learning}
-
+P. Nation came with guidelines how one should learn vocabulary in another language \cite{nation2001learning}.
 \begin{enumerate}
-	
-	\item Learn new words by using flashcards. The word is written on one side of the card and the translation on the other side. When both the word and the translation are not seen simultaneously, the connection between them will be strengthened.
-
-	\item The words should be learned in groups of fifteen to twenty words at the same time. When the words appeared to be difficult, the groups should be made smaller.
-
-	\item The learning sessions should be alternated with pauses of about one hour. In addition the sessions should be repeated after days to consolidate the words in the long-term memory. When a word appears to be learned, the time between testing this word should be gradually extended.
-
-	\item The memory process can be accelerated by saying the translations aloud. 
-
-	\item A translation that is hard to remember can be more easily retrieved when it has many associations. Seeing the word in a sentence can help this process.
-
-	\item During a learning session words with similar spelling or meaning should be avoided. 
-
-	\item The order in which the words are learned should change from time to time to prevent knowing the order instead of the words.
-
-	\item The context of the word helps with learning the translation.
-
+\item Learn new words by using flashcards. The word is written on one side of the card and the translation on the other side. When both the word and the translation are not seen simultaneously, the connection between them will be strengthened.
+\item The words should be learned in groups of fifteen to twenty words at the same time. When the words appeared to be difficult, the groups should be made smaller.
+\item The learning sessions should be alternated with pauses of about one hour. In addition the sessions should be repeated after days to consolidate the words in the long-term memory. When a word appears to be learned, the time between testing this word should be gradually extended.
+\item The memory process can be accelerated by saying the translations aloud. 
+\item A translation that is hard to remember can be more easily retrieved when it has many associations. Seeing the word in a sentence can help this process.
+\item During a learning session words with similar spelling or meaning should be avoided. 
+\item The order in which the words are learned should change from time to time to prevent knowing the order instead of the words.
+\item The context of the word helps with learning the translation.
 \end{enumerate}
+The \ttl app uses a flashcard method which means that words that are not recognized are more rapidly repeated than words that are recognized. The words are learned in small groups of five. Since the words are placed back in the list of words when a word is learned or not, the order of words changes every time and therefore serial learning is not possible. The user is also able to see the context of the word.
 
-\chg{The app}{\ttl} uses a flashcard method which means that words that are not recognized are more rapidly repeated than words that are recognized. The words are learned in small groups of five. Since the words are placed back in the list of words when a word is learned or not, the order of words changes every time and therefore serial learning is not possible. The user is also able to see the context of the word.
+J.P. Anderson and A.M. Jordan measured recall immediately after learning, after one week, after three weeks and after eight weeks \cite{anderson1928learning}. The percentages of material retained were 66\%, 48\%, 39\% and 37\% respectively. These numbers indicates that new words should be repeated very soon after the words appeared for the first time. This is to prevent that the word will be forgotten before the word appears again.\\
+The \ttl app registers the number of times the user knows a word. This number is used to decide at what position the word should be placed when the user indicates the word is still known. The higher the number the further the word is placed in the list and therefore the longer it will take to see that word again.
 
-J.P. Anderson and A.M. Jordan measured recall immediately after learning, after one week, after three weeks and after eight weeks.\cite{anderson1928learning} The percentages of material retained were 66\%, 48\%, 39\% and 37\% respectively. These numbers indicates that new words should be repeated very soon after the words appeared for the first time. This is to prevent the word is forgotten before the word appears again.\\
-The app registers the number of times the user knows a word. This number is used to decide at what position the word should be placed when the user indicates the word is still known. The higher the number the further the word is placed in the list and therefore the longer it will take to see that word again.
-
-I.S.P. Nation investigated the effect of a delay between the presentation of a word and its meaning.\cite{nation1982beginning} According to the researchers the learners have an opportunity to make an effort to guess the meaning. This extra effort will result in faster and longer retained learning. The guessing will only succeed if the learning could recognize the translation in the foreign word. When the learner sees a word for the first time, a simultaneous presentation of a word an its meaning is the best. After the first encounter the best way to show the word and its meaning is with a delayed presentation.\\
-In order understand the full meaning of a word, the learner should be able to read the context of the word.\\
-The app shows the word first without the translation which gives the user the opportunity to try to remember the translation or to do an educated guess. Then by tapping the word, the translation will appear.
+I.S.P. Nation investigated the effect of a delay between the presentation of a word and its meaning \cite{nation1982beginning}. According to the researchers the learners have an opportunity to make an effort to guess the meaning. This extra effort will result in faster and longer retained learning. The guessing will only succeed if the learner could recognize the translation in the foreign word. When the learner sees a word for the first time, a simultaneous presentation of a word an its meaning is the best. After the first encounter the best way to show the word and its meaning is with a delayed presentation.\\
+In order to understand the full meaning of a word, the learner should be able to read the context of the word.\\
+The \ttl app shows the word first without the translation which gives the user the opportunity to try to remember the translation or to make an educated guess. Then by tapping the word, the translation will appear.
 
 \chapter{The Design}
 Making an app for a smartwatch involves quite some thinking about the design. Compared to a smartphone the available display is circular and much smaller and thus designing and redesigning the layout with the time, the words, the buttons and some information components took some time. The app is a watchface and this comes with some restrictions when it comes to the different inputs the watch can receive from the user. An app that is set as a watchface can only detect touch, swipe up and swipe down. The app begins with a login screen and after entering a valid code the main screen is shown. All the decisions related to the designs of those two screens are described below.
 
 \section{Login screen}
 
-Before the user can use the app a code is needed that is used for identifying the user with the server. To get this code the app starts with a login screen. The login screen first consisted of ten buttons with the ten numbers, a `clear' button and a `okay' button. On the top of the screen there are four small rectangles for displaying the pressed numbers (see figure \ref{fig:login screen v1.0}). 
+Before the user can use the app a code is needed that is used for identifying the user with the server. To get this code the app starts with a login screen. The login screen first consisted of ten buttons with the ten numbers, a `clear' button and a `okay' button. On the top of the screen there are four small rectangles for displaying the pressed numbers (see figure \ref{fig:login screen v1.0}).
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -237,7 +207,7 @@ Before the user can use the app a code is needed that is used for identifying th
    \label{fig:login screen v1.0}
 \end{figure}
 
-After some testing and discussions it was decided that the feedback of the pressed numbers on the top of the screen were to small and thus some rethinking was needed to come up with a new design. An idea was to make four rotating disks that was inspired from securing a travel suitcases (see figure \ref{fig:lock}). 
+After some testing and discussions it was decided that the feedback of the pressed numbers on the top of the screen were too small and thus some rethinking was needed to come up with a new design. An idea was to make four rotating disks that was inspired from securing a travel suitcase (see figure \ref{fig:lock}). 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -246,7 +216,7 @@ After some testing and discussions it was decided that the feedback of the press
    \label{fig:lock}
 \end{figure}
 
-The advantage is that no buttons for the numbers were needed so the numbers could be place in the middle. In the middle they can be displayed in a larger font since more space is available due to the circular shape. However, the detection of swipe events were insufficient for rotating the disks and thus the idea for rotating disks was changed to improve the functionality. The positions of the numbers stayed the same, but instead of swiping an increase and decrease button was added above and below each number (see figure \ref{fig:login screen v2.0}). 
+The advantage is that no buttons for the numbers were needed so the numbers could be placed in the middle. In the middle they can be displayed in a larger font since more space is available due to the circular shape. However, the detection of swipe events were insufficient for rotating the disks and thus the idea for rotating disks was changed to improve the functionality. The positions of the numbers stayed the same, but instead of swiping increase and decrease buttons were added above and below each number (see figure \ref{fig:login screen v2.0}). 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -255,11 +225,11 @@ The advantage is that no buttons for the numbers were needed so the numbers coul
    \label{fig:login screen v2.0}
 \end{figure}
 
-To increase the safety of a user's account it was decided to use a code of eight digits and therefore a page indicator was placed below the decrease buttons to notify the user that the user should insert 4 digits two times. On the bottom of the screen a `next' button is placed to go to the next page for inserting the second 4 digits of the code or to confirm that the eight digits were inserted.
+To increase the safety of a user's account it was decided to use a code of eight digits and therefore a page indicator was placed below the decrease buttons to notify the user that the user should insert four digits two times. On the bottom of the screen a `next' button is placed to go to the next page for inserting the second four digits of the code or to confirm that the eight digits were inserted.
 
 \section{Main screen}
 
-When a valid code is inserted, the main screen becomes visible. During the project, the main screen had had different layouts. \chg{All the}{Each category of } decisions  \chg{are sorted in}{is discussed in } a separate \chg{categories}{section}: time, words, background, buttons, information components, option lists, profile and effects.
+When a valid code is inserted, the main screen becomes visible. During the project, the main screen had had different layouts. Each category of decisions is discussed in a separate section: time, words, background, buttons, information components, option lists, profile and effects.
 
 \subsection{Time}
 
@@ -268,11 +238,11 @@ An important part of the app is displaying the time, since the app will be the f
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=3in]{images/version_1.png} 
-   \caption{The first version of the main screen \chg{with the wrong ratio}{put too little emphasis on time}.}
+   \caption{The first version of the main screen put too little emphasis on time.}
    \label{fig:version1}
 \end{figure}
 
-After the first discussion it was decided that the time should be displayed on 50\% of the screen since the app would be use for checking the time and for learning words (see figure \ref{fig:version2}). The time however was not readable enough and this was solved by changing the font color to white and by changing the background (see figure \ref{fig:version3}). This new design worked well and therefore this became the final design for the time. 
+After the first discussion it was decided that the time should be displayed on 50\% of the screen since the app would be used for checking the time and for learning words (see figure \ref{fig:version2}). The time however was not readable enough and this was solved by changing the font color to white and by changing the background (see figure \ref{fig:version3}). This new design worked well and therefore this became the final design for the time. 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -283,7 +253,7 @@ After the first discussion it was decided that the time should be displayed on 5
 
 \subsection{Words}
 
-The other important part of the app is showing the wordpairs, the word and the translation, the user wants to learn. Displaying wordpairs on a small circular screen was quite challenging which resulted in different designs for the watchface (see figure \ref{fig:possible versions}). 
+The other important part of the app is showing the wordpairs (i.e., the word and the translation) the user wants to learn. Displaying wordpairs on a small circular screen was quite challenging which resulted in different designs for the watchface (see figure \ref{fig:possible versions}). 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -344,14 +314,13 @@ Due to the rotation a sunset and sunrise could be seen on the watch. To emphasiz
 
 \subsection{Buttons}
 
-As mentioned before swipe detection was insufficient so it was decided that the app should only use touch events. To navigate through the app with only touch events it seemed logical to use buttons. With the time on top of the screen and the wordpairs in the middle there was unused space in the bottom for the buttons. In the first design the user should be able to 
+As mentioned before swipe detection was insufficient so it was decided that the app should only use touch events. To navigate through the app with only touch events it seemed logical to use buttons. With the time on top of the screen and the wordpairs in the middle there was unused space in the bottom for the buttons. In the first design the user should be able to:
 \begin{itemize}
-\item reveal the translation of the shown word, or
-\item to go to the next wordpair.
+\item reveal the translation of the shown word
+\item go to the next wordpair
 \end{itemize}
 This resulted in two buttons, a red one with glasses on it and a green one with an arrow to the right (see figure \ref{fig:version1}). Glasses were chosen for revealing because they suggest looking something up and that we found intuitive for revealing the translation.\\ 
-
-Since the app is displayed on a small screen, the buttons should not be to small and thus almost all the available space in the bottom was used for the buttons to ensure that there was enough space for the user to press a button. Different tests showed that the buttons could be made smaller. The design of the buttons was not really pleasing and needed some rethinking. The first modification was erasing the reveal button. Instead of the button the user could touch the word to reveal the translation. The `next' button was widened so it covered the bottom of the screen (see figure \ref{fig:version3}). 
+Since the app is displayed on a small screen, the buttons should not be too small and thus almost all the available space in the bottom was used for the buttons to ensure that there was enough space for the user to press a button. Different tests showed that the buttons could be made smaller. The design of the buttons was not really pleasing and needed some rethinking. The first modification was erasing the reveal button. Instead of the button the user could touch the word to reveal the translation. The `next' button was widened so it covered the bottom of the screen (see figure \ref{fig:version3}). 
 During development more options were implemented and therefore a new button was made next to the `next' button. The `settings' button gave access to these options (see figure \ref{fig:version4}). The curves on the buttons as can be seen in the first design were replaced with right angles to create a modern feeling.
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
@@ -361,7 +330,7 @@ During development more options were implemented and therefore a new button was 
    \label{fig:version4}
 \end{figure}
 
-The app was tested and more attention was paid to improve the order in which the wordpairs are shown. This process should become smarter by the use of a knowledge estimator that would estimate what the next word should be to maximize the learning process. This estimation could only be made when the server could receive feedback of every single word. It is therefore necessary that the user should give feedback after every word. The design of the app was adapted to this new idea by changing the `next' button to a `reveal' button (see figure \ref{fig:version5}). When the user pressed this button the translation appeared and the `reveal' button changed in three different buttons: a `wrong' button, a `menu' button and a `right' button (see figure \ref{fig:version5 reveal}). 
+The app was tested and more attention was paid to improve the order in which the wordpairs are shown. This process should become smarter by the use of a knowledge estimator that would estimate what the next word should be to maximize the learning process. This estimation could only be made when the server could receive feedback of every single word. It was therefore necessary that the user should give feedback after every word. The design of the app was adapted to this new idea by changing the `next' button to a `reveal' button (see figure \ref{fig:version5}). When the user pressed this button the translation appeared and the `reveal' button changed in three different buttons: a `wrong' button, a `menu' button and a `right' button (see figure \ref{fig:version5 reveal}). 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -370,7 +339,7 @@ The app was tested and more attention was paid to improve the order in which the
    \label{fig:version5 reveal}
 \end{figure}
 
-This new design forced the user to give feedback after every word. This feedback could be used to optimize the order of the words. The first design of the buttons were a cross and a checkmark to let the user know what to press when a word was not know or was known. Later on a book and a graduation cap were used for the same purpose but the feedback to the user would be less harsh with the new design (see figure \ref{fig:version6 reveal}).
+This new design forced the user to give feedback after every word. This feedback could be used to optimize the order of the words. The first design of the buttons were a cross and a checkmark to let the user know what to press when a word was not known or was known. Later on a book and a graduation cap were used for the same purpose but the feedback to the user would be less harsh with the new design (see figure \ref{fig:version6 reveal}).
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -382,7 +351,7 @@ This new design forced the user to give feedback after every word. This feedback
 \subsection{Information components}
 
 Besides the time the app also shows the date. The date was added later when the design of the time was completed. In the first design the date had his own small icon on top of the screen (see figure \ref{fig:version3}). This icon was partly covered by a Tizen icon for the swipe down menu. Therefore the icon for the date was moved downwards near the time (see figure \ref{fig:version5}).
-During a discussion it was mentioned that it would be nice to be able to see the temperature and the weather type on the watchface. After some research a free API\footnote{http://openweathermap.org/}was found that could provide the app with this information. In the beginning of the implementation the temperature was placed to the left of the date and the weather type was placed to the right of the date. This was barely readable and it did not fit in the realized design hence a new icon was designed that contained the date, temperature, weather type and an open area in the middle for the Tizen icon for the swipe down menu (see figure \ref{fig:version6}).
+During a discussion it was mentioned that it would be nice to be able to see the temperature and the weather type on the watchface. After some research a free API\footnote{http://openweathermap.org/} was found that could provide the app with this information. In the beginning of the implementation the temperature was placed to the left of the date and the weather type was placed to the right of the date. This was barely readable and it did not fit in the realized design hence a new icon was designed that contained the date, temperature, weather type and an open area in the middle for the Tizen icon for the swipe down menu (see figure \ref{fig:version6}).
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -395,12 +364,12 @@ During a discussion it was mentioned that it would be nice to be able to see the
 
 The app has access to two different option lists: 
 \begin{itemize}
-	\item the settings which can be reached by double tapping on the time, and 
-	\item the menu that can be reached by tapping in the middle of the translation. 
+	\item the settings which can be reached by double tapping on the time
+	\item the menu that can be reached by tapping in the middle of the translation
 \end{itemize}
 The app started with one option list. When the app was able to show the words with the translation, the user should have an option to tell the app that a word had a wrong translation or that a word was learned and thus in both cases it should not reappear again. Due to the small screen it was not convenient to add more buttons for each of these options to the watchface and therefore we decided to make a menu with these extra options. 
 
-Besides these options the user should be able to reverse the order in which the wordpairs were asked (when the words were displayed from German to English, the words would be displayed from English to German after the button was pressed), to insert the number of words that the user wanted to learn and to log out of the app. All these options were reachable for the user by a 'menu' button in the bottom. The 'next' button was replaced by two buttons, the 'menu' and the 'next' button (see figure \ref{fig:version4 menu}). 
+Besides these options the user should be able to reverse the order in which the wordpairs were asked (e.g., when the words were displayed from German to English, the words would be displayed from English to German after the button was pressed), to insert the number of words that the user wanted to learn and to log out of the app. All these options were reachable for the user by a `menu' button in the bottom. The `next' button was replaced by two buttons, the `menu' and the `next' button (see figure \ref{fig:version4 menu}). 
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -418,7 +387,7 @@ In the bottom the user could close the menu or open the settings. By pressing th
    \label{fig:version4 settings}
 \end{figure}
 
-After some discussions the overall opinion was that the 'menu' button should not be this large on the watchface since the menu would give complementary options which were not part of the main function of the app. Therefore the button should not cover half of the bottom and a solution was to split the menu and the settings to two different pages that the user could reach independently. The user could reach the menu by tapping in the middle of the translation (see figure \ref{fig:version5 reveal}) and the settings could be reach by double tapping on the time since this space was hardly used. The double tap was necessary because tapping the time was already assigned to changing the background.
+After some discussions the overall opinion was that the `menu' button should not be this large on the watchface since the menu would give complementary options which were not part of the main function of the app. Therefore the button should not cover half of the bottom and a solution was to split the menu and the settings to two different pages that the user could reach independently. The user could reach the menu by tapping in the middle of the translation (see figure \ref{fig:version5 reveal}) and the settings could be reached by double tapping on the time since this space was hardly used. The double tap was necessary because tapping the time was already assigned to changing the background.
 The menu and the settings both had a black transparent background for a long time. This was inspired from the transparent and blurred swipe down menu from a well-known OS. Unfortunately the blur effect was not a success, but the transparency remained.
 
 During testing the text in the buttons were hard to read and the buttons of the main page were visible through the buttons on the bottom. Therefore it was decided that the menu and the settings page should have a background. For the background the same image was used as the background of the wordpairs to preserve the unity of the design.
@@ -431,7 +400,7 @@ Many translations depend on the context of a word. Hence the user should be able
    \label{fig:version6 menu}
 \end{figure}
 
-Later the idea was abandoned of letting the user choose how many words the user wants to learn. The 'profile' button was the latest addition to the settings page (see figure \ref{fig:version6 settings}).
+Later the idea was abandoned of letting the user choose how many words the user wants to learn. The `profile' button was the latest addition to the settings page (see figure \ref{fig:version6 settings}).
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -452,10 +421,10 @@ The app has a profile page where the user can see the four medals that can be ea
 \end{figure}
 
 The idea was that when users can earn medals, they would be more willing to use the app. 
-When the user presses the 'I learned it' button, the number of 'words learned' will increase and after 10 new learned words, a popup will appear with a motivating message to continue. 
+When the user presses the `I learned it' button, the number of `words learned' will increase and after 10 new learned words, a popup will appear with a motivating message to continue. 
 
-The total time the user used the app is also registered. When this time is the same as one of the pre-determined minutes a popup appears (see figure version 6 popup.png).
-With longest session the time is measured that the user uses the app  continuously and with the longest streak the number of days is registered in which the app is used daily. One day of not using the app resets the longest streak.
+The total time the user used the app is also registered. When this time is the same as one of the pre-determined minutes a popup appears (see figure \ref{fig:version6 popup}).
+With longest session the time is measured that the user uses the app  continuously and with the longest streak the number of days is registered in which the app is used daily. One day of not using the app resets the current streak.
 
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
@@ -475,7 +444,7 @@ The popup that appears when a new medal is earned is beatified by a particle ani
 
 
 \chapter {The Implementation}
-In this part the implementation choices are described. In this project writing the code was one of the biggest challenges. The code has been changed a lot during the process. One of the reasons was to increase readability, but also because of design changes and new features which had to be implemented. The code is written in JavaScript in combination with HTML 5, the main web technologies at the moment. The code is build with a framework called require.js, this makes it possible to have multiple files (modules) in javascript, in order to increase readability and structure. In the following sections, we will zoom in some interesting and important decisions and choices related to the implementation.
+In this part the implementation choices are described. In this project writing the code was one of the biggest challenges. The code has been changed a lot during the process. One of the reasons was to increase readability, but also because of design changes and new features which had to be implemented. The code is written in JavaScript in combination with HTML 5, the main web technologies at the moment. The code is built with a framework called require.js, this makes it possible to have multiple files (modules) in JavaScript, in order to increase readability and structure. In the following sections, we will zoom in some interesting and important decisions and choices related to the implementation.
 
 \section{Flash card algorithm}
 For presenting the words we used an algorithm which will make sure users will learn faster. The algorithm is based on the flashcard method (see fig. \ref{fig:flashcard simulation}). The algorithm works in such a way that the user is able to give feedback in the form of `wrong' and `right'. The words which are marked as `wrong' will be faster repeated than words which were marked `right'. As explained in the design the user must indicate whether he had the answer wrong or right in his head. If the user had it wrong the word will be repeated after five more words, when the user had it right the timing when the word will be repeated depends on the number of times the user had it correct. The word will be $timesCorrect * 5$ positions moved in case the user had it right in his head. 
@@ -494,43 +463,42 @@ Because the first element of the array is always shown on the screen, the next w
 \lstinputlisting[label=flashcard, language=JavaScript, firstline=49, lastline=59, caption=flashcard implemenation in userData.js]{source_code/userData.js}
 
 \section{Getting new words from the server}
-The module \module{session.js} declares function $getWords$ which fetches words from the server. The module \module{session.js} is loaded in the module \module{main.js}, there the function $session.create$ is called. This function takes the login code, which is provided by the \module{login.js} module (i.e., entered by the user or loaded from the userData). This module is also loaded in \module{main.js}. The login code is required to be submitted with every request to the server. The code is unique for every user. The login code can be found in the account when logged in the browser. The code contains eight digits. When a session is created (see listing \ref{session.create}), the first thing to look at is whether there any words on the watch. There are two situations: 
+The module \module{session.js} declares the function $getWords$ which fetches words from the server. The module \module{session.js} is loaded in the module \module{main.js}, there the function $session.create$ is called. This function takes the login code, which is provided by the \module{login.js} module (i.e., entered by the user or loaded from the userData). This module is also loaded in \module{main.js}. The login code is required to be submitted with every request to the server. The code is unique for every user. The login code can be found in the account when logged in the browser. The code contains eight digits. When a session is created (see listing \ref{session.create}), the first thing to look at is whether there are any words on the watch. There are two situations: 
 \begin{itemize}
-\item \textbf{If there words on the watch:} the global variable $status$ in \module{session.js} will become `success' (see listing \ref{session.create} line 8). The user will now get in the screen where the words will be presented.
-\item \textbf{In case there are no words on the watch yet:} the watch has to communicate with the server and get the words with the endpoint `bookmarks\_to\_study'. This endpoint will return the words which are currently the most important to study for that particular user. The communication happens in the $getWords$ function (see listing \ref{session.create} line 5). In the implementation we made the choice to get fifty words in case the user has no internet connection for longer periods of time. The function function $getWords$ (see listing \ref{session.getWords}) can set the status to different states in different situations: 
+\item \textbf{If there are words on the watch:} the global variable $status$ in \module{session.js} will become `success' (see listing \ref{session.create} line 8). The user will now get in the screen where the words will be presented.
+\item \textbf{In case there are no words on the watch yet:} the watch has to communicate with the server and get the words with the endpoint `bookmarks\_to\_study'. This endpoint will return the words which are currently the most important to study for that particular user. The communication happens in the $getWords$ function (see listing \ref{session.create} line 5), and is synchronous because we need to be sure we have words before we can proceed. In the implementation we made the choice to get fifty words in case the user has no internet connection for longer periods of time. The function $getWords$ (see listing \ref{session.getWords}) can set the status to different states in different situations: 
 \begin{itemize}
-\item if the words are successfully fetched from the server the status will become `success' as described earlier on (see listing \ref{session.create} line 26).
+\item if the words are successfully fetched from the server the status will become `success' as described earlier (see listing \ref{session.create} line 26).
 \item if the code is invalid the status will become `wrong session number' (see listing \ref{session.create} line 30).
 \item if there is no internet connection the status will become `no connection' (see listing \ref{session.create} line 36).
 \item if there are too few words in the account of the user the status will become `too few words' (see listing \ref{session.create} line 11).
 \end{itemize}
 
-One of these states will be returned to the \module{main.js} module and this module will give this state through to the \module{login.js} module, in this module the user can then be informed by a popup that will inform the user about a specific situation.\ml{this is strange. you call getWords(\_, false) and this means async=false. But async should be TRUE! you want to have async calls! could it be that the name of the var should be actually ``synchroneuous''} 
+One of these states will be returned to the \module{main.js} module and this module will give this state through to the \module{login.js} module, in this module the user can then be informed by a popup that will inform the user about a specific situation. 
+
 \end{itemize}
-\lstinputlisting[label=session.create, language=JavaScript, firstline=66, lastline=75, caption=$session.create$ in session.js]{source_code/session.js}
+\lstinputlisting[label=session.create, language=JavaScript, firstline=79, lastline=88, caption=$session.create$ in session.js]{source_code/session.js}
 
-\lstinputlisting[label=session.getWords, language=JavaScript, firstline=77, lastline=115, caption=$session.getWords$ in session.js showing communication with the server]{source_code/session.js}
+\lstinputlisting[label=session.getWords, language=JavaScript, firstline=90, lastline=124, caption=$session.getWords$ in session.js showing communication with the server]{source_code/session.js}
 
-\ml{code between lines 16 and 19 should be extractd in a different function... this function is too long}
+A successful login (i.e., the status was `success') is not the only way to let the watch fetch new words. This is because the word list can become smaller if the user has marked a couple of words as `learned it' or as `wrong translation'. After evaluating several scenarios, it was decided that the best moment for fetching new words was on a \texttt{screenOn} event (i.e., user makes an arm twist to look at the time). The new words will then be added to the current wordlist on a \texttt{screenOff} event (i.e., the user makes again an arm twist to indicate he is not looking anymore), adding words at this point is to prevent any conflicts. The user is not actually using the wordlist when the screen turns off.
 
-A successful login (i.e., the status was `success') is not the only way to let the watch fetch new words. This is because the word list can become smaller if the user has marked a couple of words as `learned it' or as `wrong translation'. After evaluating several scenarios, it was decided that the best moment for fetching new words was on a \texttt{screenOn} event (i.e., user makes arm twist to look at time). The new words will then be added to the current wordlist on a \texttt{screenOff} event (i.e., user makes again a arm twist to indicate he is not looking anymore), adding words at this point is to prevent any conflicts. The user is not actually using the wordlist when the screen turns off.
-
-When writing the code the initial preference was to get words and add them at the same time on a screen off event, since the user won't be using the application at that moment and it would really feel as everything happens in the background. Unfortunately this didn't work the watch gets in a sort of sleep mode and won't be able to communicate with the server anymore. The GET request wasn't executed so it was impossible to do this on a screen off event. \ml{but you can still update the list on a screen off! can we assume that network connetions are not executed on screen off, but simple memory operations, like updating an array are? because in that case, you should write it here to be clear!}
+When writing the code the initial preference was to get words and add them at the same time on a \texttt{screenOff} event, since the user will not be using the application at that moment and it would really feel as everything happens in the background. Unfortunately this did not work and the watch went to a sort of sleep mode and would not be able to communicate with the server anymore. The GET request was not executed so it was impossible to do this on a \texttt{screenOff} event. It seemed that it had to do with the network connection going off, because simple memory operations did work on a \texttt{screenOff}. 
 
 \paragraph{Synchronous vs. Asynchronous calls}\mbox{}\\
 When the watch tries to get new words from the server, this happens asynchronously to prevent the watch from getting slow. 
-In the first implementation when it was implemented synchronously, \del{therefore} the user could have some delay before being able to interact with the watch. It was first implemented in this way to prevent conflicts, user cannot do something with a list while words are being added. This is now solved by getting the new wordPairs on a screen on (see listing \ref{new wordPairs}) and add them later on a screen off (see listing \ref{add new words}).
+In the first implementation when it was implemented synchronously, the user could have some delay before being able to interact with the watch. It was first implemented in this way to prevent conflicts, since the user cannot do something with a list while words are being added. This is now solved by getting the new wordPairs on a \texttt{screenOn} (see listing \ref{new wordPairs}) and add them later on a \texttt{screenOff} (see listing \ref{add new words}).
 
-Implementing this asynchronously resulted in considerable speedup, because when the user is able to accumulate a large number of words in his account (e.g., some user had already 10000 words) the endpoint will be very slow. One of the main reasons for slowness is that the list of words is not already sorted based importance on the server server side. 
+Implementing this asynchronously resulted in considerable speedup, because when the user is able to accumulate a large number of words in his account (e.g., some user had already 10000 words) the endpoint will be very slow. One of the main reasons for slowness is that the list of words is not already sorted based on the importance on the server side. 
 
-\lstinputlisting[label=new wordPairs, language=JavaScript, firstline=48, lastline=62, caption=getting new wordPairs in session.js]{source_code/session.js}
+\lstinputlisting[label=new wordPairs, language=JavaScript, firstline=59, lastline=73, caption=getting new wordPairs in session.js]{source_code/session.js}
 
 \lstinputlisting[label=add new words, language=JavaScript, firstline=32, lastline=35, caption=adding new words to wordPair in userData.js]{source_code/userData.js}
 
 \section{Usage Tracking}
 
 \subsection{Events}
-Events are implemented to give the knowledge estimator information which can be used to analyze the knowledge of the user. The knowledge estimator is implemented on the server side. This means we had to decide at what point we should send the events. Because the knowledge estimator decided what the next word is going to be for the user, the events should be send when the user taps wrong or right. This is the moment the user will be presented with a new word. The knowledge estimator can receive the following events: \texttt{reveal}, \texttt{right}, \texttt{wrong}, \texttt{wrong translation}, \texttt{learned it}, \texttt{showContext}, \texttt{screenOn} and \texttt{screenOff}. In the table \ref{events} the events and their definitions are described.
+Events are implemented to give the knowledge estimator information which can be used to analyze the knowledge of the user. The knowledge estimator is implemented on the server side. This means we had to decide at what point we should send the events. Because the knowledge estimator decided what the next word is going to be for the user, the events should be sent when the user taps wrong or right. This is the moment the user will be presented with a new word. The knowledge estimator can receive the following events: \texttt{reveal}, \texttt{right}, \texttt{wrong}, \texttt{wrong translation}, \texttt{learned it}, \texttt{showContext}, \texttt{screenOn} and \texttt{screenOff}. In the table \ref{events} the events and their definitions are described.
 
 \begin{table}[H]
 \centering
@@ -552,25 +520,24 @@ screenOff & The screen turns off (automatically, after a timeout or arm twist). 
 \end{table}
 
 \subsection{Touch tracking}
-The touch tracker is designed for usability purposes. Its purpose is to track where the user taps, so the coordinates are saved. Not only the tap position is saved, also the type of the tap (e.g., user taps on reveal). For some functions this can be really interesting like the right button; the user can tap on the button itself or on the green space above the button. Both actions result in the same thing. In the future we could change the design based on these results to give the user a better experience. To conclude the touch tracker is not implemented as a user-facing feature, it is purely for telemetry purposes.
+The touch tracker is designed for usability purposes. Its purpose is to track where the user taps by saving the coordinates. Not only the tap position is saved, also the type of the tap (e.g., user taps on `reveal'). For some functions this can be really interesting like the right button; the user can tap on the button itself or on the green space above the button. Both actions result in the same thing. In the future we could change the design based on these results to give the user a better experience. To conclude the touch tracker is not implemented as a user-facing feature, it is purely for telemetry purposes.
 
 \section{Changing the watchface and sending and saving the events and taps}
-Sending and saving the taps and events was a challenge in this project. The user is able to change the watch face at every moment, and this \chg{will}{could} \ml{or do you really lose data? if not then don't say will!}result in losing data. User interaction taps and events should be saved to the storage of the watch immediately. We do this by saving them to the local storage. This is implemented in the same way as saving to the local storage in a web browser.
+Sending and saving the taps and events was a challenge in this project. The user is able to change the watch face at every moment, and this could result in losing data. User interaction taps and events should be saved to the storage of the watch immediately. We do this by saving them to the local storage. This is implemented in the same way as saving to the local storage in a web browser.
 
-The taps in the storage are sent to the Zeeguu server with a PUT request on a screen-on event asynchronously, so it won't influence the speed of the application and it happens in the background. The endpoint is used for tracking all sorts of user activity and is called `upload\_user\_activity\_data' When the taps are successfully sent to the server, the server will return `OK', if the watch then receives this message the taps in the storage can be freed, they are now at the server. The events in the storage are sent on `right' and `wrong' as previously explained to inform the knowledge estimator. Just as with the taps the events are deleted from the storage if they successfully have been \chg{arrived}{received} on the server side. 
+The taps in the storage are sent to the Zeeguu server with a PUT request on a screen-on event asynchronously, so it will not influence the speed of the application and it happens in the background. The endpoint is used for tracking all sorts of user activity and is called `upload\_user\_activity\_data'. When the taps are successfully sent to the server, the server will return `OK', if the watch then receives this message the taps in the storage can be freed, they are now at the server. The events in the storage are sent on `right' and `wrong' as previously explained to inform the knowledge estimator. Just as with the taps the events are deleted from the storage if they successfully have been received on the server side. 
 
 Losing data with changing the watch face not only happens with taps and events, it also happens when the user reverses the way the words are asked (e.g., English - Dutch to Dutch - English) and with changing the background. 
 
-The login code is being saved the first time and used for automatic login after a watch face change. 
+A correct login code is being saved the first time and used for automatic login after changing the watch face. 
 
 \section{Drawing the user interface}
-The user interface is rendered every second on the screen, this happens in the module \module{gui.js} in the $render$ function which is public (shown in listing \ref{gui.render}). The \module{main.js} module has an function which calls this function in the \module{gui.js} module every second (shown in listing \ref{main}). The screen is thus updated every second. The $render$ function consists of a $update$ function and a $draw$ function. 
+The user interface is rendered every second on the screen, this happens in the module \module{gui.js} in the $render$ function which is public (shown in listing \ref{gui.render}). The \module{main.js} module has a function which calls this function in the \module{gui.js} module every second (shown in listing \ref{main}). The screen is thus updated every second. The $render$ function consists of an $update$ function and a $draw$ function. 
 
 In the $update$ function on $profile.refresh$ the achievements are refreshed which where described in the design chapter. The time is updated and the background is rotated based on the current time, and sunset and sunrise of the current location (see listing \ref{gui.update} line 4).
 
-In the $draw$ function the time, battery and current weather are drawn on the screen. If there is no internet connection the weather won't be drawn and nothing is visible where the weather normally is shown.
+In the $draw$ function the time, battery and current weather are drawn on the screen. If there is no internet connection the weather will not be drawn and nothing is visible where the weather normally would be.
 
-\ml{Guys! i still want this rotation thing to be moved to it's own function. it is not at the same abstraction level as the previous two .refresh() and .refresh()! this looks bad!}
 \lstinputlisting[label=gui.update,language=JavaScript, firstline=151, lastline=155, caption=update function in gui.js]{source_code/gui.js}
 
 \lstinputlisting[label=gui.draw,language=JavaScript, firstline=157, lastline=162, caption=draw function in gui.js]{source_code/gui.js}
@@ -595,14 +562,12 @@ For each of these scenarios different test cases were made with the same format:
 \item Pass/Fail: compares the expected result with the actual result and decide whether the app passes or fails for the test.
 \end{enumerate}
 
-
-
 \chapter{Usage Study}
 After the implementation the app was ready to enter the test phase. The results of the test period should give answers to the following two questions: is the app used during short intervals (this would indicate that the users used the app for micro learning) and is the app designed properly (e.g., are all the options found during the test period).
 
 The test period consisted of four parts:
 \begin{enumerate}
-\item All participant\ins{s} started with making an account on Zeeguu and used Zeeguu Reader for reading. During this usage, the platform saved words they did not understand.
+\item All participants started with making an account on Zeeguu and used Zeeguu Reader for reading. During this usage, the platform saved words they did not understand.
 \item The participant received the smartwatch with the app as a watchface and basic instructions about how to use the app.
 \item The participant used the app for four days in a row.
 \item After four days the participants handed in the smartwatch and they filled in a questionnaire about the test period and how they experienced the app.
@@ -619,26 +584,16 @@ After all the participants finished their test period all the events per user we
 \item A table with the median reaction time between a `reveal' and a `right' or `wrong' and the time the app was used
 \end{itemize}
 
-
-\subsection{Overall usage.}
-\ml{the diagrams are not the main point of the section. they are only the way you present the data. the main point is the Overall Usage! Same thing for all the remaining sections. Title should be the topic of discussion, not the type of diagram!! Also, ``in seconds'' was removed.}
-These diagrams (see fig. \ref{fig:general usage 1 2} and \ref{fig:general usage 3 4}) were created by collecting all the time intervals between a \texttt{screenOn} and a \texttt{screenOff} event. This data was then sorted into five different intervals:
-
-\ml{Refactored this text to move the discussion near the time interval. Please re-read and make sure that the text make sense and fix where needed!}
+\subsection{The overall usage in seconds}
+Pie chart diagrams (see fig. \ref{fig:general usage 1 2} and \ref{fig:general usage 3 4}) were created by collecting all the time intervals between a \texttt{screenOn} and a \texttt{screenOff} event to visualize the overall usage. This data was then sorted into five different intervals:
 \begin{itemize}
-
-	\item time $\leq$ 2\ins{s}. The first interval was chosen, assuming that checking the time or other arm movements would not take more than two seconds. 
-
-	\item 2\ins{s} $<$ time $\leq$ 5\ins{s}. When the duration is longer than two seconds the user probably does more than only checking the time. The user could check the time, but because a word is shown too, the user might reveal that word by pressing `reveal' and then the user might also give feedback by pressing `right' or `wrong'. These actions for one word would take not more than five seconds. Summarized, these could be learning sessions that were not intended to be a learning session.
-
-	\item 5 $<$ time $\leq$ 15. \chg{Then}{These are} the intended learning sessions but for a really short time
-
-	\item 15 $<$ time $\leq$ 60. \ins{These are} the indended sessions that took a bit longer.
-
-	\item time $>$ 60. As mentioned before the learning app will probably only be used for short sessions and thus sessions longer that one minute will probably hardly occur.
-
+\item time $\leq$ 2s. The first interval was chosen, assuming that checking the time or other arm movements would not take more than two seconds.
+\item 2s $<$ time $\leq$ 5s. When the duration is longer than two seconds the user probably does more than only checking the time. 
+The user could check the time, but because a word is shown too, the user might reveal that word by pressing `reveal' and then the user might also give feedback by pressing `right' or `wrong'. These actions for one word would take not more than five seconds. Summarized, these could be learning sessions that were not intended to be a learning session.
+\item 5s $<$ time $\leq$ 15s. These are the intended learning sessions but for a really short time.
+\item 15s $<$ time $\leq$ 60s. These are the intended learning sessions that took a bit longer.
+\item time $>$ 60s. As mentioned before the learning app will probably only be used for short sessions and thus sessions longer than one minute will probably hardly occur.
 \end{itemize}
- 
 
 \begin{figure}[H]%
     \centering
@@ -658,17 +613,17 @@ These diagrams (see fig. \ref{fig:general usage 1 2} and \ref{fig:general usage 
     \label{fig:general usage 3 4}%
 \end{figure}
 
-The graph about the overall usage of the smartwatch provides insight into the general behavior of the smartwatch users. The graph shows that most of the time (53\% till 66\%) the smartwatch is used less than or equal to two seconds. This can be related to checking the time which {\bf could mean that the ratio between checking the time and learning words is roughly 50 to 50.} \ml{nice conclusion. can be emphasized} This is in a well agreement with the design where 50\% of the screen is used for the time and the other 50\% for learning words.\\
-The graphs also show\del{s} that a {\bf \ins{learning }session on the smartwatch rarely lasts for more than 60 seconds}. The smartwatch is not suitable or convenient enough to be constantly used for a long period.
+The graph about the overall usage of the smartwatch provides insight into the general behavior of the smartwatch users. The graph shows that most of the time (53\% till 66\%) the smartwatch is used less than or equal to two seconds. This can be related to checking the time which \textbf{could mean that the ratio between checking the time and learning words is roughly 50 to 50}. This is in a well agreement with the design where 50\% of the screen is used for the time and the other 50\% for learning words.\\
+The graphs also show that a \textbf{learning session on the smartwatch rarely lasts for more than 60 seconds}. The smartwatch is not suitable or convenient enough to be constantly used for a long period.
 
-\subsection{Pie chart diagram presenting the learning sessions in seconds}
-The durations of the learning sessions were found by using an algorithm (see listing \ref{script}). This algorithm first sorted out all the \texttt{screenOn} events that were immediately followed by a \texttt{screenOff} event. A user that used the app for learning and not for checking the time would use at least one option the app provides for learning new words before the screen would turn off. Therefore the combinations of a \texttt{screenOn} and \texttt{screenOff} events were seen as not learning sessions and these pairs were erased from the list of events\footnote{There is possibly some noise here as a user might have left the word and the translation on the screen and see them displayed nevertheless}. 
+\subsection{The learning sessions in seconds}
+The durations of the learning sessions were found by using an algorithm (see appendix \ref{script}). This algorithm first sorted out all the \texttt{screenOn} events that were immediately followed by a \texttt{screenOff} event. A user that used the app for learning and not for checking the time would use at least one option the app provides for learning new words before the screen would turn off. Therefore the combinations of a \texttt{screenOn} and \texttt{screenOff} events were seen as not learning sessions and these pairs were erased from the list of events\footnote{There is possibly some noise here as a user might have left the word and the translation on the screen and see them displayed nevertheless}. 
 In the remaining events the time was measured between a \texttt{screenOn} and a \texttt{screenOff} event and afterwards the data was sorted into four intervals and visualized in pie chart diagrams (see fig. \ref{fig:learning sessions 1 2} and \ref{fig:learning sessions 3 4}): 
 \begin{itemize}
-\item time $\leq$ 5
-\item 5 $<$ time $\leq$ 15
-\item15 $<$ time $\leq$ 60
-\item time $>$ 60
+\item time $\leq$ 5s
+\item 5s $<$ time $\leq$ 15s
+\item 15s $<$ time $\leq$ 60s
+\item time $>$ 60s
 \end{itemize}
 The app will presumably be used for micro learning. Therefore the number of sessions will probably decrease exponentially when the duration increases. This is the reason why the length of the intervals increases faster than a linear growth.
 
@@ -690,10 +645,10 @@ The app will presumably be used for micro learning. Therefore the number of sess
     \label{fig:learning sessions 3 4}%
 \end{figure}
 
-The graph about the learning sessions shows a different distribution when it comes to the duration of the sessions. {\bf When the smartwatch is used to learn words, the session last \chg{for}{between} 5\chg{ till}{and } 60 seconds most of the time \chg{where}{and} the interval of 15 \chg{till}{to} 60 seconds is often the largest}.\ml{again, nice conclusion -- can be bold-ed} Sessions that are used for learning and that last for more than 60 seconds are still a small percentage of all the sessions. In the graph from user 3 the distribution is a little bit skewed, this is probably due to a lack of results. This user didn't use the watch as often as the other users.
+The graph about the learning sessions shows a different distribution when it comes to the duration of the sessions. \textbf{When the smartwatch is used to learn words, the sessions between 5 and 60 seconds are more common and the interval of 15 to 60 seconds is often the largest}. Sessions that are used for learning and that last for more than 60 seconds are still a small percentage of all the sessions. In the graph from user 3 the distribution is a little bit skewed, this is probably due to a lack of results. This user didn't use the watch as often as the other users.
 
-\subsection{Bar chart visualizing ratio between `right' and `wrong'}
-For each day the app was used the number of \texttt{right} and \texttt{wrong} events were counted and plotted in a bar chart (see fig. \ref{fig:right wrong 1 2} and \ref{fig:right_wrong_3_4}). 
+\subsection{The ratio between `right' and `wrong'}
+For each day the app was used the number of \texttt{right} and \texttt{wrong} events were counted and plotted in a bar chart (see fig. \ref{fig:right wrong 1 2} and \ref{fig:right wrong 3 4}). 
 
 \begin{figure}[H]%
     \centering
@@ -710,136 +665,133 @@ For each day the app was used the number of \texttt{right} and \texttt{wrong} ev
     \qquad
     \subfloat[User 4]{{\includegraphics[width=2.6in]{usage_results/4_right_wrong.png} }}%
     \caption{Number of right and wrong taps for users 3 and 4}%
-    \label{fig:right_wrong_3_4}%
+    \label{fig:right wrong 3 4}%
 \end{figure}
 
-The graphs show that `right' is more often pressed than `wrong'. This might come as a surprise, since learning new words should start with more `wrong' then `right'. In the graph of user 1 (see fig. \ref{fig:right wrong 1 2}) this is shown extreme, this user had a German background and was learning German. This might be a possible explanation for the high number of `right' taps. In the graph of user 2 (see fig. \ref{fig:right wrong 1 2}), a decrease in usage is seen. At 17 August the \ins{battery of the } watch was depleted, so therefore usage was less. At 18 August usage was less since it was not a full day of usage, the user handed in the watch at noon. In the graph of user 3 (see fig. \ref{fig:right wrong 3 4}) it can be seen that the watch is unfortunately only used for 2 days, there is however a clear learning curve which can be observed in the graphs of users 1 and 4. 
+The graphs show that `right' is more often pressed than `wrong'. This might come as a surprise, since learning new words should start with more `wrong' then `right'. In the graph of user 1 (see fig. \ref{fig:right wrong 1 2}) this is shown extreme, this user had a German background and was learning German. This might be a possible explanation for the high number of `right' taps. In the graph of user 2 (see fig. \ref{fig:right wrong 1 2}), a decrease in usage is seen. At 17 August the battery of the watch was depleted, so therefore usage was less. At 18 August usage was less since it was not a full day of usage, the user handed in the watch at noon. In the graph of user 3 (see fig. \ref{fig:right wrong 3 4}) it can be seen that the watch is unfortunately only used for two days, there is however a clear learning curve which can be observed in the graphs of users 1 and 4. 
 
-\subsection{Table with median reaction time and daily usage}
-The reaction time is the time it took the user to press `right' or `wrong' after `reveal' was pressed. The average was calculated for each single day and for the whole period of four days. Besides the average time the total time is mentioned too. This indicates for how long the user used the app during the four days of testing (see tables \ref{table time 1}, \ref{table time 2}, \ref{table time 3} and \ref{table time 4}).
+\subsection{The median reaction time and daily usage}
+The reaction time is the time it took the user to press `right' or `wrong' after `reveal' was pressed. The median was found for each single day and for the whole period of four days. Besides the median time the total time is mentioned too. This indicates for how long the user used the app during the four days of testing (see tables \ref{table time 1}, \ref{table time 2}, \ref{table time 3} and \ref{table time 4}).
 
 \begin{table}[H]
 \centering
-\caption{User 1 average reaction time and total usage time}
+\caption{User 1 median reaction time and total usage time}
 \label{table time 1}
 \begin{tabular}{| l | l | l |} 
 \hline
-\textbf{Date} & \textbf{Average} & \textbf{Time} \\ \hline 
-29-07-2016 & 00:00:02 & 00:08:39 \\ \hline
-30-07-2016 & 00:00:13 & 00:13:10 \\ \hline
-31-07-2016 & 00:00:01 & 00:45:43 \\ \hline
-01-08-2016 & 00:00:36 & 00:37:07 \\ \hline
+\textbf{Date} & \textbf{Median} & \textbf{Time} \\ \hline 
+29-07-2016 & 00:00:01 & 00:08:39 \\ \hline
+30-07-2016 & 00:00:01 & 00:13:10 \\ \hline
+31-07-2016 & 00:00:00 & 00:45:43 \\ \hline
+01-08-2016 & 00:00:01 & 00:37:07 \\ \hline
 \hline
-\textbf{Average} & 00:00:07 & 00:26:10 \\ \hline
+\textbf{Average} & 00:00:01 & 00:26:10 \\ \hline
 \textbf{Total} & & 01:44:39 \\ \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{User 2 average reaction time and total usage time}
+\caption{User 2 median reaction time and total usage time}
 \label{table time 2}
 \begin{tabular}{| l | l | l |} 
 \hline
-\textbf{Date} & \textbf{Average} & \textbf{Time} \\ \hline 
-15-08-2016 & 00:00:08 & 00:19:45 \\ \hline
-16-08-2016 & 00:00:02 & 02:15:03 \\ \hline
-17-08-2016 & 00:00:02 & 00:36:00 \\ \hline
-18-08-2016 & 00:00:02 & 00:01:00 \\ \hline
+\textbf{Date} & \textbf{Median} & \textbf{Time} \\ \hline 
+15-08-2016 & 00:00:01 & 00:19:45 \\ \hline
+16-08-2016 & 00:00:01 & 02:15:03 \\ \hline
+17-08-2016 & 00:00:01 & 00:36:00 \\ \hline
+18-08-2016 & 00:00:01 & 00:01:00 \\ \hline
 \hline
-\textbf{Average} & 00:00:05 & 00:47:57 \\ \hline
+\textbf{Average} & 00:00:01 & 00:47:57 \\ \hline
 \textbf{Total} & & 02:35:48 \\ \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{User 3 average reaction time and total usage time}
+\caption{User 3 median reaction time and total usage time}
 \label{table time 3}
 \begin{tabular}{| l | l | l |} 
 \hline
-\textbf{Date} & \textbf{Average} & \textbf{Time} \\ \hline 
-21-08-2016 & 00:04:20 & 00:18:21 \\ \hline
-22-08-2016 & 00:00:04 & 00:02:23 \\ \hline
+\textbf{Date} & \textbf{Median} & \textbf{Time} \\ \hline 
+21-08-2016 & 00:00:07 & 00:18:21 \\ \hline
+22-08-2016 & 00:00:02 & 00:02:23 \\ \hline
 \hline
-\textbf{Average} & 00:02:12 & 00:10:22 \\ \hline
+\textbf{Average} & 00:00:05 & 00:10:22 \\ \hline
 \textbf{Total} & & 00:20:44 \\ \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{User 4 average reaction time and total usage time}
+\caption{User 4 median reaction time and total usage time}
 \label{table time 4}
 \begin{tabular}{| l | l | l |} 
 \hline
-\textbf{Date} & \textbf{Average} & \textbf{Time} \\ \hline 
-16-08-2016 & 00:03:54 & 00:37:23 \\ \hline
-17-08-2016 & 00:00:03 & 04:05:46 \\ \hline
-18-08-2016 & 00:12:34 & 00:28:02 \\ \hline
-19-08-2016 & 00:02:30 & 00:13:41 \\ \hline
+\textbf{Date} & \textbf{Median} & \textbf{Time} \\ \hline 
+16-08-2016 & 00:00:02 & 00:37:23 \\ \hline
+17-08-2016 & 00:00:02 & 04:05:46 \\ \hline
+18-08-2016 & 00:00:02 & 00:28:02 \\ \hline
+19-08-2016 & 00:00:01 & 00:13:41 \\ \hline
 \hline
-\textbf{Average} & 00:04:45 & 01:21:13 \\ \hline
+\textbf{Average} & 00:00:02 & 01:21:13 \\ \hline
 \textbf{Total} & & 05:24:52 \\ \hline
 \end{tabular}
 \end{table}
 
-The average reaction time between a \texttt{reveal} and a \texttt{right} or \texttt{wrong} differs per user. The first two participants had nearly the same reaction time which is quite fast compared to the other participants. A fast reaction could mean that they are fast learners and they do not have to spend a lot of time to learn the translation. This thought is confirmed by the bar chart where the two participants with a high reaction time had pressed `right' more often than `wrong'. \\
-The other two participants had a much longer reaction time in comparison with the first two reaction times. It could be that these users needed more time to learn a new word and therefore they required more time to learn the translation of a certain word. In the bar chart of the user 4 (see fig. \label{fig:right wrong 3 4}) it can be seen that in the first day `wrong' is pressed more than `right' what could indicate that the user was confronted with some hard-to-learn words. 
+The median reaction time between a \texttt{reveal} and a \texttt{right} or \texttt{wrong} does not differ much per user. The reaction times of the different users are all approximately two seconds. A fast reaction could mean that they are fast learners and that they don't need a lot of time to learn the translation. This thought is confirmed by the bar charts of the first two users who had pressed `right' more often than `wrong'. \\ 
+The users 3 and 4 had a slightly higher reaction time in comparison with the first two users. It could be that these users needed more time to learn a new word and therefore they required more time to learn the translation of a certain word. In the bar chart of the users 3 and 4 (see fig. \ref{fig:right wrong 3 4}) it can be seen that in the first day `wrong' is pressed more than `right' what could indicate that the user was confronted with some hard-to-learn words.
 
 \section{Questionnaires results}
 In order to get even more feedback from the user it was decided to let them answer a questionnaire after their test period. The questionnaire can be found in appendix \ref{questionnaire} and the answers of the users in appendix \ref{questionnaire answers}. The purpose was to get specific information about the app which cannot be obtained by only using the events. Although the test group was really small, it only consisted of four persons, we can still learn from it. The questionnaire was divided into two sections, questions related to:
 \begin{itemize} 
 \item general information about the user (i.e., what kind of users do we have)
-\item the usage of the smartwatch app.
+\item the usage of the smartwatch app
 \end{itemize}
 In the sections below the results are summarized and evaluated. 
 
 \subsection{General information about the user}
 All four of the users were relatively young, the youngest person was 22 and the oldest 34. It can thus be concluded that the test group was quite young. This could mean that they prefer certain ways of learning which fits the generation. 
 
-It was interesting to see that people don't invest much time in learning new words (see question 3 from the general information in the questionnaire). This could simply mean that they don't have much time, or that they just hate learning new words for long periods of time. Either case using the smartwatch app helps them invest more time in learning new words using micro learning. 
+It was interesting to see that people don't invest much time in learning new words (see question 3 from the general information). This could simply mean that they don't have much time, or that they just hate learning new words for long periods of time. Either case using the smartwatch app helps them invest more time in learning new words using micro learning. 
 
 For the people who already were learning, the most frequent method was by reading texts in the other language. This would suggest that using the Zeeguu ecosystem \cite{lungu2016zeeguu} (as explained in related work) in combination with the smartwatch is way that people who are enthusiastic about learning a new language would like. 
 
 \subsection{Smartwatch app usage}
 In general the reactions to the design were positive, the context function might need a larger font, but this will also result in more words being removed from the list, since the context won't fit on the screen. There were also some complains about not being able to find all the features the app offers. This was due to not having instructed some of the testers properly, but also because some features might not be very logical to find. The settings for example could be find by double tapping the time. This may not be the most convenient place for the user. A solution would be to have a sort of short instruction manual in the app itself, or to make some small button on the screen for settings. 
 
-There were two interesting features mentioned that people would like to have in app. The first one was a pronunciation function, this however is hard to implement, because the Samsung Gear S2 does not have a speaker built in. Another feature which was mentioned was ``I don't want to learn this word'', one way of doing this would be to combine ``wrong translation''  and ``I don't want to learn this word'' to ``trash'', in either way the word has to be removed. The disadvantage would be less specific user feedback. 
+There were two interesting features mentioned that people would like to have in app. The first one was a pronunciation function, this however is hard to implement, because the Samsung Gear S2 does not have a speaker built in. Another feature which was mentioned was `I don't want to learn this word', one way of doing this would be to combine `wrong translation'  and `I don't want to learn this word' to `trash', in either way the word has to be removed. The disadvantage would be less specific user feedback. 
 
 The users used the app exactly how we hoped they would, they used it mostly when they had to wait for something. This is exactly what micro learning is all about, the small wait moments will now be filled.
 
 \section{Threats to Validity}
 
-\ins{The main threats to the validity of the conclusions in this chapter are:}
+The main threats to the validity of the conclusions in this chapter are:
 
 \begin{itemize}
-	\item Threats to External Validity. The conclusions can not be generalized based on only four users. However, they represent useful incipient data.
-	\item Threats to Internal Validity. It could be that there is some noise in the data. The smartwatch froze several times, and this might determine some very long sessions to be recorded.
-	\item \ml{anything else that you think could affect the validity of the conclusions, must be added here.}
+	\item Threats to External Validity: The conclusions can not be generalized based on only four users. However, they represent useful incipient data.
+	\item Threats to Internal Validity: It could be that there is some noise in the data. The smartwatch froze several times, and this might determine some very long sessions to be recorded.
 \end{itemize}
 
 \chapter {Conclusion and Future Work}
-
 \section{Conclusion}
-
-There are still some improvements that should be implemented in the app eventually. During the test period the users were dealing with a few crashes that were probably caused by functions that require an internet connection.\\
+There are still some improvements that should be implemented in the app. During the test period the users were dealing with a few crashes that were probably caused by functions that required an internet connection.\\
 After analyzing the questionnaire it was clear that the users did not find all features the app has to offer them. This was caused by the lack of a proper instruction and the navigation that appeared to be not very intuitive for some features.
 
-In the questionnaire the users stated the time they spent on learning new words daily. When we compared these results with the time the users spent on the smartwatch for learning, we can conclude that they spent more time on learning with the watch than without the smartwatch. This could be caused by the ability to have short learning session that is doable for the users. The users could experience some trouble with concentrating on the words for a long time, since the learning sessions without a smartwatch are much longer than with the smartwatch. Because the use of micro learning in combination with the app the users were able to increase the time they spent on learning.
+In the questionnaire the users stated the time they spent on learning new words daily. When we compared these results with the time the users spent on the smartwatch for learning, we can conclude that they spent more time on learning with the watch than without the smartwatch. This could be caused by the ability to have short learning sessions that is doable for the users. The users could experience some trouble with concentrating on the words for a long time, since the learning sessions without a smartwatch are much longer than with the smartwatch. With the use of micro learning in combination with the app the users were able to increase the time they spent on learning.
 
-The design of the app was simple and neat according to the participants. Hence this design will probably be used in the future.
+The design of the app was simple and neat according to the users. Hence this design will probably be used in the future.
 
 After analyzing the results of the user study the questions stated in the introduction can be answered.\\
-\textbf{How do users use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language?}\\
-The users that use a smartwatch application to learn new words use micro learning in order to learn new words. These short learning session can take place whenever the user has some time left. A few examples mentioned in the questionnaire are waiting for the traffic lights, taking the elevator or during watching television. 
+\textbf{How can we use a smartwatch application to accelerate the memorization process of somebody who is learning the vocabulary of a second language?}\\
+The user that uses a smartwatch application to learn new words uses micro learning in order to learn new words. These short learning session can take place whenever the user has some time left. A few examples mentioned in the questionnaire are waiting for the traffic lights, taking the elevator or while watching television. 
 
 \begin{itemize}
-\item \textbf{How long does a session on a smartwatch take (i.e., general usage)?}\\ 
+\item \textbf{How long do sessions on a smartwatch take (i.e., general usage)?}\\ 
 Most of the sessions last for less than three seconds and sessions of more than 60 seconds hardly appear as can be seen in the results from the user study. The smartwatch is therefore not used for long sessions by our users. 
-\item \textbf{How long does a learning session take on a smartwatch (i.e., only using \ttl app)?}\\
+\item \textbf{How long do learning sessions take on a smartwatch (i.e., only using \ttl app)?}\\
 The duration of a learning session is between 5 and 60 seconds most of the time. From the four different intervals the group between 15 and 60 seconds was the largest. These short learning sessions are in alignment with micro learning.
-\item \textbf{How long do users use the app daily on average?}\\
+\item \textbf{How long do users use the app daily?}\\
 The time that the users spent daily on the app differs from one another. This difference between the daily usage of each user is too large to give a general answer to this question. The usage differs from one minute till four hours.
 \end{itemize}
 
@@ -847,26 +799,25 @@ The time that the users spent daily on the app differs from one another. This di
 \section{Future work}
 As far as we know this is the first time a smartwatch app was made for learning vocabulary. In this project we tried to give the user the best possible experience to make learning as efficient and fun as possible. Naturally there are still some interesting features that can be implemented to improve the functionality of the app. Some examples are:
 \begin{itemize}
-\item \textbf{\chg{Improvements}{Improving} the server side}\\
-Several events are sent to the server when the app is used. These events were used for the test results. However these events could also be used to personalize the learning process. Every user has a different learning curve that plots the time it takes before a word will be forgotten. It is therefore important that a learning app shows that word again, before the user forgets the translation. A recent research project developed at the RUG tried to calculate this curve in order to maximize the efficiency of a learning app\cite{slimstampen}.
+\item \textbf{Improving the server side}\\
+Several events are sent to the server when the app is used. These events were used for the test results. However these events could also be used to personalize the learning process. Every user has a different learning curve that plots the time it takes before a word will be forgotten. It is therefore important that a learning app shows that word again, before the user forgets the translation. A recent research project developed at the RUG tried to calculate this curve in order to maximize the efficiency of a learning app \cite{slimstampen}.
 The algorithm for the learning curve could be implemented on the server side where it could use the events to estimate the learning curve for all users. The algorithm will send a word to the watch that the user should learn according to his learning curve. The downside of this approach for the used smartwatch model will be that the watch should constantly be connected to the internet to keep the learning curve up-to-date. The connection is also important for receiving new words from the server. There are smartwatch models that support 3G and therefore keeping a connection with the internet should not be a problem for these models.
 \item \textbf{Knowing the form of the word}\\
-In the `Related Work' chapter some techniques are mentioned which could improve the time it takes to learn new words. One of these techniques was categorizing the words into different forms, like: verbs, nouns or prepositions etc. so it is clear for the learner in which situation the word should be used. We are still unsure whether there is a database with the form for different words. If it exists, the app could show this form for every word although it will be hard to find space on the small screen.
+In the `Related Work' chapter some techniques are mentioned which could improve the time it takes to learn new words. One of these techniques was categorizing the words into different forms (e.g., verbs, nouns or prepositions etc.) so it is clear for the learner in which situation the word should be used. We are still unsure whether there is a database with the form for different words. If it exists, the app could show this form for every word although it will be hard to find space on the small screen.
 
-	\ml{renamed these two next bullets because they sounded too similar to each other!}
-	\item \textbf{Exemplifying the Pronunciation of a word}\\
-	After the test period almost all the users would like to have a pronunciation function. The smartwatch model we used did not have speakers, so this function would not work for this model. However, there are models which do have speakers and there are databases available with the pronunciation of a lot of words in different languages which means that this idea could be implemented in a later version of the app. 
+\item \textbf{Exemplifying the pronunciation of a word}\\
+After the test period almost all the users would like to have a pronunciation function. The smartwatch model we used did not have speakers, so this function would not work for this model. However, there are models which do have speakers and there are databases available with the pronunciation of a lot of words in different languages which means that this idea could be implemented in a later version of the app. 
 
-	\item \textbf{Verifying a users' pronounciation}\\
-	Another way to improve learning is to say the translation aloud. It can be read in the `Related Work' chapter that pronouncing a word aloud helps the saving process in the brains. The smartwatch model we used has a build-in microphone like many more models. This makes it possible to check if the user says something. This function could even be improved by verifying if the word is pronounced the right way.
+\item \textbf{Verifying a users' pronunciation}\\
+Another way to improve learning is to say the translation aloud. It can be read in the `Related Work' chapter that pronouncing a word aloud helps the saving process in the brains. The smartwatch model we used has a build-in microphone like many more models. This makes it possible to check if the user says something. This function could even be improved by verifying if the word is pronounced the right way.
 
-\item \textbf{Avoid\ins{ing} interference with words of similar spelling or meaning}\\
+\item \textbf{Avoiding interference with words of similar spelling or meaning}\\
 Words with a similar spelling or meaning should not be shown one after another in order to prevent confusion. This would require an algorithm and a database that decides whether two words have a similar spelling and whether these words have a similar meaning.
 
-	\item \textbf{Improv\chg{e}{ing} the functionality of the app}\\
-	The method for showing new words on the app can be improved by showing the word and the translation simultaneously if it is the first time the user sees that word. After the first time the word and the translation can be shown in the same manner the app is showing the words in the latest version.
+\item \textbf{Improving the functionality of the app}\\
+The method for showing new words on the app can be improved by showing the word and the translation simultaneously if it is the first time the user sees that word. After the first time the word and the translation can be shown in the same manner the app is showing the words in the latest version.
 
-Since knowing the context of a certain word is important for the learning process, the `reveal' button could be split in two buttons with on the left the option to show the context and right the option to reveal the translation. The user will then be able to make an educated guess when reading the context of the word. In the latest version this is not possible since the option `show context' is only available when the translation is already revealed.
+Since knowing the context of a certain word is important for the learning process, the `reveal' button could be split in two buttons with on the left the option to show the context and on the right the option to reveal the translation. The user will then be able to make an educated guess when reading the context of the word. In the latest version this is not possible since the option `show context' is only available when the translation is already revealed.
 
 The settings should be opened when the user taps the time and double tap on the time should change the background. Changing the background is less important than the settings and thus entering the settings should need less afford than changing the background.
 
@@ -881,7 +832,7 @@ In this appendix the test cases are included which were described in chapter 5.
 \chapter{Questionnaire}
 \label{questionnaire}
 
-The questionnaire asked the following questions to the participants:
+The questionnaire asked the following questions to the users:
 \section{General information}
 \begin{enumerate} 
 \item What is your age?
@@ -1110,7 +1061,7 @@ In this appendix the answers of the users are included, in the user study we use
 \label{script}
 In this appendix the script is included, which was used to obtain the different session lengths for our research described in the usage study chapter. The code is written in JavaScript again.
 
-\lstinputlisting[label=script, language=JavaScript, caption=script to get different session lengths]{source_code/script_research.js}
+\lstinputlisting[language=JavaScript, caption=script to get different session lengths]{source_code/script_research.js}
 
 \end{appendices}
 
